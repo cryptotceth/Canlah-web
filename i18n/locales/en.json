@@ -1,0 +1,88 @@
+{
+  "nav": {
+    "products": "Products",
+    "platform": "Platform",
+    "about": "About",
+    "contact": "Contact Us"
+  },
+  "hero": {
+    "badge1": "AI-POWERED",
+    "badge2": "MULTI-VERTICAL",
+    "title": "AI Agents for Every {highlight}",
+    "highlight": "Business Function",
+    "description": "CANLAH AI builds intelligent agents that automate marketing, sales, service, and commerce — so your team can focus on what matters.",
+    "cta": "Explore Products",
+    "cta2": "Talk to Us"
+  },
+  "products": {
+    "sectionTag": "PRODUCT SUITE",
+    "title": "One Platform, {highlight}",
+    "highlight": "Four Agents",
+    "cards": [
+      {
+        "name": "CanMarket",
+        "tag": "AI Marketing Agent",
+        "description": "Brand-consistent content at scale. Style Genome™ remembers your brand so every image looks like you.",
+        "features": ["Brand Memory System", "AI Content Generation", "Campaign Automation", "Multi-Channel Publishing"],
+        "badge": "Live",
+        "badgeType": "live",
+        "cta": "Try CanMarket",
+        "url": "https://canmarket.ai"
+      },
+      {
+        "name": "CanService",
+        "tag": "AI Customer Service Agent",
+        "description": "24/7 intelligent support across every channel. Resolve tickets faster with AI that understands context.",
+        "features": ["Omnichannel AI Chat", "Ticket Automation", "Knowledge Base AI", "Sentiment Analysis"],
+        "badge": "Coming Soon",
+        "badgeType": "soon"
+      },
+      {
+        "name": "CanSales",
+        "tag": "AI Sales Agent",
+        "description": "From lead to close, automated. AI-powered CRM that follows up, qualifies, and converts.",
+        "features": ["Smart Lead Scoring", "Pipeline Automation", "Follow-up AI", "Sales Insights"],
+        "badge": "Coming Soon",
+        "badgeType": "soon"
+      },
+      {
+        "name": "CanCommerce",
+        "tag": "AI Commerce Agent",
+        "description": "Optimize every listing, campaign, and conversion. E-commerce intelligence that drives revenue.",
+        "features": ["Listing Optimization", "Campaign AI", "Conversion Analytics", "Inventory Intelligence"],
+        "badge": "Coming Soon",
+        "badgeType": "soon"
+      }
+    ]
+  },
+  "platform": {
+    "sectionTag": "THE ENGINE",
+    "title": "Built on a {highlight}",
+    "highlight": "Unified AI Platform",
+    "capabilities": [
+      "Agent Orchestration",
+      "Multi-Model Routing",
+      "Workflow Automation",
+      "Knowledge & Data Layer",
+      "Enterprise Security"
+    ]
+  },
+  "studio": {
+    "sectionTag": "CUSTOM SOLUTIONS",
+    "name": "Agent Studio",
+    "tag": "For enterprises that need bespoke AI agents",
+    "note": "Platform-powered configuration, not custom outsourcing",
+    "features": [
+      "Industry Templates",
+      "Visual Workflow Builder",
+      "Prompt Orchestration",
+      "Knowledge Ingestion",
+      "API Connectors",
+      "Enterprise Deployment"
+    ]
+  },
+  "footer": {
+    "rights": "© 2026 CANLAH AI. All rights reserved.",
+    "tagline": "AI Agents for Every Business Function"
+  }
+}

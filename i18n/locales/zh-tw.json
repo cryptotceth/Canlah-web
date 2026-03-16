@@ -1,0 +1,88 @@
+{
+  "nav": {
+    "products": "產品",
+    "platform": "平台",
+    "about": "關於我們",
+    "contact": "聯繫我們"
+  },
+  "hero": {
+    "badge1": "AI 驅動",
+    "badge2": "多垂直領域",
+    "title": "為每個{highlight}打造 AI Agent",
+    "highlight": "業務場景",
+    "description": "CANLAH AI 構建智能 Agent，自動化行銷、銷售、客服和電商——讓你的團隊專注於真正重要的事。",
+    "cta": "探索產品",
+    "cta2": "聯繫我們"
+  },
+  "products": {
+    "sectionTag": "產品矩陣",
+    "title": "一個平台，{highlight}",
+    "highlight": "四個 Agent",
+    "cards": [
+      {
+        "name": "CanMarket",
+        "tag": "AI 行銷 Agent",
+        "description": "品牌一致的內容規模化生產。Style Genome™ 記住你的品牌，讓每張圖都像你。",
+        "features": ["品牌記憶系統", "AI 內容生成", "行銷活動自動化", "多渠道發布"],
+        "badge": "已上線",
+        "badgeType": "live",
+        "cta": "體驗 CanMarket",
+        "url": "https://canmarket.ai"
+      },
+      {
+        "name": "CanService",
+        "tag": "AI 客服 Agent",
+        "description": "7×24 全渠道智能客服。AI 理解上下文，更快解決工單。",
+        "features": ["全渠道 AI 對話", "工單自動化", "知識庫 AI", "情感分析"],
+        "badge": "即將推出",
+        "badgeType": "soon"
+      },
+      {
+        "name": "CanSales",
+        "tag": "AI 銷售 Agent",
+        "description": "從線索到成交，全程自動化。AI 驅動的 CRM，自動跟進、評估、轉化。",
+        "features": ["智能線索評分", "管線自動化", "跟進 AI", "銷售洞察"],
+        "badge": "即將推出",
+        "badgeType": "soon"
+      },
+      {
+        "name": "CanCommerce",
+        "tag": "AI 電商 Agent",
+        "description": "優化每個商品、活動和轉化。電商智能引擎驅動收入增長。",
+        "features": ["商品優化", "活動 AI", "轉化分析", "庫存智能"],
+        "badge": "即將推出",
+        "badgeType": "soon"
+      }
+    ]
+  },
+  "platform": {
+    "sectionTag": "底層引擎",
+    "title": "構建於{highlight}",
+    "highlight": "統一 AI 平台",
+    "capabilities": [
+      "Agent 編排引擎",
+      "多模型路由",
+      "工作流自動化",
+      "知識與數據層",
+      "企業級安全"
+    ]
+  },
+  "studio": {
+    "sectionTag": "定制方案",
+    "name": "Agent Studio",
+    "tag": "為需要定制 AI Agent 的企業而生",
+    "note": "平台化配置，非定制外包",
+    "features": [
+      "行業模板",
+      "可視化工作流",
+      "Prompt 編排",
+      "知識導入",
+      "API 連接器",
+      "企業級部署"
+    ]
+  },
+  "footer": {
+    "rights": "© 2026 CANLAH AI. 保留所有權利。",
+    "tagline": "為每個業務場景打造 AI Agent"
+  }
+}
