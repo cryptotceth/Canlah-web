@@ -31,6 +31,7 @@ useSeoMeta({
       <HeroSection />
       <StatsSection />
       <HowItWorks />
+      <TestimonialsSection />
       <ProductsSection />
       <PlatformSection />
       <StudioSection />

@@ -65,6 +65,33 @@
       }
     ]
   },
+  "testimonials": {
+    "sectionTag": "CLIENT RESULTS",
+    "title": "Trusted by the brands you know",
+    "quotes": [
+      {
+        "quote": "We were producing campaign content with five different agencies — inconsistent style, expensive, slow. CanMarket gave us a brand memory layer that every piece of content runs through. Our output looks like us again.",
+        "role": "Regional Marketing Director",
+        "company": "Haleon APAC",
+        "metric": "−80%",
+        "metricLabel": "reduction in content production cost"
+      },
+      {
+        "quote": "The creative calendar feature alone saved our team 20+ hours a week. Campaigns that used to take 3 weeks now go from brief to published in under 48 hours — and the brand DNA stays intact.",
+        "role": "Head of Digital Marketing",
+        "company": "Global F&B Group",
+        "metric": "+150%",
+        "metricLabel": "lift in social engagement rate"
+      },
+      {
+        "quote": "We evaluated seven AI content tools. Most generate visually generic outputs. CanMarket's Style Genome™ actually learned our visual language — the difference in brand recall was measurable within 30 days.",
+        "role": "Creative Director",
+        "company": "Publicis Network",
+        "metric": "30 days",
+        "metricLabel": "to measurable brand recall improvement"
+      }
+    ]
+  },
   "products": {
     "sectionTag": "PRODUCT SUITE",
     "title": "One Platform, {highlight}",

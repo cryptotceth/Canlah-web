@@ -39,6 +39,33 @@
       "label": "企业级客户"
     }
   },
+  "testimonials": {
+    "sectionTag": "客户成果",
+    "title": "顶级品牌的共同选择",
+    "quotes": [
+      {
+        "quote": "我们曾与五家不同代理商合作内容生产——风格不一、成本高昂、效率低下。CanMarket 的品牌记忆层让每一件内容输出都通过统一的品牌审核。我们的内容终于又像我们自己了。",
+        "role": "区域营销总监",
+        "company": "Haleon 亚太区",
+        "metric": "−80%",
+        "metricLabel": "内容生产成本降低"
+      },
+      {
+        "quote": "光是创意日历功能每周就为我们节省了20多个小时。原本需要3周的活动，现在从简报到发布不到48小时——品牌基因始终如一。",
+        "role": "数字营销负责人",
+        "company": "全球餐饮集团",
+        "metric": "+150%",
+        "metricLabel": "社媒互动率提升"
+      },
+      {
+        "quote": "我们评估了七款 AI 内容工具。大多数生成的视觉内容千篇一律。CanMarket 的 Style Genome™ 真正学到了我们的视觉语言——30天内品牌识别度的提升是可量化的。",
+        "role": "创意总监",
+        "company": "阳狮传播网络",
+        "metric": "30 天",
+        "metricLabel": "实现可量化的品牌认知提升"
+      }
+    ]
+  },
   "products": {
     "sectionTag": "产品矩阵",
     "title": "一个平台，{highlight}",
