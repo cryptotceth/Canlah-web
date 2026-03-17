@@ -9,25 +9,27 @@ useHead({
 
 useSeoMeta({
   title: 'CANLAH AI — AI Agents for Every Business Function',
-  description: 'Intelligent automation for marketing, sales, service, and commerce.',
+  description: 'The AI platform company behind CanMarket, CanService, CanSales & CanCommerce. Intelligent agents that automate marketing, sales, service, and commerce.',
 })
 </script>
 
 <template>
   <div class="min-h-screen bg-[#050d1a] text-[#e8f0ff] font-sans selection:bg-[#00d4ff] selection:text-black relative overflow-x-hidden">
-    <!-- Animated grid background -->
-    <div class="fixed inset-0 pointer-events-none z-0 opacity-100"
-      style="background-image: linear-gradient(rgba(0,212,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(0,212,255,0.04) 1px, transparent 1px); background-size: 60px 60px;">
+
+    <!-- Subtle dot grid background -->
+    <div class="fixed inset-0 pointer-events-none z-0"
+      style="background-image: radial-gradient(circle, rgba(0,212,255,0.06) 1px, transparent 1px); background-size: 40px 40px; opacity: 0.6;">
     </div>
 
     <!-- Ambient glow blobs -->
-    <div class="fixed w-[500px] h-[500px] rounded-full blur-[80px] opacity-[0.12] pointer-events-none z-0 bg-[#0d47e0] -top-[100px] -left-[100px] animate-pulse"></div>
-    <div class="fixed w-[400px] h-[400px] rounded-full blur-[80px] opacity-[0.12] pointer-events-none z-0 bg-[#00d4ff] -bottom-[50px] -right-[50px] animate-pulse"></div>
-    <div class="fixed w-[300px] h-[300px] rounded-full blur-[80px] opacity-[0.12] pointer-events-none z-0 bg-[#00e5a0] top-[40%] left-[50%] animate-pulse"></div>
+    <div class="fixed w-[700px] h-[700px] rounded-full blur-[120px] opacity-[0.07] pointer-events-none z-0 bg-[#0d47e0] -top-[200px] -left-[200px]"></div>
+    <div class="fixed w-[500px] h-[500px] rounded-full blur-[100px] opacity-[0.07] pointer-events-none z-0 bg-[#00d4ff] top-[60%] -right-[100px]"></div>
+    <div class="fixed w-[400px] h-[400px] rounded-full blur-[100px] opacity-[0.05] pointer-events-none z-0 bg-[#6496ff] top-[30%] left-[40%]"></div>
 
     <div class="relative z-[1]">
       <SiteHeader />
       <HeroSection />
+      <StatsSection />
       <ProductsSection />
       <PlatformSection />
       <StudioSection />

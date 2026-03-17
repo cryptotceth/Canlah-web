@@ -1,53 +1,51 @@
 <script setup lang="ts">
 const { tm } = useI18n()
-const capabilities = computed(() => tm('platform.capabilities') as string[])
+const capabilities = computed(() => tm('platform.capabilities') as { icon: string, label: string, desc: string }[])
 </script>
 
 <template>
   <section id="platform" class="py-20 px-6">
     <div class="max-w-[1400px] mx-auto">
-      <!-- Connector -->
-      <div class="w-0.5 h-10 bg-gradient-to-b from-[#00d4ff]/50 to-transparent mx-auto mb-8 relative">
-        <span class="absolute -bottom-3 left-1/2 -translate-x-1/2 text-[10px] text-[#00d4ff]/50">▼</span>
-      </div>
 
       <!-- Section header -->
-      <div class="flex items-center gap-4 mb-10">
-        <div class="flex-1 h-px bg-gradient-to-r from-[#00d4ff]/30 to-transparent"></div>
-        <div class="text-center">
-          <div class="font-mono text-[10px] text-[#00d4ff] tracking-[3px] mb-1">{{ $t('platform.sectionTag') }}</div>
-          <h2 class="font-display font-bold text-2xl text-white">
-            <span v-html="$t('platform.title', { highlight: `<span class='text-[#00d4ff]'>${$t('platform.highlight')}</span>` })"></span>
-          </h2>
-        </div>
-        <div class="flex-1 h-px bg-gradient-to-l from-[#00d4ff]/30 to-transparent"></div>
+      <div class="text-center mb-14">
+        <div class="font-mono text-[10px] text-[#00d4ff] tracking-[4px] mb-3">{{ $t('platform.sectionTag') }}</div>
+        <h2 class="font-display font-extrabold text-4xl md:text-5xl text-white leading-tight">
+          <span v-html="$t('platform.title', { highlight: `<span class='bg-gradient-to-r from-[#00d4ff] to-[#3b7fff] bg-clip-text text-transparent'>${$t('platform.highlight')}</span>` })"></span>
+        </h2>
+        <p class="mt-4 text-[15px] text-[#5a7099] max-w-lg mx-auto">{{ $t('platform.subtitle') }}</p>
       </div>
 
-      <!-- Platform box -->
-      <div class="relative rounded-2xl border border-[#00d4ff]/30 bg-gradient-to-br from-[#071035] via-[#0a1a40] to-[#060e2a] p-8 overflow-hidden group hover:border-[#00d4ff]/60 hover:shadow-[0_0_40px_rgba(0,212,255,0.15)] transition-all duration-300">
-        <!-- Scanline -->
-        <div class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#00d4ff] to-transparent animate-pulse"></div>
+      <!-- Architecture diagram-style layout -->
+      <div class="relative rounded-3xl border border-[#00d4ff]/20 bg-gradient-to-br from-[#071035] via-[#0a1a40] to-[#060e2a] p-10 overflow-hidden">
+        <!-- Top accent line -->
+        <div class="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#00d4ff]/60 to-transparent"></div>
 
-        <div class="flex items-center gap-10 flex-wrap">
-          <!-- Title block -->
-          <div class="flex-shrink-0">
-            <div class="font-display text-xl font-bold text-white tracking-wide">CANLAH AI</div>
-            <div class="font-display text-xl font-bold text-white tracking-wide">AGENT PLATFORM</div>
-            <div class="font-mono text-xs text-[#00d4ff] mt-1 tracking-wider">Multi-Vertical Operating Layer</div>
+        <!-- Center label -->
+        <div class="text-center mb-10">
+          <div class="inline-flex items-center gap-3 px-6 py-3 rounded-full border border-[#00d4ff]/30 bg-[#00d4ff]/5">
+            <span class="w-2 h-2 rounded-full bg-[#00d4ff] shadow-[0_0_10px_#00d4ff] animate-pulse"></span>
+            <span class="font-mono text-sm font-semibold text-[#00d4ff] tracking-wider">CANLAH AI AGENT PLATFORM</span>
+            <span class="w-2 h-2 rounded-full bg-[#00d4ff] shadow-[0_0_10px_#00d4ff] animate-pulse"></span>
           </div>
+        </div>
 
-          <!-- Divider -->
-          <div class="hidden md:block w-px h-16 bg-gradient-to-b from-transparent via-[#00d4ff]/30 to-transparent flex-shrink-0"></div>
-
-          <!-- Capability pills -->
-          <div class="flex flex-wrap gap-2.5 flex-1">
-            <div v-for="(cap, i) in capabilities" :key="i"
-              class="flex items-center gap-2 px-3.5 py-2 rounded-lg bg-[#00d4ff]/[0.06] border border-[#00d4ff]/20 text-xs text-[#c8dcff]/85 hover:bg-[#00d4ff]/15 hover:border-[#00d4ff]/50 hover:text-white hover:-translate-y-0.5 transition-all cursor-default">
-              <span class="w-1.5 h-1.5 rounded-full bg-[#00d4ff] shadow-[0_0_6px_#00d4ff] flex-shrink-0"></span>
-              {{ cap }}
+        <!-- Capability grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div
+            v-for="(cap, i) in capabilities" :key="i"
+            class="group flex items-start gap-4 p-5 rounded-xl border border-[#00d4ff]/10 bg-[#00d4ff]/[0.03] hover:border-[#00d4ff]/35 hover:bg-[#00d4ff]/[0.07] transition-all duration-200 cursor-default"
+          >
+            <div class="text-xl flex-shrink-0 w-9 h-9 flex items-center justify-center rounded-lg bg-[#00d4ff]/10 group-hover:bg-[#00d4ff]/20 transition-colors">{{ cap.icon }}</div>
+            <div>
+              <div class="text-[13px] font-semibold text-white mb-0.5">{{ cap.label }}</div>
+              <div class="text-[11px] text-[#5a7099] leading-relaxed">{{ cap.desc }}</div>
             </div>
           </div>
         </div>
+
+        <!-- Corner decorations -->
+        <div class="absolute bottom-4 right-4 font-mono text-[10px] text-[#00d4ff]/20 tracking-wider select-none">v2.0 · MULTI-VERTICAL</div>
       </div>
     </div>
   </section>

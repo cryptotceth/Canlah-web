@@ -3,53 +3,80 @@
     "products": "Products",
     "platform": "Platform",
     "about": "About",
-    "contact": "Contact Us"
+    "contact": "Contact"
   },
   "hero": {
     "badge1": "AI-POWERED",
     "badge2": "MULTI-VERTICAL",
-    "title": "AI Agents for Every {highlight}",
-    "highlight": "Business Function",
-    "description": "CANLAH AI builds intelligent agents that automate marketing, sales, service, and commerce — so your team can focus on what matters.",
-    "cta": "Explore Products",
-    "cta2": "Talk to Us"
+    "line1": "AI Agents for",
+    "line3": "at Scale",
+    "description": "CANLAH AI builds intelligent agents that automate marketing, sales, service, and commerce — so your team focuses on what matters.",
+    "cta": "Try CanMarket Free",
+    "cta2": "See Products",
+    "trustedBy": "TRUSTED BY LEADING BRANDS",
+    "brand1": "HALEON",
+    "brand2": "STARBUCKS",
+    "brand3": "BYTEDANCE",
+    "brand4": "ALIBABA CLOUD",
+    "brand5": "PUBLICIS",
+    "brand6": "McCANN"
+  },
+  "stats": {
+    "revenue": {
+      "value": "¥2M+",
+      "label": "REVENUE IN 7 MONTHS"
+    },
+    "engagement": {
+      "value": "+150%",
+      "label": "ENGAGEMENT RATE"
+    },
+    "cost": {
+      "value": "−80%",
+      "label": "CONTENT COST REDUCTION"
+    },
+    "clients": {
+      "value": "6+",
+      "label": "ENTERPRISE CLIENTS"
+    }
   },
   "products": {
     "sectionTag": "PRODUCT SUITE",
     "title": "One Platform, {highlight}",
     "highlight": "Four Agents",
+    "subtitle": "Each agent is purpose-built for its domain — and all share the same underlying AI platform.",
+    "notify": "Notify me →",
     "cards": [
       {
         "name": "CanMarket",
         "tag": "AI Marketing Agent",
-        "description": "Brand-consistent content at scale. Style Genome™ remembers your brand so every image looks like you.",
-        "features": ["Brand Memory System", "AI Content Generation", "Campaign Automation", "Multi-Channel Publishing"],
+        "description": "Brand-consistent content at scale. Style Genome™ remembers your brand so every image looks like you — not a generic AI output.",
+        "features": ["Brand Memory (Style Genome™)", "AI Content Generation", "Campaign Automation", "Multi-Channel Publishing"],
         "badge": "Live",
         "badgeType": "live",
         "cta": "Try CanMarket",
-        "url": "https://canmarket.ai"
+        "url": "https://app.canmarket.ai"
       },
       {
         "name": "CanService",
         "tag": "AI Customer Service Agent",
-        "description": "24/7 intelligent support across every channel. Resolve tickets faster with AI that understands context.",
-        "features": ["Omnichannel AI Chat", "Ticket Automation", "Knowledge Base AI", "Sentiment Analysis"],
+        "description": "24/7 intelligent support across every channel. Resolve tickets faster with AI that understands context and escalates intelligently.",
+        "features": ["Omnichannel AI Chat", "Smart Ticket Routing", "Knowledge Base AI", "Sentiment Analysis"],
         "badge": "Coming Soon",
         "badgeType": "soon"
       },
       {
         "name": "CanSales",
         "tag": "AI Sales Agent",
-        "description": "From lead to close, automated. AI-powered CRM that follows up, qualifies, and converts.",
-        "features": ["Smart Lead Scoring", "Pipeline Automation", "Follow-up AI", "Sales Insights"],
+        "description": "From lead to close, automated. AI-powered pipeline management that follows up, qualifies, and converts while you sleep.",
+        "features": ["Smart Lead Scoring", "Pipeline Automation", "AI Follow-up Sequences", "Deal Insights"],
         "badge": "Coming Soon",
         "badgeType": "soon"
       },
       {
         "name": "CanCommerce",
         "tag": "AI Commerce Agent",
-        "description": "Optimize every listing, campaign, and conversion. E-commerce intelligence that drives revenue.",
-        "features": ["Listing Optimization", "Campaign AI", "Conversion Analytics", "Inventory Intelligence"],
+        "description": "Optimize every listing, ad, and conversion funnel. E-commerce intelligence that drives revenue 24 hours a day.",
+        "features": ["Listing Optimization", "Ad Campaign AI", "Conversion Analytics", "Inventory Intelligence"],
         "badge": "Coming Soon",
         "badgeType": "soon"
       }
@@ -59,30 +86,40 @@
     "sectionTag": "THE ENGINE",
     "title": "Built on a {highlight}",
     "highlight": "Unified AI Platform",
+    "subtitle": "All four agents run on the same infrastructure — share data, share memory, share brand identity.",
     "capabilities": [
-      "Agent Orchestration",
-      "Multi-Model Routing",
-      "Workflow Automation",
-      "Knowledge & Data Layer",
-      "Enterprise Security"
+      { "icon": "🧠", "label": "Agent Orchestration", "desc": "Multi-step reasoning across agents with automated decision routing" },
+      { "icon": "🔀", "label": "Multi-Model Routing", "desc": "Best model for each task — GPT, Gemini, Claude — intelligently selected" },
+      { "icon": "⚡", "label": "Workflow Automation", "desc": "Visual workflow builder with trigger-action pipelines and connectors" },
+      { "icon": "🗄️", "label": "Knowledge & Data Layer", "desc": "768-dim brand memory vectors with retrieval-augmented generation" },
+      { "icon": "🔒", "label": "Enterprise Security", "desc": "SOC 2 compliant, data isolation, SSO, and audit logs" },
+      { "icon": "🌐", "label": "Multi-Language Support", "desc": "Native EN / ZH / ZH-TW with locale-aware content generation" }
     ]
   },
   "studio": {
-    "sectionTag": "CUSTOM SOLUTIONS",
+    "sectionTag": "ENTERPRISE",
     "name": "Agent Studio",
-    "tag": "For enterprises that need bespoke AI agents",
-    "note": "Platform-powered configuration, not custom outsourcing",
+    "tag": "Custom AI agents for enterprises with unique requirements",
+    "note": "Powered by the CANLAH platform — no outsourcing",
+    "headline": "Build any agent your business needs",
+    "body": "Don't fit a standard product? Agent Studio lets enterprises configure bespoke AI agents on the same platform infrastructure — with full brand memory, model routing, and integration capabilities.",
+    "cta": "Talk to our team",
     "features": [
-      "Industry Templates",
-      "Visual Workflow Builder",
-      "Prompt Orchestration",
-      "Knowledge Ingestion",
-      "API Connectors",
-      "Enterprise Deployment"
+      { "icon": "🗂", "title": "Industry Templates", "desc": "Pre-built for retail, F&B, finance, healthcare" },
+      { "icon": "🔧", "title": "Visual Workflow Builder", "desc": "No-code agent configuration with drag & drop" },
+      { "icon": "💬", "title": "Prompt Orchestration", "desc": "Multi-step chains with memory and context" },
+      { "icon": "📚", "title": "Knowledge Ingestion", "desc": "Feed docs, URLs, and databases to your agent" },
+      { "icon": "🔗", "title": "API Connectors", "desc": "Connect to any CRM, ERP, or custom system" },
+      { "icon": "🏢", "title": "Enterprise Deployment", "desc": "On-prem, private cloud, or managed SaaS" }
     ]
   },
   "footer": {
-    "rights": "© 2026 CANLAH AI. All rights reserved.",
-    "tagline": "AI Agents for Every Business Function"
+    "tagline": "AI Agents for Every Business Function",
+    "status": "All systems operational",
+    "products": "PRODUCTS",
+    "company": "COMPANY",
+    "aboutLink": "About CanMarket",
+    "contactLink": "Contact Us",
+    "rights": "© 2026 CANLAH AI. All rights reserved."
   }
 }

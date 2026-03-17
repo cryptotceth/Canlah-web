@@ -2,87 +2,124 @@
   "nav": {
     "products": "产品",
     "platform": "平台",
-    "about": "关于我们",
+    "about": "关于",
     "contact": "联系我们"
   },
   "hero": {
     "badge1": "AI 驱动",
-    "badge2": "多垂直领域",
-    "title": "为每个{highlight}打造 AI Agent",
-    "highlight": "业务场景",
-    "description": "CANLAH AI 构建智能 Agent，自动化营销、销售、客服和电商——让你的团队专注于真正重要的事。",
-    "cta": "探索产品",
-    "cta2": "联系我们"
+    "badge2": "多行业垂直",
+    "line1": "AI 智能体，赋能",
+    "line3": "全面增长",
+    "description": "CANLAH AI 打造专业 AI 智能体，自动化营销、销售、客服和电商——让团队聚焦真正重要的事。",
+    "cta": "免费试用 CanMarket",
+    "cta2": "查看产品",
+    "trustedBy": "顶级品牌信赖之选",
+    "brand1": "HALEON",
+    "brand2": "星巴克",
+    "brand3": "字节跳动",
+    "brand4": "阿里云",
+    "brand5": "阳狮",
+    "brand6": "麦肯"
+  },
+  "stats": {
+    "revenue": {
+      "value": "¥200万+",
+      "label": "7个月营收"
+    },
+    "engagement": {
+      "value": "+150%",
+      "label": "互动率提升"
+    },
+    "cost": {
+      "value": "−80%",
+      "label": "内容成本降低"
+    },
+    "clients": {
+      "value": "6+",
+      "label": "企业级客户"
+    }
   },
   "products": {
     "sectionTag": "产品矩阵",
     "title": "一个平台，{highlight}",
-    "highlight": "四个 Agent",
+    "highlight": "四大智能体",
+    "subtitle": "每个智能体专注其行业领域，共享同一底层 AI 平台基础设施。",
+    "notify": "提前预约 →",
     "cards": [
       {
         "name": "CanMarket",
-        "tag": "AI 营销 Agent",
-        "description": "品牌一致的内容规模化生产。Style Genome™ 记住你的品牌，让每张图都像你。",
-        "features": ["品牌记忆系统", "AI 内容生成", "营销活动自动化", "多渠道发布"],
+        "tag": "AI 营销智能体",
+        "description": "品牌一致性内容大规模生产。Style Genome™ 记住你的品牌，每张图片都像你的团队亲自设计。",
+        "features": ["品牌记忆 (Style Genome™)", "AI 内容生成", "活动自动化", "多渠道发布"],
         "badge": "已上线",
         "badgeType": "live",
-        "cta": "体验 CanMarket",
-        "url": "https://canmarket.ai"
+        "cta": "立即体验",
+        "url": "https://app.canmarket.ai"
       },
       {
         "name": "CanService",
-        "tag": "AI 客服 Agent",
-        "description": "7×24 全渠道智能客服。AI 理解上下文，更快解决工单。",
-        "features": ["全渠道 AI 对话", "工单自动化", "知识库 AI", "情感分析"],
+        "tag": "AI 客服智能体",
+        "description": "全渠道 7×24 小时智能客服。AI 理解上下文，智能分流工单，更快解决客户问题。",
+        "features": ["全渠道 AI 对话", "智能工单路由", "知识库 AI", "情绪分析"],
         "badge": "即将推出",
         "badgeType": "soon"
       },
       {
         "name": "CanSales",
-        "tag": "AI 销售 Agent",
-        "description": "从线索到成交，全程自动化。AI 驱动的 CRM，自动跟进、评估、转化。",
-        "features": ["智能线索评分", "管线自动化", "跟进 AI", "销售洞察"],
+        "tag": "AI 销售智能体",
+        "description": "从线索到成交，全程自动化。AI 驱动的销售管道，自动跟进、评分和转化。",
+        "features": ["智能线索评分", "销售管道自动化", "AI 跟进序列", "成单洞察"],
         "badge": "即将推出",
         "badgeType": "soon"
       },
       {
         "name": "CanCommerce",
-        "tag": "AI 电商 Agent",
-        "description": "优化每个商品、活动和转化。电商智能引擎驱动收入增长。",
-        "features": ["商品优化", "活动 AI", "转化分析", "库存智能"],
+        "tag": "AI 电商智能体",
+        "description": "优化每一条商品详情、广告和转化漏斗。全天候电商智能驱动营收增长。",
+        "features": ["商品详情优化", "广告投放 AI", "转化率分析", "库存智能"],
         "badge": "即将推出",
         "badgeType": "soon"
       }
     ]
   },
   "platform": {
-    "sectionTag": "底层引擎",
-    "title": "构建于{highlight}",
-    "highlight": "统一 AI 平台",
+    "sectionTag": "技术引擎",
+    "title": "构建于 {highlight}",
+    "highlight": "统一 AI 平台之上",
+    "subtitle": "四大智能体运行于同一基础设施——共享数据、共享记忆、共享品牌身份。",
     "capabilities": [
-      "Agent 编排引擎",
-      "多模型路由",
-      "工作流自动化",
-      "知识与数据层",
-      "企业级安全"
+      { "icon": "🧠", "label": "智能体编排", "desc": "跨智能体多步推理，自动化决策路由" },
+      { "icon": "🔀", "label": "多模型路由", "desc": "GPT、Gemini、Claude 按任务智能选择最优模型" },
+      { "icon": "⚡", "label": "工作流自动化", "desc": "可视化工作流构建器，触发-动作管道和连接器" },
+      { "icon": "🗄️", "label": "知识与数据层", "desc": "768维品牌记忆向量，检索增强生成" },
+      { "icon": "🔒", "label": "企业级安全", "desc": "SOC 2 合规，数据隔离，SSO 单点登录，审计日志" },
+      { "icon": "🌐", "label": "多语言支持", "desc": "原生支持英文/简体中文/繁体中文内容生成" }
     ]
   },
   "studio": {
-    "sectionTag": "定制方案",
+    "sectionTag": "企业定制",
     "name": "Agent Studio",
-    "tag": "为需要定制 AI Agent 的企业而生",
-    "note": "平台化配置，非定制外包",
+    "tag": "为有独特需求的企业定制 AI 智能体",
+    "note": "基于 CANLAH 平台，非外包交付",
+    "headline": "为你的业务构建任意智能体",
+    "body": "标准产品不满足需求？Agent Studio 让企业在同一平台基础设施上配置定制 AI 智能体——拥有完整品牌记忆、模型路由和集成能力。",
+    "cta": "联系我们的团队",
     "features": [
-      "行业模板",
-      "可视化工作流",
-      "Prompt 编排",
-      "知识导入",
-      "API 连接器",
-      "企业级部署"
+      { "icon": "🗂", "title": "行业模板", "desc": "预置零售、餐饮、金融、医疗模板" },
+      { "icon": "🔧", "title": "可视化工作流", "desc": "拖拽式无代码智能体配置" },
+      { "icon": "💬", "title": "Prompt 编排", "desc": "带记忆和上下文的多步链路" },
+      { "icon": "📚", "title": "知识接入", "desc": "接入文档、URL 和数据库" },
+      { "icon": "🔗", "title": "API 连接器", "desc": "对接任意 CRM、ERP 或自定义系统" },
+      { "icon": "🏢", "title": "企业部署", "desc": "私有化、私有云或托管 SaaS" }
     ]
   },
   "footer": {
-    "rights": "© 2026 CANLAH AI. 保留所有权利。",
-    "tagline": "为每个业务场景打造 AI Agent"
+    "tagline": "AI 智能体，赋能每一个业务场景",
+    "status": "所有服务运行正常",
+    "products": "产品",
+    "company": "公司",
+    "aboutLink": "关于 CanMarket",
+    "contactLink": "联系我们",
+    "rights": "© 2026 CANLAH AI. 保留所有权利。"
   }
 }
