@@ -23,12 +23,12 @@
   },
   "stats": {
     "revenue": {
-      "value": "¥2M+",
-      "label": "REVENUE IN 7 MONTHS"
+      "value": "7 mo.",
+      "label": "TO $280K+ REVENUE"
     },
     "engagement": {
       "value": "+150%",
-      "label": "ENGAGEMENT RATE"
+      "label": "ENGAGEMENT RATE LIFT"
     },
     "cost": {
       "value": "−80%",
@@ -38,6 +38,32 @@
       "value": "6+",
       "label": "ENTERPRISE CLIENTS"
     }
+  },
+  "how": {
+    "sectionTag": "HOW IT WORKS",
+    "title": "From brand chaos to {highlight}",
+    "highlight": "consistent output",
+    "subtitle": "Three steps. No agency required.",
+    "steps": [
+      {
+        "num": "01",
+        "title": "Connect your brand",
+        "desc": "Upload your assets, share reference images, describe your style. Style Genome™ encodes your brand into a 768-dimensional memory vector.",
+        "detail": "Takes under 10 minutes"
+      },
+      {
+        "num": "02",
+        "title": "Agents get to work",
+        "desc": "AI agents generate content, qualify leads, resolve tickets, and optimize listings — continuously, on-brand, without prompting.",
+        "detail": "Runs 24/7 automatically"
+      },
+      {
+        "num": "03",
+        "title": "You stay in control",
+        "desc": "Review, approve, and publish in one click. Every output scored against your brand memory — so nothing off-brand ships.",
+        "detail": "Full override at any point"
+      }
+    ]
   },
   "products": {
     "sectionTag": "PRODUCT SUITE",

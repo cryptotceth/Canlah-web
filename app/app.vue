@@ -30,6 +30,7 @@ useSeoMeta({
       <SiteHeader />
       <HeroSection />
       <StatsSection />
+      <HowItWorks />
       <ProductsSection />
       <PlatformSection />
       <StudioSection />
