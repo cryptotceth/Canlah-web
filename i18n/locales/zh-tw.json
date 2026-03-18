@@ -361,6 +361,11 @@
     "cta": "立即體驗 CANLAH AI",
     "ctaNote": "提供免費層級，無需信用卡"
   },
+  "floatingCta": {
+    "title": "準備試用 CANLAH AI？",
+    "sub": "免費層級，無需信用卡",
+    "cta": "免費開始"
+  },
   "footer": {
     "tagline": "AI 智能體，賦能每一個業務場景",
     "status": "所有服務運行正常",

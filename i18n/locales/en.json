@@ -361,6 +361,11 @@
     "cta": "See CANLAH AI in action",
     "ctaNote": "Free tier available — no credit card required"
   },
+  "floatingCta": {
+    "title": "Ready to try CANLAH AI?",
+    "sub": "Free tier — no credit card",
+    "cta": "Start free"
+  },
   "footer": {
     "tagline": "AI Agents for Every Business Function",
     "status": "All systems operational",

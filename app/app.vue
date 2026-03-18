@@ -54,6 +54,7 @@ useSeoMeta({
       <FaqSection />
       <CtaSection />
       <SiteFooter />
+      <FloatingCta />
     </div>
   </div>
 </template>
