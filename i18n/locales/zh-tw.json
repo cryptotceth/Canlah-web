@@ -141,6 +141,35 @@
       { "icon": "🏢", "title": "企業部署", "desc": "私有化、私有雲或託管 SaaS" }
     ]
   },
+  "team": {
+    "sectionTag": "創始團隊",
+    "title": "由有實戰經驗的人打造",
+    "award": "MWC Pitch2Pitch 2025 · 全球亞軍",
+    "awardSub": "巴塞隆納 · 從全球 3000+ 家新創公司中脫穎而出",
+    "members": [
+      {
+        "initials": "龐",
+        "name": "龐浩洋",
+        "role": "CEO & 創始人",
+        "cred": "史丹佛 AI 研究背景。Style Genome™ 創造者——驅動所有 CANLAH 產品的品牌記憶層。",
+        "tag": "AI 架構"
+      },
+      {
+        "initials": "朱",
+        "name": "朱大衛",
+        "role": "聯合創始人",
+        "cred": "20年4A代理商經驗，曾領導跨亞太地區財富500強品牌行銷活動。MWC 2025 全球亞軍。",
+        "tag": "品牌策略"
+      },
+      {
+        "initials": "陳",
+        "name": "陳安琪",
+        "role": "聯合創始人",
+        "cred": "前奧美中國CGO，深耕品牌識別、創意系統與企業級行銷。",
+        "tag": "創意營運"
+      }
+    ]
+  },
   "how": {
     "sectionTag": "運作原理",
     "title": "從品牌混亂到{highlight}",

@@ -40,6 +40,35 @@
       "label": "ENTERPRISE CLIENTS"
     }
   },
+  "team": {
+    "sectionTag": "THE TEAM",
+    "title": "Built by people who've done this before",
+    "award": "MWC Pitch2Pitch 2025 · Global Runner-up",
+    "awardSub": "Barcelona · Competing against 3,000+ startups worldwide",
+    "members": [
+      {
+        "initials": "HP",
+        "name": "Haoyang Pang",
+        "role": "CEO & Founder",
+        "cred": "Stanford AI research. Creator of Style Genome™ — the brand memory layer powering every CANLAH product.",
+        "tag": "AI Architecture"
+      },
+      {
+        "initials": "DC",
+        "name": "David Chu",
+        "role": "Co-Founder",
+        "cred": "20 years in 4A agencies. Led campaigns for Fortune 500 brands across APAC. MWC 2025 Global Runner-up.",
+        "tag": "Brand Strategy"
+      },
+      {
+        "initials": "AC",
+        "name": "Angel Chen",
+        "role": "Co-Founder",
+        "cred": "Former CGO of Ogilvy China. Deep expertise in brand identity, creative systems, and enterprise marketing.",
+        "tag": "Creative Operations"
+      }
+    ]
+  },
   "how": {
     "sectionTag": "HOW IT WORKS",
     "title": "From brand chaos to {highlight}",
