@@ -24,9 +24,9 @@ const capabilities = computed(() => tm('platform.capabilities') as { icon: strin
         <!-- Center label -->
         <div class="text-center mb-10">
           <div class="inline-flex items-center gap-3 px-6 py-3 rounded-full border border-[#00d4ff]/30 bg-[#00d4ff]/5">
-            <span class="w-2 h-2 rounded-full bg-[#00d4ff] shadow-[0_0_10px_#00d4ff] animate-pulse"></span>
+            <span class="w-1.5 h-1.5 rounded-full bg-[#00d4ff] shadow-[0_0_6px_#00d4ff]"></span>
             <span class="font-mono text-sm font-semibold text-[#00d4ff] tracking-wider">CANLAH AI AGENT PLATFORM</span>
-            <span class="w-2 h-2 rounded-full bg-[#00d4ff] shadow-[0_0_10px_#00d4ff] animate-pulse"></span>
+            <span class="w-1.5 h-1.5 rounded-full bg-[#00d4ff] shadow-[0_0_6px_#00d4ff]"></span>
           </div>
         </div>
 

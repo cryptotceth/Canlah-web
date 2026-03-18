@@ -70,7 +70,7 @@ const cardConfig = [
         >
           <!-- Active scanline for first card -->
           <div v-if="cardConfig[i].scanline"
-            class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#00d4ff] to-transparent animate-pulse"></div>
+            class="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#00d4ff]/60 to-transparent"></div>
 
           <!-- Live badge -->
           <div class="absolute top-4 right-4">

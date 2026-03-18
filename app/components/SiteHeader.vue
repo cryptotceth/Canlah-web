@@ -14,8 +14,8 @@ onMounted(() => {
   <header
     class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md transition-all duration-300"
     :class="scrolled
-      ? 'bg-[#050d1a]/95 border-b border-white/10 shadow-[0_4px_40px_rgba(0,0,0,0.4)]'
-      : 'bg-[#050d1a]/70 border-b border-white/5'"
+      ? 'bg-[#070d16]/95 border-b border-white/10 shadow-[0_4px_40px_rgba(0,0,0,0.4)]'
+      : 'bg-[#070d16]/70 border-b border-white/5'"
   >
     <div class="max-w-[1400px] mx-auto px-6 py-4 flex items-center justify-between gap-6">
 
@@ -40,7 +40,7 @@ onMounted(() => {
           @change="setLocale(($event.target as HTMLSelectElement).value)"
           class="bg-transparent border border-white/10 rounded-md px-2 py-1 text-xs text-[#6b82b5] cursor-pointer outline-none hover:border-white/25 transition-colors"
         >
-          <option v-for="loc in locales" :key="loc.code" :value="loc.code" class="bg-[#0a1628]">
+          <option v-for="loc in locales" :key="loc.code" :value="loc.code" class="bg-[#0a1520]">
             {{ loc.name }}
           </option>
         </select>
@@ -66,14 +66,14 @@ onMounted(() => {
     </div>
 
     <!-- Mobile menu -->
-    <div v-if="isMenuOpen" class="md:hidden border-t border-white/8 bg-[#050d1a]/98 px-6 py-5 flex flex-col gap-4">
+    <div v-if="isMenuOpen" class="md:hidden border-t border-white/8 bg-[#070d16]/98 px-6 py-5 flex flex-col gap-4">
       <a href="#products" class="text-sm text-[#8ba4cc] py-1" @click="isMenuOpen = false">{{ $t('nav.products') }}</a>
       <a href="#platform" class="text-sm text-[#8ba4cc] py-1" @click="isMenuOpen = false">{{ $t('nav.platform') }}</a>
       <a href="#faq" class="text-sm text-[#8ba4cc] py-1" @click="isMenuOpen = false">{{ $t('nav.faq') }}</a>
       <div class="border-t border-white/8 pt-4 flex flex-col gap-3">
         <select :value="locale" @change="setLocale(($event.target as HTMLSelectElement).value)"
           class="bg-transparent border border-white/10 rounded-md px-2 py-1 text-xs text-[#6b82b5] w-fit">
-          <option v-for="loc in locales" :key="loc.code" :value="loc.code" class="bg-[#0a1628]">{{ loc.name }}</option>
+          <option v-for="loc in locales" :key="loc.code" :value="loc.code" class="bg-[#0a1520]">{{ loc.name }}</option>
         </select>
         <a href="mailto:hello@canlah.ai" class="text-sm text-[#6b82b5]" @click="isMenuOpen = false">{{ $t('nav.demo') }}</a>
         <a href="https://app.canmarket.ai" target="_blank"
