@@ -166,6 +166,41 @@
       { "icon": "🏢", "title": "Enterprise Deployment", "desc": "On-prem, private cloud, or managed SaaS" }
     ]
   },
+  "faq": {
+    "sectionTag": "FAQ",
+    "title": "Questions we get asked",
+    "more": "Something else on your mind?",
+    "items": [
+      {
+        "q": "How is CANLAH AI different from ChatGPT or Jasper?",
+        "a": "ChatGPT and Jasper generate generic content — they don't know your brand. CANLAH AI encodes your brand into a 768-dimensional memory vector (Style Genome™) that every output is checked against. The result is content that looks like your team made it, not an AI. Think of it as the difference between a writing assistant and a brand-trained creative director."
+      },
+      {
+        "q": "How does Style Genome™ actually learn my brand?",
+        "a": "You upload reference images, describe your visual style, and share examples of content you love. Style Genome™ uses a multimodal AI pipeline to extract your color palette, composition patterns, tone, and density — encoding them into a persistent vector. Every future generation is scored against this vector before it reaches you."
+      },
+      {
+        "q": "What's the pricing model?",
+        "a": "CanMarket operates on a credit-based model — you buy credits and spend them on generation tasks. There's a free tier to get started with no credit card required. Enterprise teams can contact us for volume pricing and custom SLAs."
+      },
+      {
+        "q": "Is my brand data secure? Where is it stored?",
+        "a": "All brand memory data is stored with SOC 2-grade infrastructure, encrypted at rest and in transit. Each workspace is fully isolated — your brand vectors and content are never shared with or used to train on behalf of other customers. Enterprise customers can request data residency options."
+      },
+      {
+        "q": "How long does onboarding take?",
+        "a": "Most teams complete their initial brand setup in under 10 minutes — upload a few reference images, answer a short style questionnaire, and your Style Genome™ is ready. Your first AI-generated content is usually produced in the same session."
+      },
+      {
+        "q": "Which markets and languages does CanMarket support?",
+        "a": "CanMarket supports content generation in English, Simplified Chinese, and Traditional Chinese, with more languages on the roadmap. The platform is used by teams across APAC, Europe, and North America. It works with WeChat, Instagram, LinkedIn, Facebook, and other major channels."
+      },
+      {
+        "q": "Do I need to replace my existing agency?",
+        "a": "No — many of our clients (including 4A agencies like Publicis and McCann) use CanMarket alongside their existing workflows. Agencies use it to scale output without proportionally scaling headcount. Brands use it to reduce dependency on agencies for routine content while freeing agency time for strategic work."
+      }
+    ]
+  },
   "cta": {
     "badge": "GET STARTED TODAY",
     "headline": "Your brand. Every output.\nOn autopilot.",
