@@ -8,7 +8,7 @@ const quotes = computed(() => tm('testimonials.quotes') as { quote: string; role
     <div class="max-w-[1400px] mx-auto">
 
       <!-- Section header -->
-      <div class="text-center mb-14">
+      <div v-reveal class="text-center mb-14">
         <div class="font-mono text-[10px] text-[#00e5a0] tracking-[4px] mb-3">{{ $t('testimonials.sectionTag') }}</div>
         <h2 class="font-display font-extrabold text-4xl md:text-5xl text-white leading-tight">
           {{ $t('testimonials.title') }}
@@ -20,6 +20,7 @@ const quotes = computed(() => tm('testimonials.quotes') as { quote: string; role
         <div
           v-for="(q, i) in quotes"
           :key="i"
+          v-reveal="{ delay: i * 120 }"
           class="group relative rounded-2xl border border-white/8 bg-white/[0.025] backdrop-blur-sm p-7 flex flex-col hover:border-[#00e5a0]/25 hover:bg-white/[0.04] transition-all duration-300"
         >
           <!-- Top accent -->

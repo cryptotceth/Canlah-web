@@ -8,7 +8,7 @@ const steps = computed(() => tm('how.steps') as { num: string; title: string; de
     <div class="max-w-[1400px] mx-auto">
 
       <!-- Section header -->
-      <div class="text-center mb-16">
+      <div v-reveal class="text-center mb-16">
         <div class="font-mono text-[10px] text-[#00d4ff] tracking-[4px] mb-3">{{ $t('how.sectionTag') }}</div>
         <h2 class="font-display font-extrabold text-4xl md:text-5xl text-white leading-tight">
           <span v-html="$t('how.title', { highlight: `<span class='bg-gradient-to-r from-[#00d4ff] to-[#3b7fff] bg-clip-text text-transparent'>${$t('how.highlight')}</span>` })"></span>
@@ -25,6 +25,7 @@ const steps = computed(() => tm('how.steps') as { num: string; title: string; de
           <div
             v-for="(step, i) in steps"
             :key="i"
+            v-reveal="{ delay: i * 150 }"
             class="group flex flex-col items-center lg:items-start text-center lg:text-left"
           >
             <!-- Step number circle -->

@@ -1,7 +1,7 @@
 <template>
   <section class="py-24 px-6">
     <div class="max-w-[900px] mx-auto">
-      <div class="relative rounded-3xl overflow-hidden border border-[#00d4ff]/25 bg-gradient-to-br from-[#071035] via-[#0b1945] to-[#060d22] p-12 md:p-16 text-center">
+      <div v-reveal class="relative rounded-3xl overflow-hidden border border-[#00d4ff]/25 bg-gradient-to-br from-[#071035] via-[#0b1945] to-[#060d22] p-12 md:p-16 text-center">
 
         <!-- Top glow line -->
         <div class="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#00d4ff]/70 to-transparent"></div>

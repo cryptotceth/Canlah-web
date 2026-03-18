@@ -1,7 +1,7 @@
 <template>
   <footer class="py-16 px-6 border-t border-white/5 mt-8">
     <div class="max-w-[1400px] mx-auto">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+      <div v-reveal class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
         <!-- Brand -->
         <div class="md:col-span-2">
           <div class="flex items-center gap-3 mb-4">

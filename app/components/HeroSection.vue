@@ -24,7 +24,7 @@ onUnmounted(() => {
 
 <template>
   <section class="pt-28 pb-16 px-6 text-center flex flex-col items-center justify-center relative">
-    <div class="max-w-5xl mx-auto">
+    <div v-reveal class="max-w-5xl mx-auto">
 
       <!-- Top badge -->
       <div class="inline-flex items-center gap-2 mb-8 px-4 py-1.5 rounded-full border border-[#00e5a0]/30 bg-[#00e5a0]/5">

@@ -63,6 +63,7 @@ const cardConfig = [
         <div
           v-for="(card, i) in cards"
           :key="i"
+          v-reveal="{ delay: i * 100 }"
           class="group relative rounded-2xl border bg-gradient-to-br backdrop-blur-md p-7 cursor-default transition-all duration-300 hover:-translate-y-2 overflow-hidden"
           :class="[cardConfig[i].borderColor, cardConfig[i].bgColor, 'hover:border-opacity-70']"
           :style="{ boxShadow: `0 0 40px ${cardConfig[i].glowColor}` }"

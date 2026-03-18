@@ -17,7 +17,7 @@ const features = computed(() => tm('studio.features') as { icon: string, title: 
       </div>
 
       <!-- Two-column layout -->
-      <div class="grid md:grid-cols-2 gap-6">
+      <div v-reveal class="grid md:grid-cols-2 gap-6">
         <!-- Left: Description + CTA -->
         <div class="rounded-2xl border border-[#6496ff]/20 bg-gradient-to-br from-[#0e1530]/90 to-[#060d22]/95 p-8 flex flex-col">
           <div class="flex-1">

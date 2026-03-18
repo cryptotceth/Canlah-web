@@ -11,7 +11,7 @@ const avatarColors = [
 
 <template>
   <section class="py-16 px-6">
-    <div class="max-w-[1400px] mx-auto">
+    <div v-reveal class="max-w-[1400px] mx-auto">
 
       <!-- Section header -->
       <div class="flex items-center gap-4 mb-10">

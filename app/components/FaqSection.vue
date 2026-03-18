@@ -21,7 +21,7 @@ function toggle(i: number) {
       </div>
 
       <!-- Accordion -->
-      <div class="space-y-2">
+      <div v-reveal class="space-y-2">
         <div
           v-for="(item, i) in faqs"
           :key="i"

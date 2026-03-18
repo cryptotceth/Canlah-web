@@ -1,7 +1,7 @@
 <template>
   <section class="py-14 px-6">
     <div class="max-w-[1400px] mx-auto">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div v-reveal class="grid grid-cols-2 md:grid-cols-4 gap-4">
         <div
           v-for="stat in stats"
           :key="stat.key"

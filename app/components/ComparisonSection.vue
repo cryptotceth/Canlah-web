@@ -24,7 +24,7 @@ const rows = computed(() => tm('comparison.rows') as {
       </div>
 
       <!-- Comparison table -->
-      <div class="overflow-x-auto -mx-6 px-6">
+      <div v-reveal class="overflow-x-auto -mx-6 px-6">
         <table class="w-full min-w-[640px] border-collapse">
 
           <!-- Column headers -->
