@@ -1,10 +1,40 @@
 <script setup lang="ts">
 useHead({
   link: [
+    { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
     { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
     { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
     { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600&display=swap' },
-  ]
+  ],
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Organization',
+        name: 'CANLAH AI',
+        url: 'https://canlah.ai',
+        logo: 'https://canlah.ai/favicon.svg',
+        description: 'AI platform company building intelligent agents for marketing, sales, service, and commerce.',
+        foundingDate: '2024',
+        sameAs: [],
+        contactPoint: {
+          '@type': 'ContactPoint',
+          email: 'hello@canlah.ai',
+          contactType: 'sales',
+        },
+        offers: {
+          '@type': 'Offer',
+          name: 'CanMarket',
+          description: 'AI Marketing Agent with Style Genome™ brand memory',
+          url: 'https://app.canmarket.ai',
+          price: '0',
+          priceCurrency: 'USD',
+          availability: 'https://schema.org/InStock',
+        },
+      }),
+    },
+  ],
 })
 
 useSeoMeta({
