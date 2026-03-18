@@ -2,7 +2,14 @@
 const visible = ref(false)
 
 onMounted(() => {
-  const onScroll = () => { visible.value = window.scrollY > 600 }
+  const onScroll = () => {
+    const scrollY = window.scrollY
+    const docHeight = document.documentElement.scrollHeight
+    const winHeight = window.innerHeight
+    const nearBottom = scrollY + winHeight > docHeight - 400
+
+    visible.value = scrollY > 600 && !nearBottom
+  }
   window.addEventListener('scroll', onScroll, { passive: true })
   onUnmounted(() => window.removeEventListener('scroll', onScroll))
 })

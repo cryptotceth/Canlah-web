@@ -1,5 +1,5 @@
 <template>
-  <footer class="py-16 px-6 border-t border-white/5 mt-8">
+  <footer class="py-16 pb-24 md:pb-16 px-6 border-t border-white/5 mt-8">
     <div class="max-w-[1400px] mx-auto">
       <div v-reveal class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
         <!-- Brand -->
