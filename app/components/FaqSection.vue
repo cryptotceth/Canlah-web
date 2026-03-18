@@ -9,7 +9,7 @@ function toggle(i: number) {
 </script>
 
 <template>
-  <section class="py-20 px-6">
+  <section id="faq" class="py-20 px-6">
     <div class="max-w-[780px] mx-auto">
 
       <!-- Section header -->

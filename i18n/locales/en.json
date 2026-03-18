@@ -2,8 +2,9 @@
   "nav": {
     "products": "Products",
     "platform": "Platform",
-    "about": "About",
-    "contact": "Contact"
+    "faq": "FAQ",
+    "demo": "Book a Demo",
+    "tryFree": "Try Free"
   },
   "hero": {
     "badge1": "AI-POWERED",

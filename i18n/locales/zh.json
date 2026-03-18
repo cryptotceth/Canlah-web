@@ -2,8 +2,9 @@
   "nav": {
     "products": "产品",
     "platform": "平台",
-    "about": "关于",
-    "contact": "联系我们"
+    "faq": "常见问题",
+    "demo": "预约演示",
+    "tryFree": "免费试用"
   },
   "hero": {
     "badge1": "AI 驱动",
