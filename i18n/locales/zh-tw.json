@@ -241,6 +241,70 @@
     "note2": "10分鐘內完成設置",
     "note3": "隨時取消"
   },
+  "pricing": {
+    "sectionTag": "定價",
+    "title": "免費開始，隨需增長",
+    "subtitle": "無合約，無驚喜。CanMarket 按積分計費——按需購買，隨時取消。",
+    "popularBadge": "最受歡迎",
+    "note": "所有方案均含 SOC 2 級基礎設施 · 數據隔離 · 企業版支持 SSO",
+    "tiers": [
+      {
+        "name": "入門版",
+        "tag": "適合個人及小團隊",
+        "price": "免費",
+        "priceSub": "永久免費",
+        "highlight": false,
+        "cta": "免費開始 →",
+        "ctaUrl": "https://app.canmarket.ai",
+        "ctaStyle": "border border-white/15 text-white/70 hover:border-white/30 hover:text-white hover:bg-white/5",
+        "features": [
+          "每月 50 次 AI 生成",
+          "1 個品牌工作區",
+          "Style Genome™ 品牌記憶",
+          "基礎內容模板",
+          "多渠道導出",
+          "無需信用卡"
+        ]
+      },
+      {
+        "name": "增長版",
+        "tag": "適合成長品牌及代理商",
+        "price": "積分制",
+        "priceSub": "按需付費",
+        "highlight": true,
+        "cta": "立即開始 →",
+        "ctaUrl": "https://app.canmarket.ai",
+        "ctaStyle": "bg-gradient-to-r from-[#0d47e0] to-[#00d4ff] text-white hover:shadow-[0_0_30px_rgba(0,212,255,0.4)] hover:scale-[1.02]",
+        "features": [
+          "無限生成（積分制）",
+          "最多 5 個品牌工作區",
+          "完整 Style Genome™ + 視覺記憶",
+          "活動自動化",
+          "多渠道發布",
+          "優先支援",
+          "進階分析"
+        ]
+      },
+      {
+        "name": "企業版",
+        "tag": "適合企業及多品牌",
+        "price": "定制",
+        "priceSub": "批量定價",
+        "highlight": false,
+        "cta": "聯繫銷售 →",
+        "ctaStyle": "border border-[#6496ff]/30 text-[#6496ff] hover:border-[#6496ff]/60 hover:bg-[#6496ff]/8",
+        "features": [
+          "無限品牌和工作區",
+          "全部 4 個智能體（含即將推出）",
+          "Agent Studio——定制 AI 智能體",
+          "專屬客戶成功經理及 SLA",
+          "SSO + 審計日誌",
+          "數據駐留選項",
+          "支持私有化/私有雲部署"
+        ]
+      }
+    ]
+  },
   "comparison": {
     "sectionTag": "為何選擇 CANLAH",
     "title": "不只是另一款 AI 工具——",

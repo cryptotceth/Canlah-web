@@ -241,6 +241,70 @@
     "note2": "Setup in under 10 minutes",
     "note3": "Cancel anytime"
   },
+  "pricing": {
+    "sectionTag": "PRICING",
+    "title": "Start free. Scale as you grow.",
+    "subtitle": "No contracts, no surprises. CanMarket runs on credits — buy what you need, cancel anytime.",
+    "popularBadge": "MOST POPULAR",
+    "note": "All plans include SOC 2-grade infrastructure · Data isolation · SSO available on Enterprise",
+    "tiers": [
+      {
+        "name": "Starter",
+        "tag": "FOR INDIVIDUALS & SMALL TEAMS",
+        "price": "Free",
+        "priceSub": "forever",
+        "highlight": false,
+        "cta": "Start for free →",
+        "ctaUrl": "https://app.canmarket.ai",
+        "ctaStyle": "border border-white/15 text-white/70 hover:border-white/30 hover:text-white hover:bg-white/5",
+        "features": [
+          "50 AI generations / month",
+          "1 brand workspace",
+          "Style Genome™ brand memory",
+          "Basic content templates",
+          "Multi-channel export",
+          "No credit card required"
+        ]
+      },
+      {
+        "name": "Growth",
+        "tag": "FOR GROWING BRANDS & AGENCIES",
+        "price": "Credits",
+        "priceSub": "pay as you go",
+        "highlight": true,
+        "cta": "Get started →",
+        "ctaUrl": "https://app.canmarket.ai",
+        "ctaStyle": "bg-gradient-to-r from-[#0d47e0] to-[#00d4ff] text-white hover:shadow-[0_0_30px_rgba(0,212,255,0.4)] hover:scale-[1.02]",
+        "features": [
+          "Unlimited generations (credit-based)",
+          "Up to 5 brand workspaces",
+          "Full Style Genome™ + visual memory",
+          "Campaign automation",
+          "Multi-channel publishing",
+          "Priority support",
+          "Advanced analytics"
+        ]
+      },
+      {
+        "name": "Enterprise",
+        "tag": "FOR ENTERPRISE & MULTI-BRAND",
+        "price": "Custom",
+        "priceSub": "volume pricing",
+        "highlight": false,
+        "cta": "Talk to sales →",
+        "ctaStyle": "border border-[#6496ff]/30 text-[#6496ff] hover:border-[#6496ff]/60 hover:bg-[#6496ff]/8",
+        "features": [
+          "Unlimited brands & workspaces",
+          "All 4 agents (CanMarket + coming soon)",
+          "Agent Studio — custom AI agents",
+          "Dedicated CSM & SLA",
+          "SSO + audit logs",
+          "Data residency options",
+          "On-prem / private cloud available"
+        ]
+      }
+    ]
+  },
   "comparison": {
     "sectionTag": "WHY CANLAH",
     "title": "Not just another AI tool — ",

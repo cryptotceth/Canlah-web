@@ -37,6 +37,7 @@ useSeoMeta({
       <ProductsSection />
       <PlatformSection />
       <StudioSection />
+      <PricingSection />
       <FaqSection />
       <CtaSection />
       <SiteFooter />
