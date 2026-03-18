@@ -26,7 +26,7 @@ onMounted(() => {
       </a>
 
       <!-- Desktop Nav -->
-      <nav class="hidden md:flex items-center gap-6 flex-1 justify-center">
+      <nav aria-label="Main navigation" class="hidden md:flex items-center gap-6 flex-1 justify-center">
         <a href="#products" class="text-sm text-[#6b82b5] hover:text-white transition-colors">{{ $t('nav.products') }}</a>
         <a href="#pricing" class="text-sm text-[#6b82b5] hover:text-white transition-colors">{{ $t('nav.pricing') }}</a>
         <a href="#platform" class="text-sm text-[#6b82b5] hover:text-white transition-colors">{{ $t('nav.platform') }}</a>

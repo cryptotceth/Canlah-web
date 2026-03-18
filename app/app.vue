@@ -71,6 +71,12 @@ useSeoMeta({
     <div class="fixed w-[400px] h-[400px] rounded-full blur-[120px] opacity-[0.035] pointer-events-none z-0 bg-[#4a6aaf] top-[30%] left-[40%]"></div>
 
     <div class="relative z-[1]">
+      <!-- Skip to content — WCAG 2.1 requirement -->
+      <a href="#main-content"
+        class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[60] focus:px-4 focus:py-2 focus:rounded-lg focus:bg-[#0d47e0] focus:text-white focus:text-sm focus:font-semibold focus:shadow-lg focus:outline-none">
+        Skip to main content
+      </a>
+
       <SiteHeader />
       <HeroSection />
       <StatsSection />

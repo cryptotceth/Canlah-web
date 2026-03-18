@@ -23,7 +23,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <section class="pt-28 pb-16 px-6 text-center flex flex-col items-center justify-center relative">
+  <section id="main-content" role="main" aria-label="CANLAH AI — AI Agents for Every Business Function" class="pt-28 pb-16 px-6 text-center flex flex-col items-center justify-center relative">
     <div v-reveal class="max-w-5xl mx-auto">
 
       <!-- Top badge -->
