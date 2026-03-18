@@ -28,6 +28,7 @@ onMounted(() => {
       <!-- Desktop Nav -->
       <nav class="hidden md:flex items-center gap-6 flex-1 justify-center">
         <a href="#products" class="text-sm text-[#6b82b5] hover:text-white transition-colors">{{ $t('nav.products') }}</a>
+        <a href="#pricing" class="text-sm text-[#6b82b5] hover:text-white transition-colors">{{ $t('nav.pricing') }}</a>
         <a href="#platform" class="text-sm text-[#6b82b5] hover:text-white transition-colors">{{ $t('nav.platform') }}</a>
         <a href="#faq" class="text-sm text-[#6b82b5] hover:text-white transition-colors">{{ $t('nav.faq') }}</a>
       </nav>
@@ -68,6 +69,7 @@ onMounted(() => {
     <!-- Mobile menu -->
     <div v-if="isMenuOpen" class="md:hidden border-t border-white/8 bg-[#070d16]/98 px-6 py-5 flex flex-col gap-4">
       <a href="#products" class="text-sm text-[#8ba4cc] py-1" @click="isMenuOpen = false">{{ $t('nav.products') }}</a>
+      <a href="#pricing" class="text-sm text-[#8ba4cc] py-1" @click="isMenuOpen = false">{{ $t('nav.pricing') }}</a>
       <a href="#platform" class="text-sm text-[#8ba4cc] py-1" @click="isMenuOpen = false">{{ $t('nav.platform') }}</a>
       <a href="#faq" class="text-sm text-[#8ba4cc] py-1" @click="isMenuOpen = false">{{ $t('nav.faq') }}</a>
       <div class="border-t border-white/8 pt-4 flex flex-col gap-3">

@@ -10,6 +10,14 @@ useHead({
 useSeoMeta({
   title: 'CANLAH AI — AI Agents for Every Business Function',
   description: 'The AI platform company behind CanMarket, CanService, CanSales & CanCommerce. Intelligent agents that automate marketing, sales, service, and commerce.',
+  ogType: 'website',
+  ogSiteName: 'CANLAH AI',
+  ogTitle: 'CANLAH AI — AI Agents for Every Business Function',
+  ogDescription: 'Intelligent AI agents that automate marketing, sales, service, and commerce. Style Genome™ brand memory ensures every output looks like your team made it. Trusted by Haleon, Starbucks, Publicis.',
+  ogUrl: 'https://canlah.ai',
+  twitterCard: 'summary_large_image',
+  twitterTitle: 'CANLAH AI — AI Agents for Every Business Function',
+  twitterDescription: 'AI agents that automate marketing, sales, service & commerce with brand memory. Start free.',
 })
 </script>
 

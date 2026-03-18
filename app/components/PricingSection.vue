@@ -8,7 +8,7 @@ const tiers = computed(() => tm('pricing.tiers') as {
 </script>
 
 <template>
-  <section class="py-20 px-6">
+  <section id="pricing" class="py-20 px-6">
     <div class="max-w-[1100px] mx-auto">
 
       <!-- Section header -->
