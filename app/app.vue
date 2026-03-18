@@ -35,6 +35,7 @@ useSeoMeta({
       <ProductsSection />
       <PlatformSection />
       <StudioSection />
+      <CtaSection />
       <SiteFooter />
     </div>
   </div>

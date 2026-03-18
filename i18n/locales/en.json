@@ -166,6 +166,16 @@
       { "icon": "🏢", "title": "Enterprise Deployment", "desc": "On-prem, private cloud, or managed SaaS" }
     ]
   },
+  "cta": {
+    "badge": "GET STARTED TODAY",
+    "headline": "Your brand. Every output.\nOn autopilot.",
+    "sub": "Join the teams at Haleon, Starbucks, and Publicis already running on CANLAH AI. Start with CanMarket — free.",
+    "primary": "Try CanMarket Free",
+    "secondary": "Book a Demo",
+    "note1": "No credit card required",
+    "note2": "Setup in under 10 minutes",
+    "note3": "Cancel anytime"
+  },
   "footer": {
     "tagline": "AI Agents for Every Business Function",
     "status": "All systems operational",

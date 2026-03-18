@@ -166,6 +166,16 @@
       }
     ]
   },
+  "cta": {
+    "badge": "立即开始",
+    "headline": "你的品牌。每一次输出。\n全自动运行。",
+    "sub": "加入已在使用 CANLAH AI 的 Haleon、星巴克、阳狮团队。从 CanMarket 免费开始。",
+    "primary": "免费试用 CanMarket",
+    "secondary": "预约演示",
+    "note1": "无需信用卡",
+    "note2": "10分钟内完成设置",
+    "note3": "随时取消"
+  },
   "footer": {
     "tagline": "AI 智能体，赋能每一个业务场景",
     "status": "所有服务运行正常",
