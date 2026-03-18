@@ -241,6 +241,61 @@
     "note2": "Setup in under 10 minutes",
     "note3": "Cancel anytime"
   },
+  "comparison": {
+    "sectionTag": "WHY CANLAH",
+    "title": "Not just another AI tool — ",
+    "highlight": "built for brands",
+    "subtitle": "Generic AI generates content. Agencies charge for it. CANLAH AI remembers your brand and scales it.",
+    "col1": { "label": "GENERIC AI", "name": "ChatGPT / Jasper" },
+    "col2": { "label": "4A AGENCY", "name": "Traditional Agency" },
+    "col3": { "label": "AI PLATFORM", "name": "CANLAH AI" },
+    "rows": [
+      {
+        "label": "Brand memory",
+        "generic": { "icon": "❌", "text": "None" },
+        "agency": { "icon": "⚠️", "text": "Manual briefs" },
+        "canlah": { "icon": "✅", "text": "Style Genome™" }
+      },
+      {
+        "label": "Time to first content",
+        "generic": { "icon": "✅", "text": "Instant" },
+        "agency": { "icon": "❌", "text": "3–4 weeks" },
+        "canlah": { "icon": "✅", "text": "< 48 hours" }
+      },
+      {
+        "label": "Brand consistency",
+        "generic": { "icon": "❌", "text": "Generic output" },
+        "agency": { "icon": "⚠️", "text": "Varies by team" },
+        "canlah": { "icon": "✅", "text": "Auto-enforced" }
+      },
+      {
+        "label": "Scales with demand",
+        "generic": { "icon": "✅", "text": "Yes" },
+        "agency": { "icon": "❌", "text": "Headcount-bound" },
+        "canlah": { "icon": "✅", "text": "Unlimited" }
+      },
+      {
+        "label": "Cost model",
+        "generic": { "icon": "💲", "text": "Per token" },
+        "agency": { "icon": "💲💲💲💲", "text": "Monthly retainer" },
+        "canlah": { "icon": "💲💲", "text": "Credit-based" }
+      },
+      {
+        "label": "Enterprise security",
+        "generic": { "icon": "❌", "text": "Shared model" },
+        "agency": { "icon": "⚠️", "text": "NDA only" },
+        "canlah": { "icon": "✅", "text": "SOC 2, isolated" }
+      },
+      {
+        "label": "24/7 availability",
+        "generic": { "icon": "✅", "text": "Yes" },
+        "agency": { "icon": "❌", "text": "Business hours" },
+        "canlah": { "icon": "✅", "text": "Always on" }
+      }
+    ],
+    "cta": "See CANLAH AI in action",
+    "ctaNote": "Free tier available — no credit card required"
+  },
   "footer": {
     "tagline": "AI Agents for Every Business Function",
     "status": "All systems operational",

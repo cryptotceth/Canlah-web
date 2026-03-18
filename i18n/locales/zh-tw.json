@@ -241,6 +241,61 @@
     "note2": "10分鐘內完成設置",
     "note3": "隨時取消"
   },
+  "comparison": {
+    "sectionTag": "為何選擇 CANLAH",
+    "title": "不只是另一款 AI 工具——",
+    "highlight": "專為品牌而生",
+    "subtitle": "通用 AI 生成內容。代理商收費執行。CANLAH AI 記住你的品牌並規模化輸出。",
+    "col1": { "label": "通用 AI", "name": "ChatGPT / Jasper" },
+    "col2": { "label": "4A 代理商", "name": "傳統代理商" },
+    "col3": { "label": "AI 平台", "name": "CANLAH AI" },
+    "rows": [
+      {
+        "label": "品牌記憶",
+        "generic": { "icon": "❌", "text": "無" },
+        "agency": { "icon": "⚠️", "text": "手動 brief" },
+        "canlah": { "icon": "✅", "text": "Style Genome™" }
+      },
+      {
+        "label": "首批內容產出時間",
+        "generic": { "icon": "✅", "text": "即時" },
+        "agency": { "icon": "❌", "text": "3–4 週" },
+        "canlah": { "icon": "✅", "text": "< 48 小時" }
+      },
+      {
+        "label": "品牌一致性",
+        "generic": { "icon": "❌", "text": "通用輸出" },
+        "agency": { "icon": "⚠️", "text": "因團隊而異" },
+        "canlah": { "icon": "✅", "text": "自動強制執行" }
+      },
+      {
+        "label": "按需擴展",
+        "generic": { "icon": "✅", "text": "是" },
+        "agency": { "icon": "❌", "text": "受人力限制" },
+        "canlah": { "icon": "✅", "text": "無限擴展" }
+      },
+      {
+        "label": "成本模型",
+        "generic": { "icon": "💲", "text": "按 token 計費" },
+        "agency": { "icon": "💲💲💲💲", "text": "月度固定費用" },
+        "canlah": { "icon": "💲💲", "text": "積分制" }
+      },
+      {
+        "label": "企業級安全",
+        "generic": { "icon": "❌", "text": "共享模型" },
+        "agency": { "icon": "⚠️", "text": "僅 NDA" },
+        "canlah": { "icon": "✅", "text": "SOC 2，數據隔離" }
+      },
+      {
+        "label": "7×24 小時可用",
+        "generic": { "icon": "✅", "text": "是" },
+        "agency": { "icon": "❌", "text": "工作時間" },
+        "canlah": { "icon": "✅", "text": "全天候在線" }
+      }
+    ],
+    "cta": "立即體驗 CANLAH AI",
+    "ctaNote": "提供免費層級，無需信用卡"
+  },
   "footer": {
     "tagline": "AI 智能體，賦能每一個業務場景",
     "status": "所有服務運行正常",

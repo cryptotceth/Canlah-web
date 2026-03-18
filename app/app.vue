@@ -33,6 +33,7 @@ useSeoMeta({
       <TeamSection />
       <HowItWorks />
       <TestimonialsSection />
+      <ComparisonSection />
       <ProductsSection />
       <PlatformSection />
       <StudioSection />
