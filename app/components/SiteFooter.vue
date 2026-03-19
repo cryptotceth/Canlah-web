@@ -34,6 +34,8 @@
           <ul class="space-y-2.5">
             <li><a href="https://canmarket.ai" target="_blank" class="text-[13px] text-[#5a6a88] hover:text-[#00d4ff] transition-colors">{{ $t('footer.aboutLink') }}</a></li>
             <li><a href="mailto:hello@canlah.ai" class="text-[13px] text-[#5a6a88] hover:text-[#00d4ff] transition-colors">{{ $t('footer.contactLink') }}</a></li>
+            <li><NuxtLink to="/privacy" class="text-[13px] text-[#5a6a88] hover:text-[#00d4ff] transition-colors">Privacy Policy</NuxtLink></li>
+            <li><NuxtLink to="/terms" class="text-[13px] text-[#5a6a88] hover:text-[#00d4ff] transition-colors">Terms of Service</NuxtLink></li>
           </ul>
         </div>
       </div>

@@ -77,20 +77,7 @@ useSeoMeta({
         Skip to main content
       </a>
 
-      <SiteHeader />
-      <HeroSection />
-      <StatsSection />
-      <HowItWorks />
-      <TestimonialsSection />
-      <ComparisonSection />
-      <ProductsSection />
-      <PlatformSection />
-      <StudioSection />
-      <PricingSection />
-      <FaqSection />
-      <CtaSection />
-      <SiteFooter />
-      <FloatingCta />
+      <NuxtPage />
     </div>
   </div>
 </template>

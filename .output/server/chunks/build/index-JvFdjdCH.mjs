@@ -1,0 +1,450 @@
+import { c as _export_sfc, _ as __nuxt_component_0, b as __nuxt_component_12 } from './SiteFooter-CTLD13jr.mjs';
+import { useSSRContext, defineComponent, ref, resolveDirective, mergeProps, unref, computed } from 'vue';
+import { ssrRenderAttrs, ssrGetDirectiveProps, ssrInterpolate, ssrRenderClass, ssrRenderStyle, ssrRenderList, ssrRenderAttr, ssrRenderComponent } from 'vue/server-renderer';
+import { a as useI18n } from './server.mjs';
+import '../nitro/nitro.mjs';
+import 'lru-cache';
+import '@unocss/core';
+import '@unocss/preset-wind3';
+import 'devalue';
+import 'consola';
+import 'unhead';
+import 'node:http';
+import 'node:https';
+import 'node:events';
+import 'node:buffer';
+import 'node:fs';
+import 'node:path';
+import 'node:crypto';
+import 'vue-router';
+import 'node:url';
+import 'unhead/server';
+import 'unhead/plugins';
+import 'unhead/utils';
+import 'vue-bundle-renderer/runtime';
+import 'fast-xml-parser';
+import 'perfect-debounce';
+import '@vue/shared';
+import '@unhead/addons';
+import '@unhead/schema-org/vue';
+
+const _sfc_main$c = /* @__PURE__ */ defineComponent({
+  __name: "HeroSection",
+  __ssrInlineRender: true,
+  setup(__props) {
+    const words = ["Marketing", "Sales", "Service", "Commerce"];
+    ref(0);
+    const displayed = ref(words[0]);
+    const isAnimating = ref(false);
+    return (_ctx, _push, _parent, _attrs) => {
+      const _directive_reveal = resolveDirective("reveal");
+      _push(`<section${ssrRenderAttrs(mergeProps({
+        id: "main-content",
+        role: "main",
+        "aria-label": "CANLAH AI — AI Agents for Every Business Function",
+        class: "pt-28 pb-16 px-6 text-center flex flex-col items-center justify-center relative"
+      }, _attrs))}><div${ssrRenderAttrs(mergeProps({ class: "max-w-5xl mx-auto" }, ssrGetDirectiveProps(_ctx, _directive_reveal)))}><div class="inline-flex items-center gap-2 mb-8 px-4 py-1.5 rounded-full border border-[#00e5a0]/30 bg-[#00e5a0]/5"><span class="w-1.5 h-1.5 rounded-full bg-[#00e5a0] shadow-[0_0_8px_#00e5a0] animate-pulse"></span><span class="text-[11px] font-mono text-[#00e5a0] tracking-[2px]">${ssrInterpolate(_ctx.$t("hero.badge1"))} · ${ssrInterpolate(_ctx.$t("hero.badge2"))}</span></div><h1 class="font-display font-extrabold text-[52px] md:text-[76px] leading-[1.05] tracking-tight mb-6"><span class="text-white">${ssrInterpolate(_ctx.$t("hero.line1"))}<br></span><span class="relative inline-block"><span class="${ssrRenderClass([unref(isAnimating) ? "opacity-0 translate-y-2" : "opacity-100 translate-y-0", "bg-gradient-to-r from-[#00d4ff] via-[#3b7fff] to-[#0d47e0] bg-clip-text text-transparent transition-all duration-300"])}" style="${ssrRenderStyle({ "display": "inline-block" })}">${ssrInterpolate(unref(displayed))}</span></span><span class="text-white">${ssrInterpolate(_ctx.$t("hero.line3"))}</span></h1><p class="text-[17px] text-[#7090c8] max-w-2xl mx-auto mb-10 leading-relaxed">${ssrInterpolate(_ctx.$t("hero.description"))}</p><div class="flex gap-4 justify-center flex-wrap mb-14"><a href="https://app.canmarket.ai" target="_blank" class="group px-8 py-3.5 rounded-full font-semibold text-sm bg-gradient-to-r from-[#0d47e0] to-[#00d4ff] text-white hover:shadow-[0_0_40px_rgba(0,212,255,0.5)] transition-all hover:scale-[1.03] flex items-center gap-2">${ssrInterpolate(_ctx.$t("hero.cta"))} <span class="group-hover:translate-x-1 transition-transform">→</span></a><a href="#products" class="px-8 py-3.5 rounded-full font-semibold text-sm border border-white/15 text-white/80 hover:border-[#00d4ff]/50 hover:text-white hover:bg-white/5 transition-all">${ssrInterpolate(_ctx.$t("hero.cta2"))}</a></div><div class="border-t border-white/5 pt-10"><p class="text-[11px] font-mono text-[#4a5a7a] tracking-[2px] mb-6">${ssrInterpolate(_ctx.$t("hero.trustedBy"))}</p><div class="flex flex-wrap justify-center items-center gap-x-10 gap-y-4"><!--[-->`);
+      ssrRenderList([_ctx.$t("hero.brand1"), _ctx.$t("hero.brand2"), _ctx.$t("hero.brand3"), _ctx.$t("hero.brand4"), _ctx.$t("hero.brand5"), _ctx.$t("hero.brand6")], (brand) => {
+        _push(`<span class="text-sm font-semibold text-[#3d5080] tracking-widest hover:text-[#7090c8] transition-colors cursor-default select-none">${ssrInterpolate(brand)}</span>`);
+      });
+      _push(`<!--]--></div></div></div></section>`);
+    };
+  }
+});
+const _sfc_setup$c = _sfc_main$c.setup;
+_sfc_main$c.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/HeroSection.vue");
+  return _sfc_setup$c ? _sfc_setup$c(props, ctx) : void 0;
+};
+const __nuxt_component_1 = Object.assign(_sfc_main$c, { __name: "HeroSection" });
+const _sfc_main$b = /* @__PURE__ */ defineComponent({
+  __name: "StatsSection",
+  __ssrInlineRender: true,
+  setup(__props) {
+    const stats = [
+      { key: "revenue" },
+      { key: "engagement" },
+      { key: "cost" },
+      { key: "clients" }
+    ];
+    return (_ctx, _push, _parent, _attrs) => {
+      const _directive_reveal = resolveDirective("reveal");
+      _push(`<section${ssrRenderAttrs(mergeProps({ class: "py-14 px-6" }, _attrs))}><div class="max-w-[1400px] mx-auto"><div${ssrRenderAttrs(mergeProps({ class: "grid grid-cols-2 md:grid-cols-4 gap-4" }, ssrGetDirectiveProps(_ctx, _directive_reveal)))}><!--[-->`);
+      ssrRenderList(stats, (stat) => {
+        _push(`<div class="relative rounded-2xl border border-white/8 bg-white/[0.03] backdrop-blur-sm p-6 text-center hover:border-[#00d4ff]/30 hover:bg-[#00d4ff]/[0.04] transition-all duration-300 group"><div class="font-display font-extrabold text-[38px] leading-none mb-1 bg-gradient-to-br from-white to-[#7090c8] bg-clip-text text-transparent group-hover:from-[#00d4ff] group-hover:to-white transition-all duration-300">${ssrInterpolate(_ctx.$t(`stats.${stat.key}.value`))}</div><div class="text-[11px] font-mono text-[#4a5a7a] tracking-wider mt-2">${ssrInterpolate(_ctx.$t(`stats.${stat.key}.label`))}</div></div>`);
+      });
+      _push(`<!--]--></div></div></section>`);
+    };
+  }
+});
+const _sfc_setup$b = _sfc_main$b.setup;
+_sfc_main$b.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/StatsSection.vue");
+  return _sfc_setup$b ? _sfc_setup$b(props, ctx) : void 0;
+};
+const __nuxt_component_2 = Object.assign(_sfc_main$b, { __name: "StatsSection" });
+const _sfc_main$a = /* @__PURE__ */ defineComponent({
+  __name: "HowItWorks",
+  __ssrInlineRender: true,
+  setup(__props) {
+    const { tm } = useI18n();
+    const steps = computed(() => tm("how.steps"));
+    return (_ctx, _push, _parent, _attrs) => {
+      const _directive_reveal = resolveDirective("reveal");
+      _push(`<section${ssrRenderAttrs(mergeProps({ class: "py-20 px-6" }, _attrs))}><div class="max-w-[1400px] mx-auto"><div${ssrRenderAttrs(mergeProps({ class: "text-center mb-16" }, ssrGetDirectiveProps(_ctx, _directive_reveal)))}><div class="font-mono text-[10px] text-[#00d4ff] tracking-[4px] mb-3">${ssrInterpolate(_ctx.$t("how.sectionTag"))}</div><h2 class="font-display font-extrabold text-4xl md:text-5xl text-white leading-tight"><span>${_ctx.$t("how.title", { highlight: `<span class='bg-gradient-to-r from-[#00d4ff] to-[#3b7fff] bg-clip-text text-transparent'>${_ctx.$t("how.highlight")}</span>` }) ?? ""}</span></h2><p class="mt-4 text-[15px] text-[#5a7099]">${ssrInterpolate(_ctx.$t("how.subtitle"))}</p></div><div class="relative"><div class="hidden lg:block absolute top-[52px] left-[calc(16.67%+2px)] right-[calc(16.67%+2px)] h-px bg-gradient-to-r from-[#00d4ff]/20 via-[#3b7fff]/40 to-[#00d4ff]/20 z-0"></div><div class="grid grid-cols-1 lg:grid-cols-3 gap-8 relative z-[1]"><!--[-->`);
+      ssrRenderList(unref(steps), (step, i) => {
+        _push(`<div${ssrRenderAttrs(mergeProps({
+          key: i,
+          class: "group flex flex-col items-center lg:items-start text-center lg:text-left"
+        }, ssrGetDirectiveProps(_ctx, _directive_reveal, { delay: i * 150 })))}><div class="${ssrRenderClass([[
+          i === 0 ? "bg-[#00d4ff]/15 border-[#00d4ff]/50 text-[#00d4ff] shadow-[0_0_20px_rgba(0,212,255,0.25)]" : i === 1 ? "bg-[#3b7fff]/15 border-[#3b7fff]/50 text-[#7ab0ff] shadow-[0_0_20px_rgba(59,127,255,0.2)]" : "bg-[#00e5a0]/10 border-[#00e5a0]/35 text-[#00e5a0] shadow-[0_0_20px_rgba(0,229,160,0.15)]"
+        ], "w-[52px] h-[52px] rounded-full flex items-center justify-center font-mono font-bold text-sm mb-6 flex-shrink-0 border transition-all duration-300 group-hover:scale-110"])}">${ssrInterpolate(step.num)}</div><div class="flex-1"><h3 class="font-display font-bold text-[19px] text-white mb-3">${ssrInterpolate(step.title)}</h3><p class="text-[14px] text-[#6080a8] leading-relaxed mb-4">${ssrInterpolate(step.desc)}</p><div class="${ssrRenderClass([[
+          i === 0 ? "text-[#00d4ff] bg-[#00d4ff]/5 border border-[#00d4ff]/15" : i === 1 ? "text-[#7ab0ff] bg-[#3b7fff]/5 border border-[#3b7fff]/15" : "text-[#00e5a0] bg-[#00e5a0]/5 border border-[#00e5a0]/15"
+        ], "inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-[11px] font-mono"])}"><span class="${ssrRenderClass([[i === 0 ? "bg-[#00d4ff]" : i === 1 ? "bg-[#7ab0ff]" : "bg-[#00e5a0]"], "w-1 h-1 rounded-full flex-shrink-0"])}"></span> ${ssrInterpolate(step.detail)}</div></div></div>`);
+      });
+      _push(`<!--]--></div></div></div></section>`);
+    };
+  }
+});
+const _sfc_setup$a = _sfc_main$a.setup;
+_sfc_main$a.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/HowItWorks.vue");
+  return _sfc_setup$a ? _sfc_setup$a(props, ctx) : void 0;
+};
+const __nuxt_component_3 = Object.assign(_sfc_main$a, { __name: "HowItWorks" });
+const _sfc_main$9 = /* @__PURE__ */ defineComponent({
+  __name: "TestimonialsSection",
+  __ssrInlineRender: true,
+  setup(__props) {
+    const { tm } = useI18n();
+    const quotes = computed(() => tm("testimonials.quotes"));
+    return (_ctx, _push, _parent, _attrs) => {
+      const _directive_reveal = resolveDirective("reveal");
+      _push(`<section${ssrRenderAttrs(mergeProps({ class: "py-20 px-6" }, _attrs))}><div class="max-w-[1400px] mx-auto"><div${ssrRenderAttrs(mergeProps({ class: "text-center mb-14" }, ssrGetDirectiveProps(_ctx, _directive_reveal)))}><div class="font-mono text-[10px] text-[#00e5a0] tracking-[4px] mb-3">${ssrInterpolate(_ctx.$t("testimonials.sectionTag"))}</div><h2 class="font-display font-extrabold text-4xl md:text-5xl text-white leading-tight">${ssrInterpolate(_ctx.$t("testimonials.title"))}</h2></div><div class="grid grid-cols-1 md:grid-cols-3 gap-6"><!--[-->`);
+      ssrRenderList(unref(quotes), (q, i) => {
+        _push(`<div${ssrRenderAttrs(mergeProps({
+          key: i,
+          class: "group relative rounded-2xl border border-white/8 bg-white/[0.025] backdrop-blur-sm p-7 flex flex-col hover:border-[#00e5a0]/25 hover:bg-white/[0.04] transition-all duration-300"
+        }, ssrGetDirectiveProps(_ctx, _directive_reveal, { delay: i * 120 })))}><div class="absolute top-0 left-8 right-8 h-[1px] bg-gradient-to-r from-transparent via-[#00e5a0]/30 to-transparent"></div><div class="font-display text-[56px] leading-none text-[#00e5a0]/15 mb-2 select-none">&quot;</div><p class="text-[14px] text-[#8faad4] leading-relaxed flex-1 mb-6">${ssrInterpolate(q.quote)}</p><div class="flex items-center gap-3 mb-5 p-3 rounded-xl bg-[#00e5a0]/5 border border-[#00e5a0]/15"><span class="font-display font-extrabold text-[26px] text-[#00e5a0] leading-none">${ssrInterpolate(q.metric)}</span><span class="text-[11px] text-[#5a8a70] leading-tight">${ssrInterpolate(q.metricLabel)}</span></div><div class="flex items-center gap-3"><div class="w-8 h-8 rounded-full bg-gradient-to-br from-[#0d47e0]/50 to-[#00d4ff]/30 flex items-center justify-center text-xs font-bold text-white flex-shrink-0">${ssrInterpolate(q.company.charAt(0))}</div><div><div class="text-[12px] font-semibold text-white/80">${ssrInterpolate(q.role)}</div><div class="text-[11px] font-mono text-[#4a6a88] tracking-wide">${ssrInterpolate(q.company)}</div></div></div></div>`);
+      });
+      _push(`<!--]--></div></div></section>`);
+    };
+  }
+});
+const _sfc_setup$9 = _sfc_main$9.setup;
+_sfc_main$9.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/TestimonialsSection.vue");
+  return _sfc_setup$9 ? _sfc_setup$9(props, ctx) : void 0;
+};
+const __nuxt_component_4 = Object.assign(_sfc_main$9, { __name: "TestimonialsSection" });
+const _sfc_main$8 = /* @__PURE__ */ defineComponent({
+  __name: "ComparisonSection",
+  __ssrInlineRender: true,
+  setup(__props) {
+    const { tm, t } = useI18n();
+    const rows = computed(() => tm("comparison.rows"));
+    return (_ctx, _push, _parent, _attrs) => {
+      const _directive_reveal = resolveDirective("reveal");
+      _push(`<section${ssrRenderAttrs(mergeProps({ class: "py-20 px-6" }, _attrs))}><div class="max-w-[1000px] mx-auto"><div class="text-center mb-14"><div class="font-mono text-[10px] text-[#00d4ff] tracking-[4px] mb-3">${ssrInterpolate(_ctx.$t("comparison.sectionTag"))}</div><h2 class="font-display font-extrabold text-4xl md:text-5xl text-white leading-tight mb-4">${ssrInterpolate(_ctx.$t("comparison.title"))} <span class="bg-gradient-to-r from-[#00d4ff] to-[#0d47e0] bg-clip-text text-transparent">${ssrInterpolate(_ctx.$t("comparison.highlight"))}</span></h2><p class="text-[16px] text-[#5070a0] max-w-xl mx-auto">${ssrInterpolate(_ctx.$t("comparison.subtitle"))}</p></div><div${ssrRenderAttrs(mergeProps({ class: "overflow-x-auto -mx-6 px-6" }, ssrGetDirectiveProps(_ctx, _directive_reveal)))}><table class="w-full min-w-[640px] border-collapse"><thead><tr><th class="pb-4 pr-4 text-left w-[30%]"></th><th class="pb-4 px-4 text-center w-[23%]"><div class="inline-block px-4 py-2 rounded-xl border border-white/8 bg-white/[0.02]"><div class="text-[11px] font-mono text-[#4a6a90] tracking-[1.5px] mb-0.5">${ssrInterpolate(_ctx.$t("comparison.col1.label"))}</div><div class="text-[13px] font-semibold text-[#6080a0]">${ssrInterpolate(_ctx.$t("comparison.col1.name"))}</div></div></th><th class="pb-4 px-4 text-center w-[23%]"><div class="inline-block px-4 py-2 rounded-xl border border-white/8 bg-white/[0.02]"><div class="text-[11px] font-mono text-[#4a6a90] tracking-[1.5px] mb-0.5">${ssrInterpolate(_ctx.$t("comparison.col2.label"))}</div><div class="text-[13px] font-semibold text-[#6080a0]">${ssrInterpolate(_ctx.$t("comparison.col2.name"))}</div></div></th><th class="pb-4 px-4 text-center w-[24%]"><div class="inline-block px-4 py-2 rounded-xl border border-[#00d4ff]/30 bg-[#00d4ff]/[0.06] shadow-[0_0_20px_rgba(0,212,255,0.12)]"><div class="text-[11px] font-mono text-[#00d4ff]/70 tracking-[1.5px] mb-0.5">${ssrInterpolate(_ctx.$t("comparison.col3.label"))}</div><div class="text-[13px] font-semibold text-[#00d4ff]">${ssrInterpolate(_ctx.$t("comparison.col3.name"))}</div></div></th></tr></thead><tbody><!--[-->`);
+      ssrRenderList(unref(rows), (row, i) => {
+        _push(`<tr class="border-t border-white/5"><td class="py-4 pr-4"><span class="text-[13px] font-medium text-[#7090b8]">${ssrInterpolate(row.label)}</span></td><td class="py-4 px-4 text-center"><div class="flex flex-col items-center gap-1"><span class="text-lg leading-none">${ssrInterpolate(row.generic.icon)}</span><span class="text-[11px] text-[#4a6080] leading-snug">${ssrInterpolate(row.generic.text)}</span></div></td><td class="py-4 px-4 text-center"><div class="flex flex-col items-center gap-1"><span class="text-lg leading-none">${ssrInterpolate(row.agency.icon)}</span><span class="text-[11px] text-[#4a6080] leading-snug">${ssrInterpolate(row.agency.text)}</span></div></td><td class="py-4 px-4 text-center bg-[#00d4ff]/[0.025] border-x border-[#00d4ff]/10"><div class="flex flex-col items-center gap-1"><span class="text-lg leading-none">${ssrInterpolate(row.canlah.icon)}</span><span class="text-[11px] text-[#7ab8d0] font-medium leading-snug">${ssrInterpolate(row.canlah.text)}</span></div></td></tr>`);
+      });
+      _push(`<!--]--></tbody></table></div><div class="text-center mt-12"><a href="https://app.canmarket.ai" target="_blank" class="group inline-flex items-center gap-2 px-8 py-3.5 rounded-full font-semibold text-sm bg-gradient-to-r from-[#0d47e0] to-[#00d4ff] text-white hover:shadow-[0_0_40px_rgba(0,212,255,0.4)] transition-all hover:scale-[1.03]">${ssrInterpolate(_ctx.$t("comparison.cta"))} <span class="group-hover:translate-x-1 transition-transform">→</span></a><p class="text-[12px] text-[#3d5880] mt-3">${ssrInterpolate(_ctx.$t("comparison.ctaNote"))}</p></div></div></section>`);
+    };
+  }
+});
+const _sfc_setup$8 = _sfc_main$8.setup;
+_sfc_main$8.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/ComparisonSection.vue");
+  return _sfc_setup$8 ? _sfc_setup$8(props, ctx) : void 0;
+};
+const __nuxt_component_5 = Object.assign(_sfc_main$8, { __name: "ComparisonSection" });
+const _sfc_main$7 = /* @__PURE__ */ defineComponent({
+  __name: "ProductsSection",
+  __ssrInlineRender: true,
+  setup(__props) {
+    const { t, tm } = useI18n();
+    const cards = computed(() => tm("products.cards"));
+    const cardConfig = [
+      {
+        icon: "📣",
+        accentFrom: "#0d47e0",
+        accentTo: "#00d4ff",
+        borderColor: "border-[#00d4ff]/35",
+        bgColor: "from-[#071a4a]/80 to-[#061030]/90",
+        glowColor: "rgba(0,212,255,0.12)",
+        glowHoverColor: "rgba(0,212,255,0.2)",
+        scanline: true
+      },
+      {
+        icon: "💬",
+        accentFrom: "#00b4c8",
+        accentTo: "#00e5a0",
+        borderColor: "border-white/10",
+        bgColor: "from-[#071a1a]/80 to-[#061030]/90",
+        glowColor: "transparent",
+        glowHoverColor: "rgba(0,229,160,0.08)",
+        scanline: false
+      },
+      {
+        icon: "📈",
+        accentFrom: "#643cdc",
+        accentTo: "#b450ff",
+        borderColor: "border-white/10",
+        bgColor: "from-[#130b2e]/80 to-[#061030]/90",
+        glowColor: "transparent",
+        glowHoverColor: "rgba(180,80,255,0.08)",
+        scanline: false
+      },
+      {
+        icon: "🛍️",
+        accentFrom: "#f5a623",
+        accentTo: "#ff6432",
+        borderColor: "border-white/10",
+        bgColor: "from-[#1f1205]/80 to-[#061030]/90",
+        glowColor: "transparent",
+        glowHoverColor: "rgba(245,166,35,0.08)",
+        scanline: false
+      }
+    ];
+    return (_ctx, _push, _parent, _attrs) => {
+      const _directive_reveal = resolveDirective("reveal");
+      _push(`<section${ssrRenderAttrs(mergeProps({
+        id: "products",
+        class: "py-20 px-6"
+      }, _attrs))}><div class="max-w-[1400px] mx-auto"><div class="text-center mb-14"><div class="font-mono text-[10px] text-[#00d4ff] tracking-[4px] mb-3">${ssrInterpolate(_ctx.$t("products.sectionTag"))}</div><h2 class="font-display font-extrabold text-4xl md:text-5xl text-white leading-tight"><span>${_ctx.$t("products.title", { highlight: `<span class='bg-gradient-to-r from-[#00d4ff] to-[#3b7fff] bg-clip-text text-transparent'>${_ctx.$t("products.highlight")}</span>` }) ?? ""}</span></h2><p class="mt-4 text-[15px] text-[#5a7099] max-w-xl mx-auto">${ssrInterpolate(_ctx.$t("products.subtitle"))}</p></div><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5"><!--[-->`);
+      ssrRenderList(unref(cards), (card, i) => {
+        _push(`<div${ssrRenderAttrs(mergeProps({
+          key: i,
+          class: ["group relative rounded-2xl border bg-gradient-to-br backdrop-blur-md p-7 cursor-default transition-all duration-300 hover:-translate-y-2 overflow-hidden", [cardConfig[i].borderColor, cardConfig[i].bgColor, "hover:border-opacity-70"]],
+          style: { boxShadow: `0 0 40px ${cardConfig[i].glowColor}` }
+        }, ssrGetDirectiveProps(_ctx, _directive_reveal, { delay: i * 100 })))}>`);
+        if (cardConfig[i].scanline) {
+          _push(`<div class="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#00d4ff]/60 to-transparent"></div>`);
+        } else {
+          _push(`<!---->`);
+        }
+        _push(`<div class="absolute top-4 right-4"><span class="${ssrRenderClass([card.badgeType === "live" ? "text-[#00e5a0] bg-[#00e5a0]/10 border border-[#00e5a0]/30 shadow-[0_0_12px_rgba(0,229,160,0.2)]" : "text-[#3d5080] bg-white/3 border border-white/8", "text-[10px] font-mono px-2.5 py-1 rounded-full"])}">`);
+        if (card.badgeType === "live") {
+          _push(`<span class="mr-1.5 inline-block w-1.5 h-1.5 rounded-full bg-[#00e5a0] shadow-[0_0_6px_#00e5a0] relative top-[-1px] animate-pulse"></span>`);
+        } else {
+          _push(`<!---->`);
+        }
+        _push(` ${ssrInterpolate(card.badge)}</span></div><div class="w-12 h-12 rounded-xl flex items-center justify-center text-xl mb-5 shadow-lg" style="${ssrRenderStyle({ background: `linear-gradient(135deg, ${cardConfig[i].accentFrom}44, ${cardConfig[i].accentTo}22)`, border: `1px solid ${cardConfig[i].accentFrom}44` })}">${ssrInterpolate(cardConfig[i].icon)}</div><h3 class="font-display font-bold text-[18px] text-white mb-1">${ssrInterpolate(card.name)}</h3><div class="text-[11px] font-mono mb-4 tracking-wide" style="${ssrRenderStyle({ color: cardConfig[i].accentFrom + "bb" })}">${ssrInterpolate(card.tag)}</div><p class="text-[13px] text-[#7090c8] mb-5 leading-relaxed">${ssrInterpolate(card.description)}</p><ul class="space-y-2 mb-5"><!--[-->`);
+        ssrRenderList(card.features, (feat, j) => {
+          _push(`<li class="text-[12px] text-[#8ba4cc] flex items-start gap-2.5"><span class="w-1.5 h-1.5 rounded-full mt-[4px] flex-shrink-0 shadow-sm" style="${ssrRenderStyle({ background: cardConfig[i].accentTo, boxShadow: `0 0 6px ${cardConfig[i].accentTo}` })}"></span> ${ssrInterpolate(feat)}</li>`);
+        });
+        _push(`<!--]--></ul><div class="mt-auto">`);
+        if (card.url) {
+          _push(`<a${ssrRenderAttr("href", card.url)} target="_blank" class="inline-flex items-center gap-1.5 text-[12px] font-semibold transition-all hover:gap-2.5" style="${ssrRenderStyle({ color: cardConfig[i].accentTo })}">${ssrInterpolate(card.cta)} <span>→</span></a>`);
+        } else {
+          _push(`<span class="text-[11px] font-mono text-[#3d5080]">${ssrInterpolate(_ctx.$t("products.notify"))}</span>`);
+        }
+        _push(`</div><div class="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" style="${ssrRenderStyle({ background: `radial-gradient(circle at 50% 0%, ${cardConfig[i].accentFrom}10, transparent 60%)` })}"></div></div>`);
+      });
+      _push(`<!--]--></div></div></section>`);
+    };
+  }
+});
+const _sfc_setup$7 = _sfc_main$7.setup;
+_sfc_main$7.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/ProductsSection.vue");
+  return _sfc_setup$7 ? _sfc_setup$7(props, ctx) : void 0;
+};
+const __nuxt_component_6 = Object.assign(_sfc_main$7, { __name: "ProductsSection" });
+const _sfc_main$6 = /* @__PURE__ */ defineComponent({
+  __name: "PlatformSection",
+  __ssrInlineRender: true,
+  setup(__props) {
+    const { tm } = useI18n();
+    const capabilities = computed(() => tm("platform.capabilities"));
+    return (_ctx, _push, _parent, _attrs) => {
+      const _directive_reveal = resolveDirective("reveal");
+      _push(`<section${ssrRenderAttrs(mergeProps({
+        id: "platform",
+        class: "py-20 px-6"
+      }, _attrs))}><div class="max-w-[1400px] mx-auto"><div${ssrRenderAttrs(mergeProps({ class: "text-center mb-14" }, ssrGetDirectiveProps(_ctx, _directive_reveal)))}><div class="font-mono text-[10px] text-[#00d4ff] tracking-[4px] mb-3">${ssrInterpolate(_ctx.$t("platform.sectionTag"))}</div><h2 class="font-display font-extrabold text-4xl md:text-5xl text-white leading-tight"><span>${_ctx.$t("platform.title", { highlight: `<span class='bg-gradient-to-r from-[#00d4ff] to-[#3b7fff] bg-clip-text text-transparent'>${_ctx.$t("platform.highlight")}</span>` }) ?? ""}</span></h2><p class="mt-4 text-[15px] text-[#5a7099] max-w-lg mx-auto">${ssrInterpolate(_ctx.$t("platform.subtitle"))}</p></div><div${ssrRenderAttrs(mergeProps({ class: "relative rounded-3xl border border-[#00d4ff]/20 bg-gradient-to-br from-[#071035] via-[#0a1a40] to-[#060e2a] p-10 overflow-hidden" }, ssrGetDirectiveProps(_ctx, _directive_reveal, { delay: 100 })))}><div class="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#00d4ff]/60 to-transparent"></div><div class="text-center mb-10"><div class="inline-flex items-center gap-3 px-6 py-3 rounded-full border border-[#00d4ff]/30 bg-[#00d4ff]/5"><span class="w-1.5 h-1.5 rounded-full bg-[#00d4ff] shadow-[0_0_6px_#00d4ff]"></span><span class="font-mono text-sm font-semibold text-[#00d4ff] tracking-wider">CANLAH AI AGENT PLATFORM</span><span class="w-1.5 h-1.5 rounded-full bg-[#00d4ff] shadow-[0_0_6px_#00d4ff]"></span></div></div><div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"><!--[-->`);
+      ssrRenderList(unref(capabilities), (cap, i) => {
+        _push(`<div class="group flex items-start gap-4 p-5 rounded-xl border border-[#00d4ff]/10 bg-[#00d4ff]/[0.03] hover:border-[#00d4ff]/35 hover:bg-[#00d4ff]/[0.07] transition-all duration-200 cursor-default"><div class="text-xl flex-shrink-0 w-9 h-9 flex items-center justify-center rounded-lg bg-[#00d4ff]/10 group-hover:bg-[#00d4ff]/20 transition-colors">${ssrInterpolate(cap.icon)}</div><div><div class="text-[13px] font-semibold text-white mb-0.5">${ssrInterpolate(cap.label)}</div><div class="text-[11px] text-[#5a7099] leading-relaxed">${ssrInterpolate(cap.desc)}</div></div></div>`);
+      });
+      _push(`<!--]--></div><div class="absolute bottom-4 right-4 font-mono text-[10px] text-[#00d4ff]/20 tracking-wider select-none">v2.0 · MULTI-VERTICAL</div></div></div></section>`);
+    };
+  }
+});
+const _sfc_setup$6 = _sfc_main$6.setup;
+_sfc_main$6.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/PlatformSection.vue");
+  return _sfc_setup$6 ? _sfc_setup$6(props, ctx) : void 0;
+};
+const __nuxt_component_7 = Object.assign(_sfc_main$6, { __name: "PlatformSection" });
+const _sfc_main$5 = /* @__PURE__ */ defineComponent({
+  __name: "StudioSection",
+  __ssrInlineRender: true,
+  setup(__props) {
+    const { tm } = useI18n();
+    const features = computed(() => tm("studio.features"));
+    return (_ctx, _push, _parent, _attrs) => {
+      const _directive_reveal = resolveDirective("reveal");
+      _push(`<section${ssrRenderAttrs(mergeProps({ class: "py-20 px-6" }, _attrs))}><div class="max-w-[1400px] mx-auto"><div class="text-center mb-14"><div class="font-mono text-[10px] text-[#6496ff] tracking-[4px] mb-3">${ssrInterpolate(_ctx.$t("studio.sectionTag"))}</div><h2 class="font-display font-extrabold text-4xl md:text-5xl text-white leading-tight">${ssrInterpolate(_ctx.$t("studio.name"))}</h2><p class="mt-4 text-[15px] text-[#5a7099] max-w-lg mx-auto">${ssrInterpolate(_ctx.$t("studio.tag"))}</p></div><div${ssrRenderAttrs(mergeProps({ class: "grid md:grid-cols-2 gap-6" }, ssrGetDirectiveProps(_ctx, _directive_reveal)))}><div class="rounded-2xl border border-[#6496ff]/20 bg-gradient-to-br from-[#0e1530]/90 to-[#060d22]/95 p-8 flex flex-col"><div class="flex-1"><div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#00e5a0]/5 border border-[#00e5a0]/20 mb-6"><span class="w-1.5 h-1.5 rounded-full bg-[#00e5a0] shadow-[0_0_6px_#00e5a0]"></span><span class="text-[11px] font-mono text-[#00e5a0]">${ssrInterpolate(_ctx.$t("studio.note"))}</span></div><h3 class="font-display font-bold text-2xl text-white mb-4">${ssrInterpolate(_ctx.$t("studio.headline"))}</h3><p class="text-[14px] text-[#5a7099] leading-relaxed mb-8">${ssrInterpolate(_ctx.$t("studio.body"))}</p></div><a href="https://canmarket.ai" target="_blank" class="inline-flex items-center gap-2 text-sm font-semibold text-[#6496ff] hover:text-white border border-[#6496ff]/30 hover:border-[#6496ff]/70 rounded-full px-6 py-3 w-fit transition-all hover:bg-[#6496ff]/10">${ssrInterpolate(_ctx.$t("studio.cta"))} → </a></div><div class="grid grid-cols-2 gap-3"><!--[-->`);
+      ssrRenderList(unref(features), (feat, i) => {
+        _push(`<div class="group flex flex-col gap-3 p-5 rounded-xl border border-[#6496ff]/12 bg-[#6496ff]/[0.04] hover:border-[#6496ff]/35 hover:bg-[#6496ff]/[0.08] transition-all duration-200 cursor-default"><span class="text-2xl">${ssrInterpolate(feat.icon)}</span><div><div class="text-[13px] font-semibold text-white mb-0.5">${ssrInterpolate(feat.title)}</div><div class="text-[11px] text-[#5a7099] leading-relaxed">${ssrInterpolate(feat.desc)}</div></div></div>`);
+      });
+      _push(`<!--]--></div></div></div></section>`);
+    };
+  }
+});
+const _sfc_setup$5 = _sfc_main$5.setup;
+_sfc_main$5.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/StudioSection.vue");
+  return _sfc_setup$5 ? _sfc_setup$5(props, ctx) : void 0;
+};
+const __nuxt_component_8 = Object.assign(_sfc_main$5, { __name: "StudioSection" });
+const _sfc_main$4 = /* @__PURE__ */ defineComponent({
+  __name: "PricingSection",
+  __ssrInlineRender: true,
+  setup(__props) {
+    const { tm } = useI18n();
+    const tiers = computed(() => tm("pricing.tiers"));
+    return (_ctx, _push, _parent, _attrs) => {
+      const _directive_reveal = resolveDirective("reveal");
+      _push(`<section${ssrRenderAttrs(mergeProps({
+        id: "pricing",
+        class: "py-20 px-6"
+      }, _attrs))}><div class="max-w-[1100px] mx-auto"><div${ssrRenderAttrs(mergeProps({ class: "text-center mb-14" }, ssrGetDirectiveProps(_ctx, _directive_reveal)))}><div class="font-mono text-[10px] text-[#00d4ff] tracking-[4px] mb-3">${ssrInterpolate(_ctx.$t("pricing.sectionTag"))}</div><h2 class="font-display font-extrabold text-4xl md:text-5xl text-white leading-tight mb-4">${ssrInterpolate(_ctx.$t("pricing.title"))}</h2><p class="text-[15px] text-[#5070a0] max-w-lg mx-auto">${ssrInterpolate(_ctx.$t("pricing.subtitle"))}</p></div><div${ssrRenderAttrs(mergeProps({ class: "grid grid-cols-1 md:grid-cols-3 gap-5" }, ssrGetDirectiveProps(_ctx, _directive_reveal, { delay: 80 })))}><!--[-->`);
+      ssrRenderList(unref(tiers), (tier, i) => {
+        _push(`<div class="${ssrRenderClass([tier.highlight ? "border-[#00d4ff]/40 bg-gradient-to-br from-[#071a4a]/80 to-[#060f2a]/90 shadow-[0_0_60px_rgba(0,212,255,0.12)]" : "border-white/8 bg-white/[0.025] hover:border-white/15", "relative rounded-2xl border p-8 flex flex-col transition-all duration-300"])}">`);
+        if (tier.highlight) {
+          _push(`<div class="absolute -top-3.5 left-1/2 -translate-x-1/2"><span class="text-[10px] font-mono px-3 py-1 rounded-full bg-gradient-to-r from-[#0d47e0] to-[#00d4ff] text-white shadow-[0_0_16px_rgba(0,212,255,0.4)]">${ssrInterpolate(_ctx.$t("pricing.popularBadge"))}</span></div>`);
+        } else {
+          _push(`<!---->`);
+        }
+        _push(`<div class="mb-6"><div class="${ssrRenderClass([tier.highlight ? "text-[#00d4ff]" : "text-[#4a6a90]", "text-[11px] font-mono tracking-[2px] mb-2"])}">${ssrInterpolate(tier.tag)}</div><h3 class="font-display font-bold text-[22px] text-white mb-4">${ssrInterpolate(tier.name)}</h3><div class="flex items-baseline gap-1.5"><span class="${ssrRenderClass([tier.highlight ? "text-white" : "text-[#8aa8d0]", "font-display font-extrabold text-[38px] leading-none"])}">${ssrInterpolate(tier.price)}</span><span class="text-[13px] text-[#4a6a90]">${ssrInterpolate(tier.priceSub)}</span></div></div><div class="${ssrRenderClass([tier.highlight ? "bg-[#00d4ff]/15" : "bg-white/6", "h-px mb-6"])}"></div><ul class="space-y-3 flex-1 mb-8"><!--[-->`);
+        ssrRenderList(tier.features, (feat, j) => {
+          _push(`<li class="${ssrRenderClass([tier.highlight ? "text-[#8ab8d4]" : "text-[#6080a0]", "flex items-start gap-2.5 text-[13px]"])}"><span class="${ssrRenderClass([tier.highlight ? "bg-[#00d4ff]/15 text-[#00d4ff]" : "bg-white/8 text-[#5a7090]", "mt-[3px] flex-shrink-0 w-4 h-4 rounded-full flex items-center justify-center text-[9px] font-bold"])}">✓</span> ${ssrInterpolate(feat)}</li>`);
+        });
+        _push(`<!--]--></ul><a${ssrRenderAttr("href", tier.ctaUrl || "mailto:hello@canlah.ai")}${ssrRenderAttr("target", tier.ctaUrl ? "_blank" : void 0)} class="${ssrRenderClass([tier.ctaStyle, "w-full py-3 rounded-full text-sm font-semibold text-center transition-all"])}">${ssrInterpolate(tier.cta)}</a></div>`);
+      });
+      _push(`<!--]--></div><p${ssrRenderAttrs(mergeProps({ class: "text-center text-[12px] font-mono text-[#3d5880] mt-8" }, ssrGetDirectiveProps(_ctx, _directive_reveal, { delay: 200 })))}>${ssrInterpolate(_ctx.$t("pricing.note"))}</p></div></section>`);
+    };
+  }
+});
+const _sfc_setup$4 = _sfc_main$4.setup;
+_sfc_main$4.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/PricingSection.vue");
+  return _sfc_setup$4 ? _sfc_setup$4(props, ctx) : void 0;
+};
+const __nuxt_component_9 = Object.assign(_sfc_main$4, { __name: "PricingSection" });
+const _sfc_main$3 = /* @__PURE__ */ defineComponent({
+  __name: "FaqSection",
+  __ssrInlineRender: true,
+  setup(__props) {
+    const { tm } = useI18n();
+    const faqs = computed(() => tm("faq.items"));
+    const openIndex = ref(0);
+    return (_ctx, _push, _parent, _attrs) => {
+      const _directive_reveal = resolveDirective("reveal");
+      _push(`<section${ssrRenderAttrs(mergeProps({
+        id: "faq",
+        class: "py-20 px-6"
+      }, _attrs))}><div class="max-w-[780px] mx-auto"><div class="text-center mb-14"><div class="font-mono text-[10px] text-[#00d4ff] tracking-[4px] mb-3">${ssrInterpolate(_ctx.$t("faq.sectionTag"))}</div><h2 class="font-display font-extrabold text-4xl md:text-5xl text-white leading-tight">${ssrInterpolate(_ctx.$t("faq.title"))}</h2></div><div${ssrRenderAttrs(mergeProps({ class: "space-y-2" }, ssrGetDirectiveProps(_ctx, _directive_reveal)))}><!--[-->`);
+      ssrRenderList(unref(faqs), (item, i) => {
+        _push(`<div class="${ssrRenderClass([unref(openIndex) === i ? "border-[#00d4ff]/30 bg-[#00d4ff]/[0.04]" : "border-white/6 bg-white/[0.02] hover:border-white/12", "rounded-xl border transition-all duration-200"])}"><button class="w-full flex items-center justify-between gap-4 px-6 py-5 text-left"><span class="${ssrRenderClass([unref(openIndex) === i ? "text-white" : "text-[#9ab0d4]", "font-semibold text-[15px] leading-snug transition-colors"])}">${ssrInterpolate(item.q)}</span><span class="${ssrRenderClass([unref(openIndex) === i ? "border-[#00d4ff]/50 text-[#00d4ff] rotate-45 bg-[#00d4ff]/10" : "border-white/15 text-white/40", "flex-shrink-0 w-6 h-6 rounded-full border flex items-center justify-center text-[11px] transition-all duration-200"])}">+</span></button><div class="px-6 pb-5" style="${ssrRenderStyle(unref(openIndex) === i ? null : { display: "none" })}"><p class="text-[14px] text-[#6080a8] leading-relaxed border-t border-white/5 pt-4">${ssrInterpolate(item.a)}</p></div></div>`);
+      });
+      _push(`<!--]--></div><div class="text-center mt-10"><p class="text-[13px] text-[#3d5880] mb-3">${ssrInterpolate(_ctx.$t("faq.more"))}</p><a href="mailto:hello@canlah.ai" class="text-[13px] font-mono text-[#00d4ff] hover:text-white transition-colors"> hello@canlah.ai → </a></div></div></section>`);
+    };
+  }
+});
+const _sfc_setup$3 = _sfc_main$3.setup;
+_sfc_main$3.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/FaqSection.vue");
+  return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
+};
+const __nuxt_component_10 = Object.assign(_sfc_main$3, { __name: "FaqSection" });
+const _sfc_main$2 = {};
+function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs) {
+  const _directive_reveal = resolveDirective("reveal");
+  _push(`<section${ssrRenderAttrs(mergeProps({ class: "py-24 px-6" }, _attrs))}><div class="max-w-[900px] mx-auto"><div${ssrRenderAttrs(mergeProps({ class: "relative rounded-3xl overflow-hidden border border-[#00d4ff]/25 bg-gradient-to-br from-[#071035] via-[#0b1945] to-[#060d22] p-12 md:p-16 text-center" }, ssrGetDirectiveProps(_ctx, _directive_reveal)))}><div class="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#00d4ff]/70 to-transparent"></div><div class="absolute inset-0 pointer-events-none" style="${ssrRenderStyle({ "background": "radial-gradient(ellipse 70% 50% at 50% 0%, rgba(13,71,224,0.18), transparent)" })}"></div><div class="relative z-[1]"><div class="inline-flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full border border-[#00e5a0]/25 bg-[#00e5a0]/5"><span class="w-1.5 h-1.5 rounded-full bg-[#00e5a0] shadow-[0_0_8px_#00e5a0] animate-pulse"></span><span class="text-[11px] font-mono text-[#00e5a0] tracking-[2px]">${ssrInterpolate(_ctx.$t("cta.badge"))}</span></div><h2 class="font-display font-extrabold text-[38px] md:text-[52px] text-white leading-[1.1] tracking-tight mb-5">${ssrInterpolate(_ctx.$t("cta.headline"))}</h2><p class="text-[16px] text-[#6080a8] max-w-xl mx-auto mb-10 leading-relaxed">${ssrInterpolate(_ctx.$t("cta.sub"))}</p><div class="flex gap-4 justify-center flex-wrap mb-7"><a href="https://app.canmarket.ai" target="_blank" class="group px-9 py-4 rounded-full font-bold text-[15px] bg-gradient-to-r from-[#0d47e0] to-[#00d4ff] text-white hover:shadow-[0_0_50px_rgba(0,212,255,0.5)] transition-all hover:scale-[1.04] flex items-center gap-2">${ssrInterpolate(_ctx.$t("cta.primary"))} <span class="group-hover:translate-x-1 transition-transform">→</span></a><a href="mailto:hello@canlah.ai" class="px-9 py-4 rounded-full font-semibold text-[15px] border border-white/15 text-white/80 hover:border-[#00d4ff]/50 hover:text-white hover:bg-white/5 transition-all">${ssrInterpolate(_ctx.$t("cta.secondary"))}</a></div><div class="flex flex-wrap justify-center gap-x-6 gap-y-2"><!--[-->`);
+  ssrRenderList([_ctx.$t("cta.note1"), _ctx.$t("cta.note2"), _ctx.$t("cta.note3")], (note) => {
+    _push(`<span class="flex items-center gap-1.5 text-[12px] text-[#3d5880] font-mono"><span class="text-[#00e5a0]">✓</span> ${ssrInterpolate(note)}</span>`);
+  });
+  _push(`<!--]--></div></div></div></div></section>`);
+}
+const _sfc_setup$2 = _sfc_main$2.setup;
+_sfc_main$2.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/CtaSection.vue");
+  return _sfc_setup$2 ? _sfc_setup$2(props, ctx) : void 0;
+};
+const __nuxt_component_11 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$2, [["ssrRender", _sfc_ssrRender$1]]), { __name: "CtaSection" });
+const _sfc_main$1 = /* @__PURE__ */ defineComponent({
+  __name: "FloatingCta",
+  __ssrInlineRender: true,
+  setup(__props) {
+    const visible = ref(false);
+    return (_ctx, _push, _parent, _attrs) => {
+      _push(`<div${ssrRenderAttrs(mergeProps({ class: "fixed bottom-0 left-0 right-0 z-40 md:bottom-6 md:left-auto md:right-6 md:w-auto" }, _attrs, {
+        style: unref(visible) ? null : { display: "none" }
+      }))}><div class="md:hidden flex items-center justify-between gap-3 px-5 py-3 bg-[#070d16]/95 backdrop-blur-lg border-t border-white/10 shadow-[0_-4px_30px_rgba(0,0,0,0.5)]"><div class="min-w-0"><div class="text-[13px] font-semibold text-white truncate">${ssrInterpolate(_ctx.$t("floatingCta.title"))}</div><div class="text-[11px] text-[#5a7090] truncate">${ssrInterpolate(_ctx.$t("floatingCta.sub"))}</div></div><a href="https://app.canmarket.ai" target="_blank" class="flex-shrink-0 px-5 py-2.5 rounded-full text-[13px] font-semibold bg-gradient-to-r from-[#0d47e0] to-[#00d4ff] text-white shadow-[0_0_20px_rgba(0,212,255,0.3)]">${ssrInterpolate(_ctx.$t("floatingCta.cta"))} → </a></div><div class="hidden md:flex items-center gap-3 px-5 py-3 rounded-2xl bg-[#070d16]/90 backdrop-blur-lg border border-white/10 shadow-[0_8px_40px_rgba(0,0,0,0.5)]"><span class="text-[13px] text-[#7090b8]">${ssrInterpolate(_ctx.$t("floatingCta.sub"))}</span><a href="https://app.canmarket.ai" target="_blank" class="group px-5 py-2 rounded-full text-[13px] font-semibold bg-gradient-to-r from-[#0d47e0] to-[#00d4ff] text-white hover:shadow-[0_0_24px_rgba(0,212,255,0.4)] transition-all hover:scale-[1.03] flex items-center gap-1.5">${ssrInterpolate(_ctx.$t("floatingCta.cta"))} <span class="group-hover:translate-x-0.5 transition-transform">→</span></a></div></div>`);
+    };
+  }
+});
+const _sfc_setup$1 = _sfc_main$1.setup;
+_sfc_main$1.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/FloatingCta.vue");
+  return _sfc_setup$1 ? _sfc_setup$1(props, ctx) : void 0;
+};
+const __nuxt_component_13 = Object.assign(_sfc_main$1, { __name: "FloatingCta" });
+const _sfc_main = {};
+function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
+  const _component_SiteHeader = __nuxt_component_0;
+  const _component_HeroSection = __nuxt_component_1;
+  const _component_StatsSection = __nuxt_component_2;
+  const _component_HowItWorks = __nuxt_component_3;
+  const _component_TestimonialsSection = __nuxt_component_4;
+  const _component_ComparisonSection = __nuxt_component_5;
+  const _component_ProductsSection = __nuxt_component_6;
+  const _component_PlatformSection = __nuxt_component_7;
+  const _component_StudioSection = __nuxt_component_8;
+  const _component_PricingSection = __nuxt_component_9;
+  const _component_FaqSection = __nuxt_component_10;
+  const _component_CtaSection = __nuxt_component_11;
+  const _component_SiteFooter = __nuxt_component_12;
+  const _component_FloatingCta = __nuxt_component_13;
+  _push(`<div${ssrRenderAttrs(_attrs)}>`);
+  _push(ssrRenderComponent(_component_SiteHeader, null, null, _parent));
+  _push(ssrRenderComponent(_component_HeroSection, null, null, _parent));
+  _push(ssrRenderComponent(_component_StatsSection, null, null, _parent));
+  _push(ssrRenderComponent(_component_HowItWorks, null, null, _parent));
+  _push(ssrRenderComponent(_component_TestimonialsSection, null, null, _parent));
+  _push(ssrRenderComponent(_component_ComparisonSection, null, null, _parent));
+  _push(ssrRenderComponent(_component_ProductsSection, null, null, _parent));
+  _push(ssrRenderComponent(_component_PlatformSection, null, null, _parent));
+  _push(ssrRenderComponent(_component_StudioSection, null, null, _parent));
+  _push(ssrRenderComponent(_component_PricingSection, null, null, _parent));
+  _push(ssrRenderComponent(_component_FaqSection, null, null, _parent));
+  _push(ssrRenderComponent(_component_CtaSection, null, null, _parent));
+  _push(ssrRenderComponent(_component_SiteFooter, null, null, _parent));
+  _push(ssrRenderComponent(_component_FloatingCta, null, null, _parent));
+  _push(`</div>`);
+}
+const _sfc_setup = _sfc_main.setup;
+_sfc_main.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("pages/index.vue");
+  return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
+};
+const index = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]);
+
+export { index as default };
+//# sourceMappingURL=index-JvFdjdCH.mjs.map
