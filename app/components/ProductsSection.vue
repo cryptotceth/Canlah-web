@@ -2,6 +2,21 @@
 const { t, tm } = useI18n()
 const cards = computed(() => tm('products.cards') as any[])
 
+const waitlistEmails = reactive<Record<number, string>>({})
+const waitlistSubmitted = reactive<Record<number, boolean>>({})
+
+function submitWaitlist(index: number) {
+  const email = waitlistEmails[index]?.trim()
+  if (!email || !email.includes('@')) return
+
+  // Store locally (replace with API call when backend is ready)
+  const existing = JSON.parse(localStorage.getItem('canlah_waitlist') || '[]')
+  existing.push({ email, product: cards.value[index]?.name, timestamp: new Date().toISOString() })
+  localStorage.setItem('canlah_waitlist', JSON.stringify(existing))
+
+  waitlistSubmitted[index] = true
+}
+
 const cardConfig = [
   {
     icon: '📣',
@@ -118,7 +133,30 @@ const cardConfig = [
               :style="{ color: cardConfig[i].accentTo }">
               {{ card.cta }} <span>→</span>
             </a>
-            <span v-else class="text-[11px] font-mono text-[#3d5080]">{{ $t('products.notify') }}</span>
+            <div v-else>
+              <!-- Waitlist success -->
+              <div v-if="waitlistSubmitted[i]" class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#00e5a0]"></span>
+                <span class="text-[11px] font-mono text-[#00e5a0]">We'll notify you at launch!</span>
+              </div>
+              <!-- Waitlist form -->
+              <form v-else class="flex gap-1.5" @submit.prevent="submitWaitlist(i)">
+                <input
+                  v-model="waitlistEmails[i]"
+                  type="email"
+                  placeholder="you@company.com"
+                  required
+                  class="flex-1 min-w-0 px-3 py-1.5 rounded-lg text-[11px] bg-white/5 border border-white/10 text-white placeholder-[#3d5080] outline-none focus:border-white/25 transition-colors"
+                />
+                <button
+                  type="submit"
+                  class="flex-shrink-0 px-3 py-1.5 rounded-lg text-[11px] font-semibold transition-all hover:brightness-110"
+                  :style="{ background: cardConfig[i].accentFrom + '30', color: cardConfig[i].accentTo }"
+                >
+                  Notify me
+                </button>
+              </form>
+            </div>
           </div>
 
           <!-- Hover glow overlay -->
