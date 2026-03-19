@@ -31,6 +31,7 @@ onMounted(() => {
         <a href="#pricing" class="text-sm text-[#6b82b5] hover:text-white transition-colors">{{ $t('nav.pricing') }}</a>
         <a href="#platform" class="text-sm text-[#6b82b5] hover:text-white transition-colors">{{ $t('nav.platform') }}</a>
         <a href="#faq" class="text-sm text-[#6b82b5] hover:text-white transition-colors">{{ $t('nav.faq') }}</a>
+        <NuxtLink to="/blog" class="text-sm text-[#6b82b5] hover:text-white transition-colors">Blog</NuxtLink>
       </nav>
 
       <!-- Desktop right actions -->
@@ -72,6 +73,7 @@ onMounted(() => {
       <a href="#pricing" class="text-sm text-[#8ba4cc] py-1" @click="isMenuOpen = false">{{ $t('nav.pricing') }}</a>
       <a href="#platform" class="text-sm text-[#8ba4cc] py-1" @click="isMenuOpen = false">{{ $t('nav.platform') }}</a>
       <a href="#faq" class="text-sm text-[#8ba4cc] py-1" @click="isMenuOpen = false">{{ $t('nav.faq') }}</a>
+      <NuxtLink to="/blog" class="text-sm text-[#8ba4cc] py-1" @click="isMenuOpen = false">Blog</NuxtLink>
       <div class="border-t border-white/8 pt-4 flex flex-col gap-3">
         <select :value="locale" @change="setLocale(($event.target as HTMLSelectElement).value)"
           class="bg-transparent border border-white/10 rounded-md px-2 py-1 text-xs text-[#6b82b5] w-fit">

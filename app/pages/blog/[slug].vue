@@ -1,0 +1,92 @@
+<script setup lang="ts">
+import { blogPosts } from '~/data/blog'
+
+const route = useRoute()
+const slug = route.params.slug as string
+
+const post = computed(() => blogPosts.find(p => p.slug === slug))
+
+if (!post.value) {
+  throw createError({ statusCode: 404, statusMessage: 'Article not found' })
+}
+
+useSeoMeta({
+  title: `${post.value.title} — CANLAH AI Blog`,
+  description: post.value.description,
+  ogTitle: `${post.value.title} — CANLAH AI Blog`,
+  ogDescription: post.value.description,
+})
+</script>
+
+<template>
+  <div>
+    <SiteHeader />
+
+    <article v-if="post" class="pt-32 pb-20 px-6">
+      <div class="max-w-[760px] mx-auto">
+
+        <!-- Article header -->
+        <div v-reveal class="mb-12">
+          <div class="flex items-center gap-3 mb-5">
+            <span
+              class="text-[10px] font-mono px-2.5 py-1 rounded-full border"
+              :style="{ color: post.categoryColor, borderColor: post.categoryColor + '30', backgroundColor: post.categoryColor + '10' }"
+            >
+              {{ post.category }}
+            </span>
+            <span class="text-[11px] font-mono text-[#4a5a7a]">{{ post.date }}</span>
+            <span class="text-[11px] font-mono text-[#4a5a7a]">·</span>
+            <span class="text-[11px] font-mono text-[#4a5a7a]">{{ post.readTime }}</span>
+          </div>
+
+          <h1 class="font-display font-extrabold text-3xl md:text-[42px] text-white leading-tight mb-5">
+            {{ post.title }}
+          </h1>
+
+          <p class="text-[16px] text-[#7090b8] leading-relaxed">
+            {{ post.description }}
+          </p>
+
+          <div class="mt-6 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+        </div>
+
+        <!-- Article body slot — content is in individual article components -->
+        <div v-reveal="{ delay: 100 }" class="article-body">
+          <component :is="articleComponent" v-if="articleComponent" />
+          <div v-else class="rounded-2xl border border-white/8 bg-white/[0.025] p-8 text-center">
+            <p class="text-[15px] text-[#5a7099]">This article is coming soon. Check back shortly.</p>
+          </div>
+        </div>
+
+        <!-- Bottom nav -->
+        <div class="mt-16 flex items-center justify-between">
+          <NuxtLink to="/blog" class="text-[13px] text-[#5a7099] hover:text-[#00d4ff] transition-colors">← All articles</NuxtLink>
+          <a href="https://app.canmarket.ai" target="_blank"
+            class="text-[13px] font-semibold text-[#00d4ff] hover:underline">Try CanMarket Free →</a>
+        </div>
+
+      </div>
+    </article>
+
+    <SiteFooter />
+  </div>
+</template>
+
+<script lang="ts">
+import { defineAsyncComponent } from 'vue'
+
+export default {
+  computed: {
+    articleComponent() {
+      const slug = this.$route.params.slug as string
+      try {
+        return defineAsyncComponent(() =>
+          import(`~/components/blog/${slug}.vue`)
+        )
+      } catch {
+        return null
+      }
+    }
+  }
+}
+</script>
