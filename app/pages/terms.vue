@@ -2,6 +2,10 @@
 useSeoMeta({
   title: 'Terms of Service — CANLAH AI',
   description: 'Terms and conditions for using CANLAH AI products including CanMarket, CanService, CanSales, and CanCommerce.',
+  ogType: 'website',
+  ogTitle: 'Terms of Service — CANLAH AI',
+  ogDescription: 'Terms and conditions for using CANLAH AI products including CanMarket, CanService, CanSales, and CanCommerce.',
+  ogUrl: 'https://canlah.ai/terms',
 })
 </script>
 

@@ -2,6 +2,10 @@
 useSeoMeta({
   title: 'Privacy Policy — CANLAH AI',
   description: 'How CANLAH AI collects, uses, and protects your data. SOC 2-grade infrastructure with data isolation.',
+  ogType: 'website',
+  ogTitle: 'Privacy Policy — CANLAH AI',
+  ogDescription: 'How CANLAH AI collects, uses, and protects your data. SOC 2-grade infrastructure with data isolation.',
+  ogUrl: 'https://canlah.ai/privacy',
 })
 </script>
 

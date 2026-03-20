@@ -4,6 +4,10 @@ import { blogPosts } from '~/data/blog'
 useSeoMeta({
   title: 'Blog — CANLAH AI',
   description: 'Insights on AI marketing, brand memory, content automation, and the future of multi-agent marketing systems.',
+  ogType: 'website',
+  ogTitle: 'Blog — CANLAH AI',
+  ogDescription: 'Insights on AI marketing, brand memory, content automation, and the future of multi-agent marketing systems.',
+  ogUrl: 'https://canlah.ai/blog',
 })
 </script>
 

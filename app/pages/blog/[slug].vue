@@ -13,8 +13,41 @@ if (!post.value) {
 useSeoMeta({
   title: `${post.value.title} — CANLAH AI Blog`,
   description: post.value.description,
+  ogType: 'article',
   ogTitle: `${post.value.title} — CANLAH AI Blog`,
   ogDescription: post.value.description,
+  ogUrl: `https://canlah.ai/blog/${slug}`,
+})
+
+// Article + BreadcrumbList schema for SEO rich snippets + GEO
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        headline: post.value.title,
+        description: post.value.description,
+        datePublished: post.value.date,
+        author: { '@type': 'Organization', name: 'CANLAH AI', url: 'https://canlah.ai' },
+        publisher: { '@type': 'Organization', name: 'CANLAH AI', logo: { '@type': 'ImageObject', url: 'https://canlah.ai/favicon.svg' } },
+        mainEntityOfPage: { '@type': 'WebPage', '@id': `https://canlah.ai/blog/${slug}` },
+      }),
+    },
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://canlah.ai' },
+          { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://canlah.ai/blog' },
+          { '@type': 'ListItem', position: 3, name: post.value.title, item: `https://canlah.ai/blog/${slug}` },
+        ],
+      }),
+    },
+  ],
 })
 </script>
 

@@ -6,6 +6,26 @@ const openIndex = ref<number | null>(0)
 function toggle(i: number) {
   openIndex.value = openIndex.value === i ? null : i
 }
+
+// FAQPage schema for SEO rich snippets + GEO citation
+const faqSchema = computed(() => ({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.value.map(item => ({
+    '@type': 'Question',
+    name: item.q,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.a,
+    },
+  })),
+}))
+
+useHead({
+  script: [
+    { type: 'application/ld+json', innerHTML: computed(() => JSON.stringify(faqSchema.value)) },
+  ],
+})
 </script>
 
 <template>

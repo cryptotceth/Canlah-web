@@ -1,0 +1,41 @@
+# CANLAH AI — llms.txt
+# https://canlah.ai
+
+> CANLAH AI builds intelligent AI agents for marketing, sales, service, and commerce. Our core technology, Style Genome™, encodes brand identity into a 768-dimensional memory vector that ensures every AI-generated output is on-brand.
+
+## Products
+
+- [CanMarket](https://app.canmarket.ai): AI Marketing Agent with brand memory. Generates brand-consistent content at scale using Style Genome™. Free tier available.
+- CanService: AI Customer Service Agent (coming soon). Omnichannel support with sentiment-aware escalation.
+- CanSales: AI Sales Agent (coming soon). Lead scoring, pipeline automation, AI follow-up sequences.
+- CanCommerce: AI Commerce Agent (coming soon). Listing optimization, ad campaigns, conversion analytics.
+
+## Key Technology
+
+- **Style Genome™**: Encodes brand identity into a 768-dimensional vector space. Every output is scored via cosine similarity (0.85 threshold) against the brand vector. 97% pass rate by attempt 3.
+- **Multi-Model Routing**: Intelligently selects GPT, Gemini, or Claude for each task.
+- **Agent Orchestration**: Multi-step reasoning across agents with automated decision routing.
+
+## Company
+
+- Founded: 2024
+- Headquarters: Singapore
+- Contact: hello@canlah.ai
+- Clients: Haleon, Starbucks, ByteDance, Alibaba Cloud, Publicis, McCann
+- Achievement: MWC Pitch2Pitch 2025 Global Runner-up (3,000+ startups)
+- Revenue: $280K+ in first 7 months
+
+## Blog Topics
+
+- Brand memory vs generic AI content
+- Style Genome™ technical architecture
+- Agency vs AI platform cost comparison
+- DTC brand marketing automation
+- Multi-agent marketing systems
+- Enterprise AI content strategy
+
+## Pricing
+
+- Starter: Free forever, 50 generations/month, no credit card required
+- Growth: Credit-based pay-as-you-go, unlimited generations
+- Enterprise: Custom pricing, dedicated CSM, SSO, on-prem available
