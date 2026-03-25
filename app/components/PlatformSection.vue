@@ -11,7 +11,7 @@ const capabilities = computed(() => tm('platform.capabilities') as { icon: strin
       <div v-reveal class="text-center mb-14">
         <div class="font-mono text-[10px] text-[#00d4ff] tracking-[4px] mb-3">{{ $t('platform.sectionTag') }}</div>
         <h2 class="font-display font-bold text-4xl md:text-5xl text-white leading-tight">
-          <span v-html="$t('platform.title', { highlight: `<span class='bg-gradient-to-r from-[#00d4ff] to-[#3b7fff] bg-clip-text text-transparent'>${$t('platform.highlight')}</span>` })"></span>
+          <span v-html="$t('platform.title', { highlight: `<span class='bg-gradient-to-r from-[#00d4ff] to-[#60a5fa] bg-clip-text text-transparent'>${$t('platform.highlight')}</span>` })"></span>
         </h2>
         <p class="mt-4 text-[15px] text-[#5a7099] max-w-lg mx-auto">{{ $t('platform.subtitle') }}</p>
       </div>

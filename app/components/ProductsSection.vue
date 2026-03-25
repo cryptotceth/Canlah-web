@@ -1,6 +1,9 @@
 <script setup lang="ts">
 const { t, tm } = useI18n()
-const cards = computed(() => tm('products.cards') as any[])
+const allCards = computed(() => tm('products.cards') as any[])
+const liveCards = computed(() => allCards.value.filter((c: any) => c.badgeType === 'live'))
+const soonCards = computed(() => allCards.value.filter((c: any) => c.badgeType !== 'live'))
+const cards = allCards
 
 const waitlistEmails = reactive<Record<number, string>>({})
 const waitlistSubmitted = reactive<Record<number, boolean>>({})
@@ -78,18 +81,18 @@ const cardConfig = [
       <div class="text-center mb-14">
         <div class="font-mono text-[10px] text-[#00d4ff] tracking-[4px] mb-3">{{ $t('products.sectionTag') }}</div>
         <h2 class="font-display font-bold text-4xl md:text-5xl text-white leading-tight">
-          <span v-html="$t('products.title', { highlight: `<span class='bg-gradient-to-r from-[#00d4ff] to-[#3b7fff] bg-clip-text text-transparent'>${$t('products.highlight')}</span>` })"></span>
+          <span v-html="$t('products.title', { highlight: `<span class='bg-gradient-to-r from-[#00d4ff] to-[#60a5fa] bg-clip-text text-transparent'>${$t('products.highlight')}</span>` })"></span>
         </h2>
         <p class="mt-4 text-[15px] text-[#5a7099] max-w-xl mx-auto">{{ $t('products.subtitle') }}</p>
       </div>
 
-      <!-- Product grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <!-- Product grid — flex wrap centers the last row of 2 -->
+      <div class="flex flex-wrap justify-center gap-5">
         <div
           v-for="(card, i) in cards"
           :key="i"
           v-reveal="{ delay: i * 100 }"
-          class="group relative rounded-2xl border bg-gradient-to-br backdrop-blur-md p-7 cursor-default transition-all duration-300 hover:-translate-y-2 overflow-hidden"
+          class="group relative rounded-2xl border bg-gradient-to-br backdrop-blur-md p-7 cursor-default transition-all duration-300 hover:-translate-y-2 overflow-hidden w-full md:w-[calc(50%-10px)] lg:w-[calc(33.333%-14px)]"
           :class="[cardConfig[i].borderColor, cardConfig[i].bgColor, 'hover:border-opacity-70']"
           :style="{ boxShadow: `0 0 40px ${cardConfig[i].glowColor}` }"
         >

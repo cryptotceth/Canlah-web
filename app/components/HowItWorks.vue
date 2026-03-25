@@ -11,7 +11,7 @@ const steps = computed(() => tm('how.steps') as { num: string; title: string; de
       <div v-reveal class="text-center mb-16">
         <div class="font-mono text-[10px] text-[#00d4ff] tracking-[4px] mb-3">{{ $t('how.sectionTag') }}</div>
         <h2 class="font-display font-bold text-4xl md:text-5xl text-white leading-tight">
-          <span v-html="$t('how.title', { highlight: `<span class='bg-gradient-to-r from-[#00d4ff] to-[#3b7fff] bg-clip-text text-transparent'>${$t('how.highlight')}</span>` })"></span>
+          <span v-html="$t('how.title', { highlight: `<span class='bg-gradient-to-r from-[#00d4ff] to-[#60a5fa] bg-clip-text text-transparent'>${$t('how.highlight')}</span>` })"></span>
         </h2>
         <p class="mt-4 text-[15px] text-[#5a7099]">{{ $t('how.subtitle') }}</p>
       </div>
