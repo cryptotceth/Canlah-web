@@ -5,7 +5,7 @@
         <!-- Brand -->
         <div class="md:col-span-2">
           <div class="flex items-center gap-3 mb-4">
-            <img src="/logo-mascot.png" alt="CANLAH AI" class="w-9 h-9 object-contain" />
+            <img src="/logo-mascot.png" alt="CANLAH AI" class="w-11 h-11 object-contain" />
             <span class="font-display font-bold text-xl tracking-wide text-white">CANLAH AI</span>
           </div>
           <p class="text-[13px] text-[#4a5a7a] leading-relaxed max-w-xs mb-5">
