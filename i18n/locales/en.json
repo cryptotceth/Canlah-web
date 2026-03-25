@@ -126,7 +126,7 @@
   "products": {
     "sectionTag": "PRODUCT SUITE",
     "title": "One Platform, {highlight}",
-    "highlight": "Four Agents",
+    "highlight": "Five Agents",
     "subtitle": "Each agent is purpose-built for its domain — and all share the same underlying AI platform.",
     "notify": "Notify me →",
     "cards": [
@@ -141,18 +141,30 @@
         "url": "https://app.canmarket.ai"
       },
       {
+        "name": "CanArt",
+        "tag": "AI Design in Telegram",
+        "description": "No software to learn, no desktop required. Send a message, get professional-grade images in 3 seconds. Brand memory keeps every image on-brand.",
+        "features": ["Text-to-Image (Seedream 4.5)", "Smart Image Editing (Gemini)", "14-Reference Composition", "Poster & Typography"],
+        "badge": "Live",
+        "badgeType": "live",
+        "cta": "Try CanArt",
+        "url": "https://canart-landing.vercel.app/en"
+      },
+      {
+        "name": "CanSell",
+        "tag": "AI Sales Agent for Stores",
+        "description": "Paste your store URL — get an AI agent that knows every product, speaks every language, and upsells naturally. 24/7 on Telegram, web, or any chat.",
+        "features": ["Instant Store Crawling", "Multilingual Sales Chat", "Smart Upselling (+15% AOV)", "Shopify / WooCommerce / Any URL"],
+        "badge": "Live",
+        "badgeType": "live",
+        "cta": "Try CanSell",
+        "url": "https://hatchery-bot.vercel.app"
+      },
+      {
         "name": "CanService",
         "tag": "AI Customer Service Agent",
         "description": "24/7 intelligent support across every channel. Resolve tickets faster with AI that understands context and escalates intelligently.",
         "features": ["Omnichannel AI Chat", "Smart Ticket Routing", "Knowledge Base AI", "Sentiment Analysis"],
-        "badge": "Coming Soon",
-        "badgeType": "soon"
-      },
-      {
-        "name": "CanSales",
-        "tag": "AI Sales Agent",
-        "description": "From lead to close, automated. AI-powered pipeline management that follows up, qualifies, and converts while you sleep.",
-        "features": ["Smart Lead Scoring", "Pipeline Automation", "AI Follow-up Sequences", "Deal Insights"],
         "badge": "Coming Soon",
         "badgeType": "soon"
       },

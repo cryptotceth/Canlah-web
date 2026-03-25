@@ -71,7 +71,7 @@
   "products": {
     "sectionTag": "产品矩阵",
     "title": "一个平台，{highlight}",
-    "highlight": "四大智能体",
+    "highlight": "五大智能体",
     "subtitle": "每个智能体专注其行业领域，共享同一底层 AI 平台基础设施。",
     "notify": "提前预约 →",
     "cards": [
@@ -86,18 +86,30 @@
         "url": "https://app.canmarket.ai"
       },
       {
+        "name": "CanArt",
+        "tag": "Telegram AI 设计助手",
+        "description": "无需学习软件，无需电脑。发条消息，3 秒出专业级电商图片。品牌记忆让每张图片保持一致。",
+        "features": ["文生图 (Seedream 4.5)", "智能图片编辑 (Gemini)", "14 图参考合成", "海报排版"],
+        "badge": "已上线",
+        "badgeType": "live",
+        "cta": "体验 CanArt",
+        "url": "https://canart-landing.vercel.app/en"
+      },
+      {
+        "name": "CanSell",
+        "tag": "AI 店铺销售智能体",
+        "description": "粘贴店铺链接，即刻获得 AI 销售助手——熟知每一件商品、支持多语言、自然推荐关联产品。",
+        "features": ["即时店铺爬取", "多语言销售对话", "智能追加销售 (+15% 客单价)", "支持 Shopify / WooCommerce"],
+        "badge": "已上线",
+        "badgeType": "live",
+        "cta": "体验 CanSell",
+        "url": "https://hatchery-bot.vercel.app"
+      },
+      {
         "name": "CanService",
         "tag": "AI 客服智能体",
         "description": "全渠道 7×24 小时智能客服。AI 理解上下文，智能分流工单，更快解决客户问题。",
         "features": ["全渠道 AI 对话", "智能工单路由", "知识库 AI", "情绪分析"],
-        "badge": "即将推出",
-        "badgeType": "soon"
-      },
-      {
-        "name": "CanSales",
-        "tag": "AI 销售智能体",
-        "description": "从线索到成交，全程自动化。AI 驱动的销售管道，自动跟进、评分和转化。",
-        "features": ["智能线索评分", "销售管道自动化", "AI 跟进序列", "成单洞察"],
         "badge": "即将推出",
         "badgeType": "soon"
       },

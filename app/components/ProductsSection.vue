@@ -29,17 +29,27 @@ const cardConfig = [
     scanline: true,
   },
   {
-    icon: '💬',
-    accentFrom: '#00b4c8',
-    accentTo: '#00e5a0',
-    borderColor: 'border-white/10',
-    bgColor: 'from-[#071a1a]/80 to-[#061030]/90',
-    glowColor: 'transparent',
-    glowHoverColor: 'rgba(0,229,160,0.08)',
-    scanline: false,
+    icon: '🎨',
+    accentFrom: '#e04690',
+    accentTo: '#ff6ba6',
+    borderColor: 'border-[#ff6ba6]/25',
+    bgColor: 'from-[#2a0a1a]/80 to-[#061030]/90',
+    glowColor: 'rgba(255,107,166,0.08)',
+    glowHoverColor: 'rgba(255,107,166,0.15)',
+    scanline: true,
   },
   {
-    icon: '📈',
+    icon: '🛒',
+    accentFrom: '#00b4c8',
+    accentTo: '#00e5a0',
+    borderColor: 'border-[#00e5a0]/25',
+    bgColor: 'from-[#071a1a]/80 to-[#061030]/90',
+    glowColor: 'rgba(0,229,160,0.08)',
+    glowHoverColor: 'rgba(0,229,160,0.15)',
+    scanline: true,
+  },
+  {
+    icon: '💬',
     accentFrom: '#643cdc',
     accentTo: '#b450ff',
     borderColor: 'border-white/10',
@@ -74,7 +84,7 @@ const cardConfig = [
       </div>
 
       <!-- Product grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         <div
           v-for="(card, i) in cards"
           :key="i"
