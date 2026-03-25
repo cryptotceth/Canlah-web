@@ -14,7 +14,7 @@ useHead({
         '@type': 'Organization',
         name: 'CANLAH AI',
         url: 'https://canlah.ai',
-        logo: 'https://canlah.ai/favicon.svg',
+        logo: 'https://canlah.ai/logo-mascot.png',
         description: 'AI platform company building intelligent agents for marketing, sales, service, and commerce.',
         foundingDate: '2024',
         sameAs: [],

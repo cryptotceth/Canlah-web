@@ -21,7 +21,7 @@ onMounted(() => {
 
       <!-- Logo -->
       <a href="/" class="flex items-center gap-3 flex-shrink-0">
-        <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-[#0d47e0] to-[#00d4ff] flex items-center justify-center text-base shadow-[0_0_20px_rgba(0,212,255,0.4)]">⬡</div>
+        <img src="/logo-mascot.png" alt="CANLAH AI" class="w-9 h-9 object-contain" />
         <span class="font-display font-bold text-xl tracking-wide text-white">CANLAH AI</span>
       </a>
 
