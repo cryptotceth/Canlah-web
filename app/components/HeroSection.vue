@@ -33,7 +33,7 @@ onUnmounted(() => {
       </div>
 
       <!-- Main headline -->
-      <h1 class="font-display font-extrabold text-[52px] md:text-[76px] leading-[1.05] tracking-tight mb-6">
+      <h1 class="font-display font-bold text-[48px] md:text-[72px] leading-[1.08] tracking-[-0.02em] mb-6">
         <span class="text-white">{{ $t('hero.line1') }}<br /></span>
         <span class="relative inline-block">
           <span
@@ -42,7 +42,7 @@ onUnmounted(() => {
             style="display:inline-block"
           >{{ displayed }}</span>
         </span>
-        <span class="text-white"> {{ $t('hero.line3') }}</span>
+        <span class="text-white">&nbsp;{{ $t('hero.line3') }}</span>
       </h1>
 
       <!-- Subheadline -->
