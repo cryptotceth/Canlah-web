@@ -33,9 +33,9 @@ onUnmounted(() => {
       </div>
 
       <!-- Main headline -->
-      <h1 class="font-display font-bold text-[48px] md:text-[72px] leading-[1.08] tracking-[-0.02em] mb-6">
+      <h1 class="font-display font-bold text-[48px] md:text-[72px] leading-[1.2] tracking-[-0.02em] mb-6">
         <span class="text-white">{{ $t('hero.line1') }}<br /></span>
-        <span class="relative inline-block mr-[0.25em]">
+        <span class="relative inline-block" style="margin-right: 0.3em;">
           <span
             class="bg-gradient-to-r from-[#00d4ff] via-[#3b7fff] to-[#0d47e0] bg-clip-text text-transparent transition-all duration-300"
             :class="isAnimating ? 'opacity-0 translate-y-2' : 'opacity-100 translate-y-0'"
