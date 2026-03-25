@@ -18,7 +18,7 @@
           </div>
 
           <!-- Headline -->
-          <h2 class="font-display font-extrabold text-[38px] md:text-[52px] text-white leading-[1.1] tracking-tight mb-5">
+          <h2 class="font-display font-bold text-[38px] md:text-[52px] text-white leading-[1.2] tracking-tight mb-5">
             {{ $t('cta.headline') }}
           </h2>
 

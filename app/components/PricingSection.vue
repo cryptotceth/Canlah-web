@@ -14,7 +14,7 @@ const tiers = computed(() => tm('pricing.tiers') as {
       <!-- Section header -->
       <div v-reveal class="text-center mb-14">
         <div class="font-mono text-[10px] text-[#00d4ff] tracking-[4px] mb-3">{{ $t('pricing.sectionTag') }}</div>
-        <h2 class="font-display font-extrabold text-4xl md:text-5xl text-white leading-tight mb-4">
+        <h2 class="font-display font-bold text-4xl md:text-5xl text-white leading-tight mb-4">
           {{ $t('pricing.title') }}
         </h2>
         <p class="text-[15px] text-[#5070a0] max-w-lg mx-auto">{{ $t('pricing.subtitle') }}</p>

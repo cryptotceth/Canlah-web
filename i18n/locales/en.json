@@ -182,7 +182,7 @@
     "sectionTag": "THE ENGINE",
     "title": "Built on a {highlight}",
     "highlight": "Unified AI Platform",
-    "subtitle": "All four agents run on the same infrastructure — share data, share memory, share brand identity.",
+    "subtitle": "All five agents run on the same infrastructure — share data, share memory, share brand identity.",
     "capabilities": [
       { "icon": "🧠", "label": "Agent Orchestration", "desc": "Multi-step reasoning across agents with automated decision routing" },
       { "icon": "🔀", "label": "Multi-Model Routing", "desc": "Best model for each task — GPT, Gemini, Claude — intelligently selected" },
@@ -308,7 +308,7 @@
         "ctaStyle": "border border-[#6496ff]/30 text-[#6496ff] hover:border-[#6496ff]/60 hover:bg-[#6496ff]/8",
         "features": [
           "Unlimited brands & workspaces",
-          "All 4 agents (CanMarket + coming soon)",
+          "All 5 agents (3 live + 2 coming soon)",
           "Agent Studio — custom AI agents",
           "Dedicated CSM & SLA",
           "SSO + audit logs",

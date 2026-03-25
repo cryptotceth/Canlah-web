@@ -10,7 +10,7 @@ const quotes = computed(() => tm('testimonials.quotes') as { quote: string; role
       <!-- Section header -->
       <div v-reveal class="text-center mb-14">
         <div class="font-mono text-[10px] text-[#00e5a0] tracking-[4px] mb-3">{{ $t('testimonials.sectionTag') }}</div>
-        <h2 class="font-display font-extrabold text-4xl md:text-5xl text-white leading-tight">
+        <h2 class="font-display font-bold text-4xl md:text-5xl text-white leading-tight">
           {{ $t('testimonials.title') }}
         </h2>
       </div>

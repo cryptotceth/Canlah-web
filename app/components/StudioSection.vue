@@ -10,7 +10,7 @@ const features = computed(() => tm('studio.features') as { icon: string, title: 
       <!-- Section header -->
       <div class="text-center mb-14">
         <div class="font-mono text-[10px] text-[#6496ff] tracking-[4px] mb-3">{{ $t('studio.sectionTag') }}</div>
-        <h2 class="font-display font-extrabold text-4xl md:text-5xl text-white leading-tight">
+        <h2 class="font-display font-bold text-4xl md:text-5xl text-white leading-tight">
           {{ $t('studio.name') }}
         </h2>
         <p class="mt-4 text-[15px] text-[#5a7099] max-w-lg mx-auto">{{ $t('studio.tag') }}</p>

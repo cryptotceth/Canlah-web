@@ -35,7 +35,7 @@ useHead({
       <!-- Section header -->
       <div class="text-center mb-14">
         <div class="font-mono text-[10px] text-[#00d4ff] tracking-[4px] mb-3">{{ $t('faq.sectionTag') }}</div>
-        <h2 class="font-display font-extrabold text-4xl md:text-5xl text-white leading-tight">
+        <h2 class="font-display font-bold text-4xl md:text-5xl text-white leading-tight">
           {{ $t('faq.title') }}
         </h2>
       </div>

@@ -127,7 +127,7 @@
     "sectionTag": "技术引擎",
     "title": "构建于 {highlight}",
     "highlight": "统一 AI 平台之上",
-    "subtitle": "四大智能体运行于同一基础设施——共享数据、共享记忆、共享品牌身份。",
+    "subtitle": "五大智能体运行于同一基础设施——共享数据、共享记忆、共享品牌身份。",
     "capabilities": [
       { "icon": "🧠", "label": "智能体编排", "desc": "跨智能体多步推理，自动化决策路由" },
       { "icon": "🔀", "label": "多模型路由", "desc": "GPT、Gemini、Claude 按任务智能选择最优模型" },
@@ -308,7 +308,7 @@
         "ctaStyle": "border border-[#6496ff]/30 text-[#6496ff] hover:border-[#6496ff]/60 hover:bg-[#6496ff]/8",
         "features": [
           "无限品牌和工作区",
-          "全部 4 个智能体（含即将推出）",
+          "全部 5 个智能体（3 个已上线 + 2 个即将推出）",
           "Agent Studio——定制 AI 智能体",
           "专属客户成功经理及 SLA",
           "SSO + 审计日志",

@@ -77,7 +77,7 @@ const cardConfig = [
       <!-- Section header -->
       <div class="text-center mb-14">
         <div class="font-mono text-[10px] text-[#00d4ff] tracking-[4px] mb-3">{{ $t('products.sectionTag') }}</div>
-        <h2 class="font-display font-extrabold text-4xl md:text-5xl text-white leading-tight">
+        <h2 class="font-display font-bold text-4xl md:text-5xl text-white leading-tight">
           <span v-html="$t('products.title', { highlight: `<span class='bg-gradient-to-r from-[#00d4ff] to-[#3b7fff] bg-clip-text text-transparent'>${$t('products.highlight')}</span>` })"></span>
         </h2>
         <p class="mt-4 text-[15px] text-[#5a7099] max-w-xl mx-auto">{{ $t('products.subtitle') }}</p>

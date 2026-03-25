@@ -16,7 +16,7 @@ const rows = computed(() => tm('comparison.rows') as {
       <!-- Section header -->
       <div class="text-center mb-14">
         <div class="font-mono text-[10px] text-[#00d4ff] tracking-[4px] mb-3">{{ $t('comparison.sectionTag') }}</div>
-        <h2 class="font-display font-extrabold text-4xl md:text-5xl text-white leading-tight mb-4">
+        <h2 class="font-display font-bold text-4xl md:text-5xl text-white leading-tight mb-4">
           {{ $t('comparison.title') }}
           <span class="bg-gradient-to-r from-[#00d4ff] to-[#0d47e0] bg-clip-text text-transparent">{{ $t('comparison.highlight') }}</span>
         </h2>
