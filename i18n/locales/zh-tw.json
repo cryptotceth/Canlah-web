@@ -123,6 +123,46 @@
       }
     ]
   },
+  "amazonSuite": {
+    "sectionTag": "亞馬遜賣家工具箱",
+    "title": "為{highlight}量身打造",
+    "highlight": "亞馬遜賣家",
+    "subtitle": "CanMarket 守護你的品牌，這些工具經營你的店鋪。",
+    "cta": "查看所有工具",
+    "ctaUrl": "https://github.com/Canlah-AI",
+    "cards": [
+      {
+        "name": "Listing Gen",
+        "icon": "photo",
+        "description": "AI 驅動的亞馬遜 Listing 圖生成 — ReAct Agent，Stripe 計費，幾分鐘出專業級 A+ 素材。",
+        "url": "https://github.com/Canlah-AI/listing-gen"
+      },
+      {
+        "name": "Rufus Scraper",
+        "icon": "chat",
+        "description": "批次 ASIN → Amazon Rufus AI 問答抓取，中英雙語報告，Playwright CDP。",
+        "url": "https://github.com/Canlah-AI/rufus-scraper"
+      },
+      {
+        "name": "SuperScrape",
+        "icon": "shield",
+        "description": "反爬 Amazon / eBay / Shopee 資料抓取 + GPT Vision 競品情報。",
+        "url": "https://github.com/Canlah-AI/superscrape"
+      },
+      {
+        "name": "TVC Generator",
+        "icon": "video",
+        "description": "為亞馬遜和 DTC 品牌生成 AI 電視廣告級產品影片。",
+        "url": "https://github.com/Canlah-AI/tvc-generator"
+      },
+      {
+        "name": "Hatchery (CanSell)",
+        "icon": "bolt",
+        "description": "電商 AI 銷售代理 — Shopify 爬蟲、郵件序列、聊天外掛。",
+        "url": "https://github.com/Canlah-AI/cansell-bot"
+      }
+    ]
+  },
   "platform": {
     "sectionTag": "技術引擎",
     "title": "構建於 {highlight}",

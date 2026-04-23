@@ -178,6 +178,46 @@
       }
     ]
   },
+  "amazonSuite": {
+    "sectionTag": "AMAZON SELLER SUITE",
+    "title": "Purpose-built for {highlight}",
+    "highlight": "Amazon sellers",
+    "subtitle": "CanMarket handles your brand. These handle your store.",
+    "cta": "See all tools",
+    "ctaUrl": "https://github.com/Canlah-AI",
+    "cards": [
+      {
+        "name": "Listing Gen",
+        "icon": "photo",
+        "description": "AI-powered Amazon listing images — ReAct agent, Stripe billing, minutes to pro-grade A+ creatives.",
+        "url": "https://github.com/Canlah-AI/listing-gen"
+      },
+      {
+        "name": "Rufus Scraper",
+        "icon": "chat",
+        "description": "Batch ASIN → Amazon Rufus AI Q&A extraction, bilingual EN/ZH reports, Playwright CDP.",
+        "url": "https://github.com/Canlah-AI/rufus-scraper"
+      },
+      {
+        "name": "SuperScrape",
+        "icon": "shield",
+        "description": "Anti-bot Amazon / eBay / Shopee scraping + GPT Vision competitive intel.",
+        "url": "https://github.com/Canlah-AI/superscrape"
+      },
+      {
+        "name": "TVC Generator",
+        "icon": "video",
+        "description": "AI-generated TV commercial product videos for Amazon and DTC brands.",
+        "url": "https://github.com/Canlah-AI/tvc-generator"
+      },
+      {
+        "name": "Hatchery (CanSell)",
+        "icon": "bolt",
+        "description": "AI sales agent for ecommerce — Shopify crawler, email sequences, chat widget.",
+        "url": "https://github.com/Canlah-AI/cansell-bot"
+      }
+    ]
+  },
   "platform": {
     "sectionTag": "THE ENGINE",
     "title": "Built on a {highlight}",

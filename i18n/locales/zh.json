@@ -123,6 +123,46 @@
       }
     ]
   },
+  "amazonSuite": {
+    "sectionTag": "亚马逊卖家工具箱",
+    "title": "为{highlight}量身打造",
+    "highlight": "亚马逊卖家",
+    "subtitle": "CanMarket 守护你的品牌，这些工具经营你的店铺。",
+    "cta": "查看所有工具",
+    "ctaUrl": "https://github.com/Canlah-AI",
+    "cards": [
+      {
+        "name": "Listing Gen",
+        "icon": "photo",
+        "description": "AI 驱动的亚马逊 Listing 图生成 — ReAct Agent，Stripe 计费，几分钟出专业级 A+ 素材。",
+        "url": "https://github.com/Canlah-AI/listing-gen"
+      },
+      {
+        "name": "Rufus Scraper",
+        "icon": "chat",
+        "description": "批量 ASIN → Amazon Rufus AI 问答抓取，中英双语报告，Playwright CDP。",
+        "url": "https://github.com/Canlah-AI/rufus-scraper"
+      },
+      {
+        "name": "SuperScrape",
+        "icon": "shield",
+        "description": "反爬 Amazon / eBay / Shopee 数据抓取 + GPT Vision 竞品情报。",
+        "url": "https://github.com/Canlah-AI/superscrape"
+      },
+      {
+        "name": "TVC Generator",
+        "icon": "video",
+        "description": "为亚马逊和 DTC 品牌生成 AI 电视广告级产品视频。",
+        "url": "https://github.com/Canlah-AI/tvc-generator"
+      },
+      {
+        "name": "Hatchery (CanSell)",
+        "icon": "bolt",
+        "description": "电商 AI 销售代理 — Shopify 爬虫、邮件序列、聊天插件。",
+        "url": "https://github.com/Canlah-AI/cansell-bot"
+      }
+    ]
+  },
   "platform": {
     "sectionTag": "技术引擎",
     "title": "构建于 {highlight}",

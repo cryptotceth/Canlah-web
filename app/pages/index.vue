@@ -7,6 +7,7 @@
     <TestimonialsSection />
     <ComparisonSection />
     <ProductsSection />
+    <AmazonSuiteSection />
     <PlatformSection />
     <StudioSection />
     <PricingSection />
