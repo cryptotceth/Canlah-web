@@ -127,39 +127,34 @@
     "sectionTag": "亚马逊卖家工具箱",
     "title": "为{highlight}量身打造",
     "highlight": "亚马逊卖家",
-    "subtitle": "CanMarket 守护你的品牌，这些工具经营你的店铺。",
-    "cta": "查看所有工具",
-    "ctaUrl": "https://github.com/Canlah-AI",
+    "subtitle": "同一个品牌，贯穿每一张 Listing、每一条视频、每一次顾客触达。",
+    "cta": "在你的产品上看效果",
+    "ctaUrl": "#pricing",
     "cards": [
       {
-        "name": "Listing Gen",
+        "name": "一致的品牌级 Listing 素材",
         "icon": "photo",
-        "description": "AI 驱动的亚马逊 Listing 图生成 — ReAct Agent，Stripe 计费，几分钟出专业级 A+ 素材。",
-        "url": "https://github.com/Canlah-AI/listing-gen"
+        "description": "只上传一张产品图，主图、信息图、场景图全套出齐，每一张都符合你的品牌调性——几分钟就搞定。"
       },
       {
-        "name": "Rufus Scraper",
+        "name": "读懂 AI 时代买家的问题",
         "icon": "chat",
-        "description": "批量 ASIN → Amazon Rufus AI 问答抓取，中英双语报告，Playwright CDP。",
-        "url": "https://github.com/Canlah-AI/rufus-scraper"
+        "description": "在买家点进你的页面之前，先看清他们向亚马逊 AI 助手问了什么，中英文都能抓。"
       },
       {
-        "name": "SuperScrape",
-        "icon": "shield",
-        "description": "反爬 Amazon / eBay / Shopee 数据抓取 + GPT Vision 竞品情报。",
-        "url": "https://github.com/Canlah-AI/superscrape"
-      },
-      {
-        "name": "TVC Generator",
-        "icon": "video",
-        "description": "为亚马逊和 DTC 品牌生成 AI 电视广告级产品视频。",
-        "url": "https://github.com/Canlah-AI/tvc-generator"
-      },
-      {
-        "name": "Hatchery (CanSell)",
+        "name": "品类级视觉洞察",
         "icon": "bolt",
-        "description": "电商 AI 销售代理 — Shopify 爬虫、邮件序列、聊天插件。",
-        "url": "https://github.com/Canlah-AI/cansell-bot"
+        "description": "不用专门的研究团队，也能看清你所在品类里哪些创意最有效，并自动转化为符合品牌的素材。"
+      },
+      {
+        "name": "不用剧组也能出视频广告",
+        "icon": "video",
+        "description": "一张产品图，就能生成 TVC 级别的视频广告，用于 Amazon Posts、Prime Video 和社交媒体——品牌一致、可批量产出。"
+      },
+      {
+        "name": "把成交后的客户留下来",
+        "icon": "shield",
+        "description": "自动跟进 Amazon 和 Shopify 首单客户，用符合品牌的话术做回访、邀评、交叉推荐，把一次性买家变成回头客。"
       }
     ]
   },

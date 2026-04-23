@@ -182,39 +182,34 @@
     "sectionTag": "AMAZON SELLER SUITE",
     "title": "Purpose-built for {highlight}",
     "highlight": "Amazon sellers",
-    "subtitle": "CanMarket handles your brand. These handle your store.",
-    "cta": "See all tools",
-    "ctaUrl": "https://github.com/Canlah-AI",
+    "subtitle": "Your brand, consistent across every listing, video, and buyer touchpoint.",
+    "cta": "See it on your products",
+    "ctaUrl": "#pricing",
     "cards": [
       {
-        "name": "Listing Gen",
+        "name": "On-brand listing creatives",
         "icon": "photo",
-        "description": "AI-powered Amazon listing images — ReAct agent, Stripe billing, minutes to pro-grade A+ creatives.",
-        "url": "https://github.com/Canlah-AI/listing-gen"
+        "description": "Upload one product photo. Get main images, infographics, and lifestyle shots that match your brand — every time, in minutes."
       },
       {
-        "name": "Rufus Scraper",
+        "name": "Know what AI-era buyers ask",
         "icon": "chat",
-        "description": "Batch ASIN → Amazon Rufus AI Q&A extraction, bilingual EN/ZH reports, Playwright CDP.",
-        "url": "https://github.com/Canlah-AI/rufus-scraper"
+        "description": "See the questions shoppers put to Amazon's AI assistant about your category — before they land on your page, in English and Chinese."
       },
       {
-        "name": "SuperScrape",
-        "icon": "shield",
-        "description": "Anti-bot Amazon / eBay / Shopee scraping + GPT Vision competitive intel.",
-        "url": "https://github.com/Canlah-AI/superscrape"
-      },
-      {
-        "name": "TVC Generator",
-        "icon": "video",
-        "description": "AI-generated TV commercial product videos for Amazon and DTC brands.",
-        "url": "https://github.com/Canlah-AI/tvc-generator"
-      },
-      {
-        "name": "Hatchery (CanSell)",
+        "name": "Category-level visual intelligence",
         "icon": "bolt",
-        "description": "AI sales agent for ecommerce — Shopify crawler, email sequences, chat widget.",
-        "url": "https://github.com/Canlah-AI/cansell-bot"
+        "description": "Understand which creative patterns win in your niche without a research team. Turn insight into on-brand assets automatically."
+      },
+      {
+        "name": "Video ads without a studio",
+        "icon": "video",
+        "description": "Turn a single product photo into TV-grade video ads for Amazon Posts, Prime Video, and social — on your brand, at scale."
+      },
+      {
+        "name": "Close the loop after purchase",
+        "icon": "shield",
+        "description": "Turn first-time Amazon and Shopify buyers into repeat customers with on-brand follow-ups, review asks, and cross-sells — automatic."
       }
     ]
   },

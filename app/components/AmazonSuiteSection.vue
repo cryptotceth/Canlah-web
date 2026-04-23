@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { tm } = useI18n()
-const cards = computed(() => tm('amazonSuite.cards') as { name: string, icon: string, description: string, url: string }[])
+const cards = computed(() => tm('amazonSuite.cards') as { name: string, icon: string, description: string }[])
 </script>
 
 <template>
@@ -15,15 +15,12 @@ const cards = computed(() => tm('amazonSuite.cards') as { name: string, icon: st
         <p class="mt-4 text-[15px] text-[#5a7099] max-w-xl mx-auto">{{ $t('amazonSuite.subtitle') }}</p>
       </div>
 
-      <!-- Product grid — 3 + 2 on desktop, flex-wrap centers last row -->
+      <!-- Capability grid — 3 + 2 on desktop, flex-wrap centers last row -->
       <div class="flex flex-wrap justify-center gap-5 mb-12">
-        <a
+        <div
           v-for="(card, i) in cards"
           :key="i"
           v-reveal="{ delay: i * 80 }"
-          :href="card.url"
-          target="_blank"
-          rel="noopener"
           class="group relative rounded-2xl border border-[#00d4ff]/20 bg-gradient-to-br from-[#071a4a]/70 to-[#061030]/90 backdrop-blur-md p-7 transition-all duration-300 hover:-translate-y-2 hover:border-[#00d4ff]/50 overflow-hidden w-full md:w-[calc(50%-10px)] lg:w-[calc(33.333%-14px)]"
           :style="{ boxShadow: '0 0 30px rgba(0,212,255,0.08)' }"
         >
@@ -60,25 +57,18 @@ const cards = computed(() => tm('amazonSuite.cards') as { name: string, icon: st
           <h3 class="font-display font-bold text-[18px] text-white mb-3">{{ card.name }}</h3>
 
           <!-- Description -->
-          <p class="text-[13px] text-[#8ba4cc] mb-5 leading-relaxed">{{ card.description }}</p>
-
-          <!-- View on GitHub -->
-          <div class="inline-flex items-center gap-1.5 text-[12px] font-semibold text-[#00d4ff] transition-all group-hover:gap-2.5">
-            View on GitHub <span>→</span>
-          </div>
+          <p class="text-[13px] text-[#8ba4cc] leading-relaxed">{{ card.description }}</p>
 
           <!-- Hover glow overlay -->
           <div class="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
             style="background: radial-gradient(circle at 50% 0%, rgba(0,212,255,0.08), transparent 60%)"></div>
-        </a>
+        </div>
       </div>
 
       <!-- Global CTA -->
       <div v-reveal="{ delay: 400 }" class="text-center">
         <a
           :href="$t('amazonSuite.ctaUrl')"
-          target="_blank"
-          rel="noopener"
           class="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-[#00d4ff]/35 bg-[#00d4ff]/5 text-[#00d4ff] font-mono text-sm font-semibold tracking-wider transition-all hover:bg-[#00d4ff]/10 hover:border-[#00d4ff]/60"
         >
           {{ $t('amazonSuite.cta') }}
