@@ -1,35 +1,30 @@
 <script setup lang="ts">
-const { tm } = useI18n()
-const cards = computed(() => tm('amazonSuite.cards') as { name: string, icon: string, description: string }[])
+const cards = useTmList<{ name: string, icon: string, description: string }[]>('amazonSuite.cards')
 </script>
 
 <template>
-  <section id="amazon-suite" class="py-20 px-6">
-    <div class="max-w-[1400px] mx-auto">
+  <section id="amazon-suite" class="section px-4 sm:px-6 lg:px-10 xl:px-14">
+    <div class="w-full">
       <!-- Section header -->
-      <div v-reveal class="text-center mb-14">
-        <div class="font-mono text-[10px] text-[#00d4ff] tracking-[4px] mb-3">{{ $t('amazonSuite.sectionTag') }}</div>
-        <h2 class="font-display font-bold text-4xl md:text-5xl text-white leading-tight">
-          <span v-html="$t('amazonSuite.title', { highlight: `<span class='bg-gradient-to-r from-[#00d4ff] to-[#60a5fa] bg-clip-text text-transparent'>${$t('amazonSuite.highlight')}</span>` })"></span>
+      <div v-reveal class="text-center mb-16">
+        <div class="font-mono text-[10px] text-[#BDD1F6] tracking-[4px] mb-3">{{ $t('amazonSuite.sectionTag') }}</div>
+        <h2 class="font-display font-bold text-4xl md:text-5xl text-[#efefe5] leading-[1.15]">
+          <span v-html="$t('amazonSuite.title', { highlight: `<span class='bg-gradient-to-r from-[#BDD1F6] to-[#91B3F0] bg-clip-text text-transparent'>${$t('amazonSuite.highlight')}</span>` })"></span>
         </h2>
-        <p class="mt-4 text-[15px] text-[#5a7099] max-w-xl mx-auto">{{ $t('amazonSuite.subtitle') }}</p>
+        <p class="mt-4 text-[15px] text-[#BABABA] max-w-xl mx-auto">{{ $t('amazonSuite.subtitle') }}</p>
       </div>
 
-      <!-- Capability grid — 3 + 2 on desktop, flex-wrap centers last row -->
-      <div class="flex flex-wrap justify-center gap-5 mb-12">
+      <!-- Flex wrap + center: last row (2 cards) auto-centers -->
+      <div class="flex flex-wrap justify-center gap-5 lg:gap-6 w-full mb-12">
         <div
           v-for="(card, i) in cards"
           :key="i"
-          v-reveal="{ delay: i * 80 }"
-          class="group relative rounded-2xl border border-[#00d4ff]/20 bg-gradient-to-br from-[#071a4a]/70 to-[#061030]/90 backdrop-blur-md p-7 transition-all duration-300 hover:-translate-y-2 hover:border-[#00d4ff]/50 overflow-hidden w-full md:w-[calc(50%-10px)] lg:w-[calc(33.333%-14px)]"
-          :style="{ boxShadow: '0 0 30px rgba(0,212,255,0.08)' }"
+          v-reveal="{ delay: i * 100 }"
+          class="group relative w-full md:w-[calc(50%-10px)] lg:w-[calc(33.333%-16px)] rounded-[2px] border border-[#efefe5]/12 bg-[#0B0A10]/75 hover:bg-[#0B0A10]/90 hover:border-[#efefe5]/25 backdrop-blur-md p-7 lg:p-9 flex flex-col min-h-[260px] transition-colors duration-300"
         >
-          <!-- Top accent line -->
-          <div class="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#00d4ff]/50 to-transparent"></div>
-
           <!-- Icon -->
           <div
-            class="w-12 h-12 rounded-xl flex items-center justify-center mb-5 border border-[#00d4ff]/30 bg-[#00d4ff]/10 text-[#00d4ff] transition-colors group-hover:bg-[#00d4ff]/20"
+            class="w-[52px] h-[52px] rounded-[2px] flex items-center justify-center mb-6 flex-shrink-0 border bg-[#BDD1F6]/15 border-[#BDD1F6]/50 text-[#BDD1F6] shadow-[0_0_20px_rgba(189,209,246,0.25)] transition-all duration-300 group-hover:scale-110"
           >
             <!-- photo / camera -->
             <svg v-if="card.icon === 'photo'" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="w-6 h-6">
@@ -53,15 +48,11 @@ const cards = computed(() => tm('amazonSuite.cards') as { name: string, icon: st
             </svg>
           </div>
 
-          <!-- Name -->
-          <h3 class="font-display font-bold text-[18px] text-white mb-3">{{ card.name }}</h3>
-
-          <!-- Description -->
-          <p class="text-[13px] text-[#8ba4cc] leading-relaxed">{{ card.description }}</p>
-
-          <!-- Hover glow overlay -->
-          <div class="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
-            style="background: radial-gradient(circle at 50% 0%, rgba(0,212,255,0.08), transparent 60%)"></div>
+          <!-- Content -->
+          <div class="flex-1">
+            <h3 class="font-display font-bold text-[19px] text-[#efefe5] mb-3">{{ card.name }}</h3>
+            <p class="text-[14px] text-[#BABABA] leading-[1.5]">{{ card.description }}</p>
+          </div>
         </div>
       </div>
 
@@ -69,7 +60,7 @@ const cards = computed(() => tm('amazonSuite.cards') as { name: string, icon: st
       <div v-reveal="{ delay: 400 }" class="text-center">
         <a
           :href="$t('amazonSuite.ctaUrl')"
-          class="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-[#00d4ff]/35 bg-[#00d4ff]/5 text-[#00d4ff] font-mono text-sm font-semibold tracking-wider transition-all hover:bg-[#00d4ff]/10 hover:border-[#00d4ff]/60"
+          class="inline-flex items-center gap-2 px-6 py-3 rounded-[2px] border border-[#BDD1F6]/35 bg-[#BDD1F6]/5 text-[#BDD1F6] font-mono text-sm font-bold tracking-wider transition-all hover:bg-[#BDD1F6]/10 hover:border-[#BDD1F6]/60"
         >
           {{ $t('amazonSuite.cta') }}
           <span>→</span>

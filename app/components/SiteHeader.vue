@@ -2,89 +2,129 @@
 const { locale, locales, setLocale } = useI18n()
 const isMenuOpen = ref(false)
 const scrolled = ref(false)
+const headerEl = ref<HTMLElement | null>(null)
 
 onMounted(() => {
   const onScroll = () => { scrolled.value = window.scrollY > 60 }
   window.addEventListener('scroll', onScroll, { passive: true })
-  onUnmounted(() => window.removeEventListener('scroll', onScroll))
+
+  const setNavHeight = () => {
+    if (!headerEl.value) return
+    document.documentElement.style.setProperty('--nav-h', `${headerEl.value.offsetHeight}px`)
+  }
+  setNavHeight()
+  const ro = new ResizeObserver(setNavHeight)
+  if (headerEl.value) ro.observe(headerEl.value)
+
+  onUnmounted(() => {
+    window.removeEventListener('scroll', onScroll)
+    ro.disconnect()
+  })
 })
+
+const links = [
+  { href: '#products',  label: 'Products',  dots: true,  show: 'lg' },
+  { href: '#pricing',   label: 'Pricing',   chev: true,  show: 'lg' },
+  { href: '#platform',  label: 'Platform',  chev: true,  show: 'xl' },
+  { href: '#faq',       label: 'FAQ',                    show: 'xl' },
+  { href: '/blog',      label: 'Blog',                   show: 'xl', nuxt: true },
+]
+
+const route = useRoute()
+const { $lenis } = useNuxtApp() as any
+function onLogo(e: MouseEvent) {
+  if (route.path === '/') {
+    e.preventDefault()
+    $lenis?.scrollTo(0, { duration: 1.2 })
+    history.replaceState(null, '', '/')
+  }
+}
 </script>
 
 <template>
   <header
-    class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md transition-all duration-300"
-    :class="scrolled
-      ? 'bg-[#070d16]/95 border-b border-white/10 shadow-[0_4px_40px_rgba(0,0,0,0.4)]'
-      : 'bg-[#070d16]/70 border-b border-white/5'"
+    ref="headerEl"
+    class="fixed top-0 left-0 right-0 z-50 transition-colors duration-300 backdrop-blur-xl"
+    :class="scrolled ? 'bg-[#0a090f]/92' : 'bg-[#0a090f]/72'"
   >
-    <div class="max-w-[1400px] mx-auto px-6 py-4 flex items-center justify-between gap-6">
+    <!-- chaingpt-style bottom decorative line: solid 1px white + rainbow accent segment -->
+    <span class="absolute left-0 right-0 bottom-0 h-px bg-[#efefe5]/25 pointer-events-none"></span>
+    <span class="absolute left-1/4 right-1/4 bottom-0 h-px pointer-events-none" style="background-image: var(--rainbow); opacity: 0.55;"></span>
+    <div class="relative flex items-end justify-between px-4 sm:px-6 lg:px-10 xl:px-14 pt-5 pb-5 gap-4 lg:gap-6">
 
-      <!-- Logo -->
-      <a href="/" class="flex items-center gap-3 flex-shrink-0">
-        <img src="/logo-mascot.png" alt="CANLAH AI" class="w-10 h-10 object-contain -ml-1" />
-        <span class="font-display font-bold text-xl tracking-wide text-white">CANLAH AI</span>
+      <!-- ── LEFT: rainbow logo + wordmark — scroll to top if on home, else navigate -->
+      <a href="/" class="flex items-center gap-2.5 sm:gap-3 flex-shrink-0 group" @click="onLogo">
+        <span class="relative w-8 h-8 sm:w-9 sm:h-9 rounded-[2px] border-rainbow overflow-hidden flex items-center justify-center bg-[#0a090f]">
+          <img src="/logo-mascot.png" alt="" class="w-[22px] h-[22px] sm:w-[24px] sm:h-[24px] object-contain" />
+        </span>
+        <span class="font-display font-bold text-[16px] sm:text-[17px] tracking-[0.04em] text-[#efefe5] uppercase">CANLAH&nbsp;AI</span>
       </a>
 
-      <!-- Desktop Nav -->
-      <nav aria-label="Main navigation" class="hidden md:flex items-center gap-6 flex-1 justify-center">
-        <a href="#products" class="text-sm text-[#6b82b5] hover:text-white transition-colors">{{ $t('nav.products') }}</a>
-        <a href="#pricing" class="text-sm text-[#6b82b5] hover:text-white transition-colors">{{ $t('nav.pricing') }}</a>
-        <a href="#platform" class="text-sm text-[#6b82b5] hover:text-white transition-colors">{{ $t('nav.platform') }}</a>
-        <a href="#faq" class="text-sm text-[#6b82b5] hover:text-white transition-colors">{{ $t('nav.faq') }}</a>
-        <NuxtLink to="/blog" class="text-sm text-[#6b82b5] hover:text-white transition-colors">Blog</NuxtLink>
+      <!-- ── CENTER: nav aligned to 25%-75% decorative lines -->
+      <nav aria-label="Main navigation" class="hidden lg:flex items-center justify-between absolute left-1/4 right-1/4 top-1/2 -translate-y-1/2">
+        <template v-for="(l, i) in links" :key="l.href">
+          <NuxtLink v-if="l.nuxt" :to="l.href"
+            class="frame-hover font-sans font-normal text-[15px] text-[#efefe5] hover:text-[#efefe5] transition-colors flex items-center gap-1.5 whitespace-nowrap"
+            :class="l.show === 'xl' ? 'hidden xl:inline-flex' : ''">
+            <i class="fb" aria-hidden="true"></i><i class="fb-rainbow" aria-hidden="true"></i>
+            <span v-if="l.dots" class="inline-grid grid-cols-2 gap-[2px] mr-0.5"><span v-for="j in 4" :key="j" class="w-[3px] h-[3px] bg-current rounded-[2px]"></span></span>
+            {{ l.label }}
+            <span v-if="l.chev" class="text-[9px] opacity-80">▼</span>
+          </NuxtLink>
+          <a v-else :href="l.href"
+            class="frame-hover font-sans font-normal text-[15px] text-[#efefe5] hover:text-[#efefe5] transition-colors flex items-center gap-1.5 whitespace-nowrap"
+            :class="l.show === 'xl' ? 'hidden xl:inline-flex' : ''">
+            <i class="fb" aria-hidden="true"></i><i class="fb-rainbow" aria-hidden="true"></i>
+            <span v-if="l.dots" class="inline-grid grid-cols-2 gap-[2px] mr-0.5"><span v-for="j in 4" :key="j" class="w-[3px] h-[3px] bg-current rounded-[2px]"></span></span>
+            {{ l.label }}
+            <span v-if="l.chev" class="text-[9px] opacity-80">▼</span>
+          </a>
+        </template>
       </nav>
 
-      <!-- Desktop right actions -->
-      <div class="hidden md:flex items-center gap-3 flex-shrink-0">
-        <!-- Language switcher -->
+      <!-- ── RIGHT: language + LAUNCH DAPP CTA -->
+      <div class="flex items-center gap-2 sm:gap-3 justify-end">
         <select
           :value="locale"
           @change="setLocale(($event.target as HTMLSelectElement).value)"
-          class="bg-transparent border border-white/10 rounded-md px-2 py-1 text-xs text-[#6b82b5] cursor-pointer outline-none hover:border-white/25 transition-colors"
+          class="hidden lg:inline-flex bg-transparent border-0 font-sans font-normal text-[14px] text-[#efefe5]/85 cursor-pointer outline-none hover:opacity-70 transition-opacity appearance-none"
         >
-          <option v-for="loc in locales" :key="loc.code" :value="loc.code" class="bg-[#0a1520]">
-            {{ loc.name }}
-          </option>
+          <option v-for="loc in locales" :key="loc.code" :value="loc.code" class="bg-[#0a090f]">{{ loc.name }}</option>
         </select>
 
-        <!-- Book Demo ghost -->
-        <a href="mailto:hello@canlah.ai"
-          class="text-sm text-[#6b82b5] hover:text-white transition-colors px-3 py-2">
-          {{ $t('nav.demo') }}
-        </a>
+        <div class="relative frame-bracket hover:opacity-90 transition-opacity"><i class="fb"></i>
+          <span class="absolute top-0 left-3 right-3 h-px" style="background-image: var(--rainbow)"></span>
+          <a href="https://app.canmarket.ai" target="_blank"
+            class="cockpit-label !text-[11px] sm:!text-[12px] !text-[#efefe5] flex items-center gap-2 whitespace-nowrap">
+            <span class="inline-grid grid-cols-2 gap-[2px]"><span v-for="i in 4" :key="i" class="w-[3px] h-[3px] bg-current rounded-[2px]"></span></span>
+            <span class="hidden sm:inline">{{ $t('nav.tryFree') }}</span>
+            <span class="sm:hidden">Try</span>
+          </a>
+        </div>
 
-        <!-- Try Free primary CTA -->
-        <a href="https://app.canmarket.ai" target="_blank"
-          class="group text-sm font-semibold px-5 py-2 rounded-full bg-gradient-to-r from-[#0d47e0] to-[#00d4ff] text-white hover:shadow-[0_0_24px_rgba(0,212,255,0.45)] transition-all hover:scale-[1.03] flex items-center gap-1.5">
-          {{ $t('nav.tryFree') }}
-          <span class="group-hover:translate-x-0.5 transition-transform text-xs">→</span>
-        </a>
+        <button @click="isMenuOpen = !isMenuOpen"
+          class="lg:hidden text-[#efefe5] p-1.5 -mr-1 rounded-[2px] hover:bg-[#efefe5]/5 transition-colors"
+          :aria-label="isMenuOpen ? 'Close menu' : 'Open menu'">
+          <span class="text-lg leading-none">{{ isMenuOpen ? '✕' : '☰' }}</span>
+        </button>
       </div>
-
-      <!-- Mobile menu toggle -->
-      <button @click="isMenuOpen = !isMenuOpen" class="md:hidden text-white p-1" :aria-label="isMenuOpen ? 'Close menu' : 'Open menu'">
-        <span class="text-xl leading-none">{{ isMenuOpen ? '✕' : '☰' }}</span>
-      </button>
     </div>
 
-    <!-- Mobile menu -->
-    <div v-if="isMenuOpen" class="md:hidden border-t border-white/8 bg-[#070d16]/98 px-6 py-5 flex flex-col gap-4">
-      <a href="#products" class="text-sm text-[#8ba4cc] py-1" @click="isMenuOpen = false">{{ $t('nav.products') }}</a>
-      <a href="#pricing" class="text-sm text-[#8ba4cc] py-1" @click="isMenuOpen = false">{{ $t('nav.pricing') }}</a>
-      <a href="#platform" class="text-sm text-[#8ba4cc] py-1" @click="isMenuOpen = false">{{ $t('nav.platform') }}</a>
-      <a href="#faq" class="text-sm text-[#8ba4cc] py-1" @click="isMenuOpen = false">{{ $t('nav.faq') }}</a>
-      <NuxtLink to="/blog" class="text-sm text-[#8ba4cc] py-1" @click="isMenuOpen = false">Blog</NuxtLink>
-      <div class="border-t border-white/8 pt-4 flex flex-col gap-3">
+    <!-- ── Mobile dropdown -->
+    <div v-if="isMenuOpen" class="lg:hidden border-t border-[#efefe5]/10 bg-[#0a090f]/95 backdrop-blur-xl px-6 py-5 flex flex-col gap-4">
+      <a v-for="l in links.filter(x => !x.nuxt)" :key="l.href" :href="l.href"
+        class="cockpit-label !text-[12px] !text-[#efefe5]/85 flex items-center gap-2 py-1"
+        @click="isMenuOpen = false">
+        <span v-if="l.dots" class="inline-grid grid-cols-2 gap-[2px]"><span v-for="i in 4" :key="i" class="w-[3px] h-[3px] bg-current rounded-[2px]"></span></span>
+        {{ l.label }}
+        <span v-if="l.chev" class="text-[8px] opacity-70 ml-auto">▼</span>
+      </a>
+      <NuxtLink to="/blog" class="cockpit-label !text-[12px] !text-[#efefe5]/85 flex items-center gap-2 py-1" @click="isMenuOpen = false">Community</NuxtLink>
+      <div class="border-t border-[#efefe5]/10 pt-4 flex items-center justify-between gap-3">
         <select :value="locale" @change="setLocale(($event.target as HTMLSelectElement).value)"
-          class="bg-transparent border border-white/10 rounded-md px-2 py-1 text-xs text-[#6b82b5] w-fit">
-          <option v-for="loc in locales" :key="loc.code" :value="loc.code" class="bg-[#0a1520]">{{ loc.name }}</option>
+          class="bg-transparent text-[#efefe5]/65 cockpit-label !text-[11px] cursor-pointer outline-none">
+          <option v-for="loc in locales" :key="loc.code" :value="loc.code" class="bg-[#0a090f]">{{ loc.name }}</option>
         </select>
-        <a href="mailto:hello@canlah.ai" class="text-sm text-[#6b82b5]" @click="isMenuOpen = false">{{ $t('nav.demo') }}</a>
-        <a href="https://app.canmarket.ai" target="_blank"
-          class="text-sm font-semibold px-5 py-2.5 rounded-full bg-gradient-to-r from-[#0d47e0] to-[#00d4ff] text-white text-center"
-          @click="isMenuOpen = false">
-          {{ $t('nav.tryFree') }} →
-        </a>
       </div>
     </div>
   </header>

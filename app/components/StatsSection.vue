@@ -1,29 +1,16 @@
+<script setup lang="ts">
+const stats = ['revenue', 'engagement', 'cost', 'clients']
+</script>
+
 <template>
-  <section class="py-14 px-6">
-    <div class="max-w-[1400px] mx-auto">
-      <div v-reveal class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div
-          v-for="stat in stats"
-          :key="stat.key"
-          class="relative rounded-2xl border border-white/8 bg-white/[0.03] backdrop-blur-sm p-6 text-center hover:border-[#00d4ff]/30 hover:bg-[#00d4ff]/[0.04] transition-all duration-300 group"
-        >
-          <div class="font-display font-extrabold text-[38px] leading-none mb-1 bg-gradient-to-br from-white to-[#7090c8] bg-clip-text text-transparent group-hover:from-[#00d4ff] group-hover:to-white transition-all duration-300">
-            {{ $t(`stats.${stat.key}.value`) }}
-          </div>
-          <div class="text-[11px] font-mono text-[#4a5a7a] tracking-wider mt-2">
-            {{ $t(`stats.${stat.key}.label`) }}
-          </div>
+  <section class="section px-4 sm:px-6 lg:px-10 xl:px-14">
+    <div v-reveal class="w-full flex flex-col gap-10 sm:gap-12">
+      <div v-for="key in stats" :key="key" class="text-center">
+        <div class="font-display font-bold text-[40px] sm:text-[56px] md:text-[72px] leading-none mb-2 sm:mb-3 text-grad">
+          {{ $t(`stats.${key}.value`) }}
         </div>
+        <div class="eyebrow justify-center text-[11px] sm:text-[13px]">{{ $t(`stats.${key}.label`) }}</div>
       </div>
     </div>
   </section>
 </template>
-
-<script setup lang="ts">
-const stats = [
-  { key: 'revenue' },
-  { key: 'engagement' },
-  { key: 'cost' },
-  { key: 'clients' },
-]
-</script>

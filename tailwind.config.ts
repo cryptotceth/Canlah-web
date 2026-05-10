@@ -8,9 +8,12 @@ export default <Partial<Config>>{
   theme: {
     extend: {
       fontFamily: {
-        display: ['Syne', 'sans-serif'],
-        mono: ['DM Mono', 'monospace'],
-        sans: ['Outfit', 'sans-serif'],
+        display: ['"Bai Jamjuree"', 'system-ui', 'sans-serif'],
+        mono: ['"DM Mono"', 'monospace'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+      },
+      colors: {
+        muted: '#BABABA',
       },
     },
   },

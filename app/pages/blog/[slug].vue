@@ -62,21 +62,21 @@ useHead({
         <div v-reveal class="mb-12">
           <div class="flex items-center gap-3 mb-5">
             <span
-              class="text-[10px] font-mono px-2.5 py-1 rounded-full border"
+              class="text-[10px] font-mono px-2.5 py-1 rounded-[2px] border"
               :style="{ color: post.categoryColor, borderColor: post.categoryColor + '30', backgroundColor: post.categoryColor + '10' }"
             >
               {{ post.category }}
             </span>
-            <span class="text-[11px] font-mono text-[#4a5a7a]">{{ post.date }}</span>
-            <span class="text-[11px] font-mono text-[#4a5a7a]">·</span>
-            <span class="text-[11px] font-mono text-[#4a5a7a]">{{ post.readTime }}</span>
+            <span class="text-[11px] font-mono text-[#BABABA]">{{ post.date }}</span>
+            <span class="text-[11px] font-mono text-[#BABABA]">·</span>
+            <span class="text-[11px] font-mono text-[#BABABA]">{{ post.readTime }}</span>
           </div>
 
-          <h1 class="font-display font-extrabold text-3xl md:text-[42px] text-white leading-tight mb-5">
+          <h1 class="font-display font-bold text-3xl md:text-[42px] text-[#efefe5] leading-[1.15] mb-5">
             {{ post.title }}
           </h1>
 
-          <p class="text-[16px] text-[#7090b8] leading-relaxed">
+          <p class="text-[16px] text-[#BABABA] leading-[1.5]">
             {{ post.description }}
           </p>
 
@@ -86,16 +86,16 @@ useHead({
         <!-- Article body slot — content is in individual article components -->
         <div v-reveal="{ delay: 100 }" class="article-body">
           <component :is="articleComponent" v-if="articleComponent" />
-          <div v-else class="rounded-2xl border border-white/8 bg-white/[0.025] p-8 text-center">
-            <p class="text-[15px] text-[#5a7099]">This article is coming soon. Check back shortly.</p>
+          <div v-else class="rounded-[2px] border border-white/8 bg-white/[0.025] p-8 text-center">
+            <p class="text-[15px] text-[#BABABA]">This article is coming soon. Check back shortly.</p>
           </div>
         </div>
 
         <!-- Bottom nav -->
         <div class="mt-16 flex items-center justify-between">
-          <NuxtLink to="/blog" class="text-[13px] text-[#5a7099] hover:text-[#00d4ff] transition-colors">← All articles</NuxtLink>
+          <NuxtLink to="/blog" class="text-[13px] text-[#BABABA] hover:text-[#BDD1F6] transition-colors">← All articles</NuxtLink>
           <a href="https://app.canmarket.ai" target="_blank"
-            class="text-[13px] font-semibold text-[#00d4ff] hover:underline">Try CanMarket Free →</a>
+            class="text-[13px] font-bold text-[#BDD1F6] hover:underline">Try CanMarket Free →</a>
         </div>
 
       </div>

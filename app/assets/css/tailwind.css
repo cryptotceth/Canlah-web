@@ -2,6 +2,357 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  scroll-behavior: smooth;
+html { scroll-behavior: smooth; }
+
+:root {
+  --bg:        #0a090f;
+  --bg-elev:   #0B0A10;
+  --bg-raised: #1E222A;
+  --text:      #efefe5;
+  --text-acc:  #BDD1F6;
+  --accent:    #91B3F0;
+  --violet:    #815ff7;
+  --muted:     #BABABA;
+  --divider:   #353539;
+  --pastel-green: #def8cb;
+  --pastel-peach: #fed0ab;
+  --pastel-pink:  #f8cbd6;
+  --pastel-sky:   #96daef;
+  /* chaingpt-exact 6-stop rainbow */
+  --rainbow: linear-gradient(90deg, #5be9d8 0%, #5d6df6 22%, #b15bf3 42%, #ee5d96 62%, #fea868 82%, #f8e055 100%);
+
+  /* Spacing scale — mirrors ethena.fi */
+  --section-y: 60px;
+  --inset-x:   16px;
+  --gap-1: 8px;  --gap-2: 12px; --gap-3: 16px;
+  --gap-4: 24px; --gap-5: 32px; --gap-6: 48px;
+  --r-sm: 10px;  --r-md: 16px;  --r-lg: 24px;  --r-xl: 32px;
+  --line-body: 1.5;     /* 16/24 */
+  --line-tight: 1.05;   /* H1 */
+  --line-display: 1.15; /* H2/H3 */
+}
+@media (min-width: 1024px) {
+  :root { --section-y: 120px; --inset-x: 20px; }
+}
+
+@layer components {
+  /* Signature ethena.fi gradient — exact stops from DOM */
+  .text-grad {
+    background-image: linear-gradient(90deg, #A4AFC2 0%, #E7EFFC 32%, #BFD4FA 100%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+
+  /* 1.5px gradient stroke — ethena exact: top #BDD1F6/60 → #1E222A → bg */
+  .border-grad { position: relative; isolation: isolate; }
+  .border-grad::before {
+    content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 1.5px;
+    background: linear-gradient(180deg, rgba(189,209,246,0.85) 0%, rgba(189,209,246,0.25) 18%, #2A2F38 55%, #14171C 100%);
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor; mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center text-[12px] font-medium uppercase tracking-[0.1em];
+    color: var(--text-acc);
+  }
+
+  .btn-pill {
+    @apply relative inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium transition-colors;
+    background: var(--bg-raised);
+    color: var(--text);
+  }
+  .btn-pill:hover { color: var(--text-acc); }
+
+  .bg-dots {
+    background-image: radial-gradient(circle, rgba(189,209,246,0.16) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+
+  .focus-ring:focus-visible {
+    outline: 2px solid rgba(145,179,240,0.5);
+    outline-offset: 2px;
+  }
+
+  /* Nav link with hover glow */
+  .nav-link { color: var(--muted); }
+  .nav-link:hover { color: var(--text-acc); text-shadow: 0 0 14px rgba(189,209,246,0.55), 0 0 4px rgba(189,209,246,0.4); }
+  .btn-pill:hover { box-shadow: 0 0 24px rgba(189,209,246,0.25), inset 0 0 0 1px rgba(189,209,246,0.18); }
+
+  /* Fluid container: edge-to-edge mobile w/ inset, 20px gap on lg+, capped at 1920 */
+  .wide {
+    width: 100%;
+    margin-inline: auto;
+    max-width: min(100% - calc(var(--inset-x) * 2), 1920px);
+    padding-inline: 0;
+  }
+
+  /* Section vertical rhythm — 60 mobile / 120 desktop, locked to ethena */
+  .section { padding-block: var(--section-y); }
+
+  /* Inner content gutter — never lets text touch screen edge */
+  .inset-x { padding-inline: var(--inset-x); }
+
+  /* Body text default */
+  body, .body-text { line-height: var(--line-body); color: var(--text); }
+
+  /* chaingpt cockpit corner brackets — 4 large L frames + connecting edge lines */
+  .crosshair-frame::before,
+  .crosshair-frame::after,
+  .crosshair-frame > i:first-of-type::before,
+  .crosshair-frame > i:first-of-type::after {
+    content:""; position:fixed; width:36px; height:36px; pointer-events:none; z-index:40;
+    border-color: rgba(239,239,229,0.65);
+    border-style: solid; border-width: 0;
+  }
+  .crosshair-frame::before { top:12px; left:12px; border-top-width:1px; border-left-width:1px; border-top-left-radius:8px; }
+  .crosshair-frame::after  { top:12px; right:12px; border-top-width:1px; border-right-width:1px; border-top-right-radius:8px; }
+  /* Bottom corners + edges sit ABOVE the fixed logo-loop (loop bottom:0, height ~50px, no gap ⇒ 50px) */
+  .crosshair-frame > i:first-of-type::before { bottom:50px; left:24px; border-bottom-width:1px; border-left-width:1px; border-bottom-left-radius:8px; }
+  .crosshair-frame > i:first-of-type::after  { bottom:50px; right:24px; border-bottom-width:1px; border-right-width:1px; border-bottom-right-radius:8px; }
+
+  /* Top rainbow line + connecting edge frame — chaingpt signature */
+  .crosshair-frame > i.edge {
+    position: fixed; pointer-events:none; z-index:39;
+  }
+  .crosshair-frame > i.edge.top    { top:12px; left:48px; right:48px; height:1px; background: rgba(239,239,229,0.22); }
+  .crosshair-frame > i.edge.bottom { bottom:50px; left:48px; right:48px; height:1px; background: rgba(239,239,229,0.18); }
+  .crosshair-frame > i.edge.left   { left:12px; top:48px; bottom:86px; width:1px; background: rgba(239,239,229,0.18); }
+  .crosshair-frame > i.edge.right  { right:12px; top:48px; bottom:86px; width:1px; background: rgba(239,239,229,0.18); }
+
+  /* chaingpt-style mono caption ("LOADING" etc) */
+  .cockpit-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 1.44px;
+    color: rgba(239,239,229,0.45);
+    text-transform: uppercase;
+  }
+
+  /* chaingpt cockpit label — mono uppercase tight */
+  .cockpit-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 1.44px;
+    text-transform: uppercase;
+    color: var(--text);
+  }
+
+  /* L-bracket frame — wraps a content block with 4 corner brackets */
+  .frame-bracket { position: relative; padding: 12px; }
+
+  /* Frame on hover/active — chaingpt nav: corners + rainbow top edge appear only on hover or .active */
+  .frame-hover { position: relative; padding: 14px; }
+  .frame-hover::before, .frame-hover::after,
+  .frame-hover > i.fb::before, .frame-hover > i.fb::after,
+  .frame-hover > i.fb-rainbow {
+    content:""; position:absolute; pointer-events:none; opacity:0;
+    transition: opacity 0.2s ease;
+  }
+  .frame-hover::before, .frame-hover::after,
+  .frame-hover > i.fb::before, .frame-hover > i.fb::after {
+    width:10px; height:10px; border-color: rgba(239,239,229,0.6); border-style: solid; border-width: 0;
+  }
+  .frame-hover::before { top:0; left:0; border-top-width:1px; border-left-width:1px; }
+  .frame-hover::after  { top:0; right:0; border-top-width:1px; border-right-width:1px; }
+  .frame-hover > i.fb::before { bottom:0; left:0; border-bottom-width:1px; border-left-width:1px; }
+  .frame-hover > i.fb::after  { bottom:0; right:0; border-bottom-width:1px; border-right-width:1px; }
+  .frame-hover > i.fb-rainbow { top:0; left:8px; right:8px; height:1px; background-image: var(--rainbow); }
+
+  .frame-hover:hover::before, .frame-hover:hover::after,
+  .frame-hover:hover > i.fb::before, .frame-hover:hover > i.fb::after,
+  .frame-hover:hover > i.fb-rainbow,
+  .frame-hover.active::before, .frame-hover.active::after,
+  .frame-hover.active > i.fb::before, .frame-hover.active > i.fb::after,
+  .frame-hover.active > i.fb-rainbow { opacity: 1; }
+  .frame-bracket::before, .frame-bracket::after,
+  .frame-bracket > i.fb::before, .frame-bracket > i.fb::after {
+    content:""; position:absolute; width:14px; height:14px;
+    border-color: rgba(239,239,229,0.55); border-style: solid; border-width: 0;
+    pointer-events: none;
+  }
+  .frame-bracket::before { top:0; left:0; border-top-width:1px; border-left-width:1px; }
+  .frame-bracket::after  { top:0; right:0; border-top-width:1px; border-right-width:1px; }
+  .frame-bracket > i.fb::before { bottom:0; left:0; border-bottom-width:1px; border-left-width:1px; }
+  .frame-bracket > i.fb::after  { bottom:0; right:0; border-bottom-width:1px; border-right-width:1px; }
+
+  /* Rainbow text */
+  .text-rainbow {
+    background-image: var(--rainbow);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+
+  /* Rainbow 1.5px stroke (mask trick) — with continuous color-shift animation */
+  .border-rainbow { position: relative; isolation: isolate; }
+  .border-rainbow::before {
+    content:""; position:absolute; inset:0; border-radius: inherit; padding:1.5px;
+    background: var(--rainbow);
+    background-size: 300% 100%;
+    background-position: 0% 0%;
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+            mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor; mask-composite: exclude;
+    pointer-events: none;
+    animation: rainbow-flow 6s linear infinite;
+  }
+  /* Alias kept for backward compatibility */
+  .border-rainbow-anim { position: relative; isolation: isolate; }
+  .border-rainbow-anim::before {
+    content:""; position:absolute; inset:0; border-radius: inherit; padding:1.5px;
+    background: var(--rainbow);
+    background-size: 300% 100%;
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+            mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor; mask-composite: exclude;
+    pointer-events: none;
+    animation: rainbow-flow 6s linear infinite;
+  }
+  @keyframes rainbow-flow {
+    0%   { background-position: 0% 0%; }
+    100% { background-position: 300% 0%; }
+  }
+
+  /* Connector line w/ arrow */
+  .connector-line { height: 1px; background: rgba(239,239,229,0.25); }
+
+  /* Vertical writing-mode label (chaingpt INTRO/MENU/SCROLL) */
+  .vlabel {
+    writing-mode: vertical-rl; transform: rotate(180deg);
+    font-family: 'DM Mono', monospace; font-size: 11px;
+    letter-spacing: 1.44px; text-transform: uppercase;
+    color: rgba(239,239,229,0.5);
+  }
+
+  /* chaingpt-style 4-layer sticky stack — pure CSS, no JS */
+  .layers { position: relative; }
+  .layer {
+    position: sticky;
+    top: var(--nav-h, 4rem); /* flush against fixed nav, no gap */
+    height: 90vh;
+  }
+  @media (min-width: 1024px) { .layer { height: 600px; } }
+  .layer-card {
+    position: relative;
+    height: 100%;
+    background: #0B0A10; /* opaque — required for stacking */
+    box-sizing: border-box;
+  }
+  /* From 2nd layer on, gradient shadow at top simulates "another layer is pressing on" */
+  .layer:not(:first-child) .layer-card::before {
+    content: "";
+    position: absolute; left: 0; right: 0; bottom: 100%;
+    height: 3rem;
+    background: linear-gradient(transparent, #0B0A10);
+    pointer-events: none;
+  }
+
+  /* legacy stack-deck kept */
+  .stack-deck { position: relative; }
+  .stack-card.stack-card {
+    position: sticky;
+    top: calc(96px + var(--stack-i, 0) * 18px);
+    margin-bottom: 24px;
+    box-shadow: 0 24px 60px -20px rgba(0,0,0,0.55);
+    transition: transform .5s cubic-bezier(.4,0,.2,1);
+  }
+
+  /* Hero background animations */
+  .anim-spin-slow { animation: spin-slow 60s linear infinite; }
+  .anim-pulse-soft { animation: pulse-soft 8s ease-in-out infinite; }
+  .anim-drift { animation: drift 24s linear infinite; }
+  .anim-aurora { animation: aurora 14s ease-in-out infinite; }
+}
+
+@keyframes spin-slow { to { transform: translate(0,-50%) rotate(360deg); } }
+@keyframes pulse-soft {
+  0%,100% { opacity: 0.55; }
+  50%     { opacity: 1; }
+}
+@keyframes drift {
+  0%   { background-position: 0 0; }
+  100% { background-position: 56px 56px; }
+}
+/* Lenis smooth scroll bootstrap */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: hidden; }
+.lenis.lenis-smooth iframe { pointer-events: none; }
+
+/* Hero brand logo seamless marquee — duplicate items + slide -50% */
+@keyframes logo-loop { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+.anim-logo-loop { animation: logo-loop 40s linear infinite; will-change: transform; }
+
+/* Stats char-by-char load animation */
+.stat-typer .char {
+  display: inline-block;
+  opacity: 0;
+  filter: blur(6px);
+  transform: translateY(10px);
+  animation: char-in 0.55s cubic-bezier(0.22,1,0.36,1) forwards;
+  white-space: pre;
+}
+.stat-label {
+  display: inline-block;
+  opacity: 0;
+  animation: label-in 0.55s cubic-bezier(0.22,1,0.36,1) forwards;
+}
+@keyframes char-in {
+  to { opacity: 1; filter: blur(0); transform: translateY(0); }
+}
+@keyframes label-in {
+  to { opacity: 1; }
+}
+
+/* Typewriter cursor blink */
+@keyframes typer-blink { 0%,49%{opacity:1} 50%,100%{opacity:0} }
+.typer-cursor { height: 0.85em; animation: typer-blink 0.9s steps(1) infinite; }
+
+@keyframes mascot-float {
+  0%,100% { transform: translate(-50%, 0) scale(1); }
+  50%     { transform: translate(-50%, -14px) scale(1.03); }
+}
+.anim-mascot {
+  animation: mascot-float 5s ease-in-out infinite;
+  transition: filter 0.45s cubic-bezier(0.22,1,0.36,1);
+  cursor: pointer;
+  filter:
+    drop-shadow(0 0 70px rgba(91,233,216,0.22))
+    drop-shadow(0 0 90px rgba(177,91,243,0.22))
+    drop-shadow(0 30px 60px rgba(0,0,0,0.75));
+}
+.anim-mascot:hover {
+  filter:
+    drop-shadow(0 0 50px rgba(91,233,216,0.4))
+    drop-shadow(0 0 60px rgba(177,91,243,0.35))
+    drop-shadow(0 30px 60px rgba(0,0,0,0.8));
+}
+
+/* Unified idle animation for ProductsSection agent IPs (no x-translate) */
+@keyframes ip-float {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50%     { transform: translateY(-14px) scale(1.025); }
+}
+.ip-anim {
+  animation: ip-float 4.8s ease-in-out infinite;
+  animation-delay: 0s;
+  filter:
+    drop-shadow(0 0 60px rgba(145,179,240,0.18))
+    drop-shadow(0 28px 50px rgba(0,0,0,0.6));
+  transition: filter 0.45s cubic-bezier(.22,1,.36,1);
+  cursor: pointer;
+}
+.ip-anim:hover {
+  filter:
+    drop-shadow(0 0 90px rgba(145,179,240,0.5))
+    drop-shadow(0 0 160px rgba(189,209,246,0.4))
+    drop-shadow(0 30px 60px rgba(0,0,0,0.75))
+    brightness(1.08);
+}
+
+@keyframes aurora {
+  0%,100% { transform: translate(0,-50%) scale(1) rotate(0deg); }
+  33%     { transform: translate(20px,-50%) scale(1.08) rotate(8deg); }
+  66%     { transform: translate(-15px,-50%) scale(0.95) rotate(-6deg); }
 }

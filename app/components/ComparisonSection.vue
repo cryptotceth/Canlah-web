@@ -1,111 +1,115 @@
 <script setup lang="ts">
-const { tm, t } = useI18n()
-
-const rows = computed(() => tm('comparison.rows') as {
+const rows = useTmList<{
   label: string
   generic: { icon: string; text: string }
   agency: { icon: string; text: string }
   canlah: { icon: string; text: string }
-}[])
+}[]>('comparison.rows')
+
+function isPositive(icon: string) {
+  return icon === '✓' || icon === '✅' || icon === '⭐' || icon === '★'
+}
 </script>
 
 <template>
-  <section class="py-20 px-6">
-    <div class="max-w-[1000px] mx-auto">
+  <section class="section px-6 relative">
+    <!-- ambient backdrop glow -->
+    <div class="absolute inset-x-0 top-1/2 -translate-y-1/2 h-[480px] pointer-events-none opacity-50"
+      style="background: radial-gradient(ellipse 60% 60% at 50% 50%, rgba(145,179,240,0.12), transparent 70%)"></div>
+
+    <div class="max-w-[1080px] mx-auto relative">
 
       <!-- Section header -->
-      <div class="text-center mb-14">
-        <div class="font-mono text-[10px] text-[#00d4ff] tracking-[4px] mb-3">{{ $t('comparison.sectionTag') }}</div>
-        <h2 class="font-display font-bold text-4xl md:text-5xl text-white leading-tight mb-4">
+      <div class="text-center mb-16" v-reveal>
+        <div class="inline-flex items-center gap-2 mb-5">
+          <span class="h-px w-8 bg-gradient-to-r from-transparent to-[#BDD1F6]/10"></span>
+          <span class="font-mono text-[10px] text-[#BDD1F6] tracking-[4px]">{{ $t('comparison.sectionTag') }}</span>
+          <span class="h-px w-8 bg-gradient-to-l from-transparent to-[#BDD1F6]/10"></span>
+        </div>
+        <h2 class="font-display font-bold text-4xl md:text-5xl text-[#efefe5] leading-[1.15] mb-4">
           {{ $t('comparison.title') }}
-          <span class="bg-gradient-to-r from-[#00d4ff] to-[#0d47e0] bg-clip-text text-transparent">{{ $t('comparison.highlight') }}</span>
+          <span class="bg-gradient-to-r from-[#BDD1F6] to-[#91B3F0] bg-clip-text text-transparent">{{ $t('comparison.highlight') }}</span>
         </h2>
-        <p class="text-[16px] text-[#5070a0] max-w-xl mx-auto">{{ $t('comparison.subtitle') }}</p>
+        <p class="text-[15px] text-[#BABABA] max-w-xl mx-auto leading-[1.6]">{{ $t('comparison.subtitle') }}</p>
       </div>
 
-      <!-- Comparison table -->
-      <div v-reveal class="overflow-x-auto -mx-6 px-6">
-        <table class="w-full min-w-[640px] border-collapse">
+      <!-- Comparison frame -->
+      <div v-reveal class="relative rounded-[3px] overflow-hidden">
+        <!-- top rainbow accent -->
+        <div class="absolute top-0 left-0 right-0 h-[1px]" style="background: var(--rainbow); opacity: 0.1"></div>
+
+        <div class="rounded-[3px] border border-[#efefe5]/12 bg-[#0B0A10]/80 backdrop-blur-md p-6 sm:p-10">
 
           <!-- Column headers -->
-          <thead>
-            <tr>
-              <th class="pb-4 pr-4 text-left w-[30%]"></th>
-
-              <!-- Generic AI -->
-              <th class="pb-4 px-4 text-center w-[23%]">
-                <div class="inline-block px-4 py-2 rounded-xl border border-white/8 bg-white/[0.02]">
-                  <div class="text-[11px] font-mono text-[#4a6a90] tracking-[1.5px] mb-0.5">{{ $t('comparison.col1.label') }}</div>
-                  <div class="text-[13px] font-semibold text-[#6080a0]">{{ $t('comparison.col1.name') }}</div>
-                </div>
-              </th>
-
-              <!-- Agency -->
-              <th class="pb-4 px-4 text-center w-[23%]">
-                <div class="inline-block px-4 py-2 rounded-xl border border-white/8 bg-white/[0.02]">
-                  <div class="text-[11px] font-mono text-[#4a6a90] tracking-[1.5px] mb-0.5">{{ $t('comparison.col2.label') }}</div>
-                  <div class="text-[13px] font-semibold text-[#6080a0]">{{ $t('comparison.col2.name') }}</div>
-                </div>
-              </th>
-
-              <!-- CANLAH — highlighted -->
-              <th class="pb-4 px-4 text-center w-[24%]">
-                <div class="inline-block px-4 py-2 rounded-xl border border-[#00d4ff]/30 bg-[#00d4ff]/[0.06] shadow-[0_0_20px_rgba(0,212,255,0.12)]">
-                  <div class="text-[11px] font-mono text-[#00d4ff]/70 tracking-[1.5px] mb-0.5">{{ $t('comparison.col3.label') }}</div>
-                  <div class="text-[13px] font-semibold text-[#00d4ff]">{{ $t('comparison.col3.name') }}</div>
-                </div>
-              </th>
-            </tr>
-          </thead>
+          <div class="grid grid-cols-[1.4fr_1fr_1fr_1.2fr] gap-3 sm:gap-4 mb-2">
+            <div></div>
+            <!-- Generic AI -->
+            <div class="rounded-[2px] border border-[#efefe5]/10 bg-white/[0.02] px-3 py-3 sm:px-4 sm:py-4 text-center">
+              <div class="font-mono text-[10px] text-[#5C6470] tracking-[2px] mb-1.5">{{ $t('comparison.col1.label') }}</div>
+              <div class="text-[14px] font-bold text-[#BABABA]">{{ $t('comparison.col1.name') }}</div>
+            </div>
+            <!-- Agency -->
+            <div class="rounded-[2px] border border-[#efefe5]/10 bg-white/[0.02] px-3 py-3 sm:px-4 sm:py-4 text-center">
+              <div class="font-mono text-[10px] text-[#5C6470] tracking-[2px] mb-1.5">{{ $t('comparison.col2.label') }}</div>
+              <div class="text-[14px] font-bold text-[#BABABA]">{{ $t('comparison.col2.name') }}</div>
+            </div>
+            <!-- CANLAH — featured -->
+            <div class="border-rainbow rounded-[2px] px-3 py-3 sm:px-4 sm:py-4 text-center bg-gradient-to-b from-[#BDD1F6]/[0.10] to-[#91B3F0]/[0.06]">
+              <div class="font-mono text-[10px] text-[#BDD1F6] tracking-[2px] mb-1.5 flex items-center justify-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-[2px] bg-[#BDD1F6] shadow-[0_0_6px_#BDD1F6] animate-pulse"></span>
+                {{ $t('comparison.col3.label') }}
+              </div>
+              <div class="text-[14px] font-bold text-[#efefe5]">{{ $t('comparison.col3.name') }}</div>
+            </div>
+          </div>
 
           <!-- Rows -->
-          <tbody>
-            <tr
-              v-for="(row, i) in rows"
-              :key="i"
-              class="border-t border-white/5"
-            >
+          <div class="grid grid-cols-[1.4fr_1fr_1fr_1.2fr] gap-3 sm:gap-4">
+            <template v-for="(row, i) in rows" :key="i">
               <!-- Feature label -->
-              <td class="py-4 pr-4">
-                <span class="text-[13px] font-medium text-[#7090b8]">{{ row.label }}</span>
-              </td>
+              <div class="py-2 px-2 flex items-center">
+                <span class="text-[13px] sm:text-[14px] text-[#efefe5]/90 font-medium">{{ row.label }}</span>
+              </div>
+              <!-- Generic AI -->
+              <div class="py-2 px-3 flex flex-col items-center justify-center gap-1 text-center">
+                <span class="text-[18px] leading-none"
+                  :class="isPositive(row.generic.icon) ? 'text-[#91B3F0]' : 'text-[#5C6470]'">
+                  {{ row.generic.icon }}
+                </span>
+                <span class="text-[11px] text-[#BABABA]/80 leading-[1.4]">{{ row.generic.text }}</span>
+              </div>
+              <!-- Agency -->
+              <div class="py-2 px-3 flex flex-col items-center justify-center gap-1 text-center">
+                <span class="text-[18px] leading-none"
+                  :class="isPositive(row.agency.icon) ? 'text-[#91B3F0]' : 'text-[#5C6470]'">
+                  {{ row.agency.icon }}
+                </span>
+                <span class="text-[11px] text-[#BABABA]/80 leading-[1.4]">{{ row.agency.text }}</span>
+              </div>
+              <!-- CANLAH — highlighted column -->
+              <div class="relative py-2 px-3 flex flex-col items-center justify-center gap-1 text-center bg-gradient-to-b from-[#BDD1F6]/[0.04] to-[#BDD1F6]/[0.02]">
+                <span class="text-[18px] leading-none text-[#BDD1F6] drop-shadow-[0_0_6px_rgba(189,209,246,0.5)]">
+                  {{ row.canlah.icon }}
+                </span>
+                <span class="text-[12px] text-[#efefe5] font-medium leading-[1.4]">{{ row.canlah.text }}</span>
+              </div>
+            </template>
+          </div>
 
-              <!-- Generic AI cell -->
-              <td class="py-4 px-4 text-center">
-                <div class="flex flex-col items-center gap-1">
-                  <span class="text-lg leading-none">{{ row.generic.icon }}</span>
-                  <span class="text-[11px] text-[#4a6080] leading-snug">{{ row.generic.text }}</span>
-                </div>
-              </td>
-
-              <!-- Agency cell -->
-              <td class="py-4 px-4 text-center">
-                <div class="flex flex-col items-center gap-1">
-                  <span class="text-lg leading-none">{{ row.agency.icon }}</span>
-                  <span class="text-[11px] text-[#4a6080] leading-snug">{{ row.agency.text }}</span>
-                </div>
-              </td>
-
-              <!-- CANLAH cell — highlighted column -->
-              <td class="py-4 px-4 text-center bg-[#00d4ff]/[0.025] border-x border-[#00d4ff]/10">
-                <div class="flex flex-col items-center gap-1">
-                  <span class="text-lg leading-none">{{ row.canlah.icon }}</span>
-                  <span class="text-[11px] text-[#7ab8d0] font-medium leading-snug">{{ row.canlah.text }}</span>
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+          <!-- bottom rainbow accent (subtle) -->
+          <div class="mt-4 h-[1px] mx-auto max-w-[60%] opacity-10" style="background: var(--rainbow)"></div>
+        </div>
       </div>
 
-      <!-- Bottom CTA nudge -->
-      <div class="text-center mt-12">
+      <!-- Bottom CTA -->
+      <div v-reveal class="text-center mt-14">
         <a href="https://app.canmarket.ai" target="_blank"
-          class="group inline-flex items-center gap-2 px-8 py-3.5 rounded-full font-semibold text-sm bg-gradient-to-r from-[#0d47e0] to-[#00d4ff] text-white hover:shadow-[0_0_40px_rgba(0,212,255,0.4)] transition-all hover:scale-[1.03]">
+          class="border-rainbow rounded-[2px] inline-flex items-center gap-3 px-7 py-4 cockpit-label !text-[12px] !text-[#efefe5] hover:opacity-90 transition-opacity whitespace-nowrap">
+          <span class="inline-grid grid-cols-2 gap-[2px]"><span v-for="d in 4" :key="d" class="w-[3px] h-[3px] bg-current rounded-[2px]"></span></span>
           {{ $t('comparison.cta') }}
-          <span class="group-hover:translate-x-1 transition-transform">→</span>
+          <span>→</span>
         </a>
-        <p class="text-[12px] text-[#3d5880] mt-3">{{ $t('comparison.ctaNote') }}</p>
+        <p class="text-[12px] text-[#5C6470] mt-4">{{ $t('comparison.ctaNote') }}</p>
       </div>
 
     </div>

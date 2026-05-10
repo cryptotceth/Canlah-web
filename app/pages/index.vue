@@ -2,8 +2,6 @@
   <div>
     <SiteHeader />
     <HeroSection />
-    <StatsSection />
-    <HowItWorks />
     <TestimonialsSection />
     <ComparisonSection />
     <ProductsSection />
@@ -14,6 +12,5 @@
     <FaqSection />
     <CtaSection />
     <SiteFooter />
-    <FloatingCta />
   </div>
 </template>
