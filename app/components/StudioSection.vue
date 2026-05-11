@@ -3,7 +3,7 @@ const features = useTmList<{ icon: string, title: string, desc: string }[]>('stu
 </script>
 
 <template>
-  <section class="section px-6">
+  <section class="section px-3 sm:px-6">
     <div class="wide">
 
       <!-- Section header -->
@@ -16,9 +16,9 @@ const features = useTmList<{ icon: string, title: string, desc: string }[]>('stu
       </div>
 
       <!-- Two-column layout -->
-      <div v-reveal class="grid md:grid-cols-2 gap-6">
+      <div v-reveal class="grid md:grid-cols-2 gap-3 md:gap-6">
         <!-- Left: Description + CTA -->
-        <div class="rounded-[2px] border border-[#91B3F0]/20 bg-gradient-to-br from-[#1E222A]/90 to-[#0a090f]/95 p-8 flex flex-col">
+        <div class="rounded-[2px] border border-[#91B3F0]/20 bg-gradient-to-br from-[#1E222A]/90 to-[#0a090f]/95 p-3 md:p-8 flex flex-col">
           <div class="flex-1">
             <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-[2px] bg-[#BDD1F6]/5 border border-[#BDD1F6]/20 mb-6">
               <span class="w-1.5 h-1.5 rounded-[2px] bg-[#BDD1F6] shadow-[0_0_6px_#BDD1F6]"></span>
@@ -37,12 +37,12 @@ const features = useTmList<{ icon: string, title: string, desc: string }[]>('stu
         <div class="grid grid-cols-2 gap-3">
           <div
             v-for="(feat, i) in features" :key="i"
-            class="group flex flex-col gap-3 p-5 rounded-[2px] border border-[#91B3F0]/12 bg-[#91B3F0]/[0.04] hover:border-[#91B3F0]/35 hover:bg-[#91B3F0]/[0.08] transition-all duration-200 cursor-default"
+            class="group flex flex-col gap-3 p-3 md:p-5 rounded-[2px] border border-[#91B3F0]/12 bg-[#91B3F0]/[0.04] hover:border-[#91B3F0]/35 hover:bg-[#91B3F0]/[0.08] transition-all duration-200 cursor-default"
           >
             <span class="text-2xl">{{ feat.icon }}</span>
             <div>
-              <div class="text-[13px] font-bold text-[#efefe5] mb-0.5">{{ feat.title }}</div>
-              <div class="text-[11px] text-[#BABABA] leading-[1.5]">{{ feat.desc }}</div>
+              <div class="text-[16px] md:text-[13px] font-bold text-[#efefe5] mb-0.5">{{ feat.title }}</div>
+              <div class="text-[12px] md:text-[11px] text-[#BABABA] leading-[1.5]">{{ feat.desc }}</div>
             </div>
           </div>
         </div>

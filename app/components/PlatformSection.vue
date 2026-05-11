@@ -3,7 +3,7 @@ const capabilities = useTmList<{ icon: string, label: string, desc: string }[]>(
 </script>
 
 <template>
-  <section id="platform" class="section px-6">
+  <section id="platform" class="section px-3 sm:px-6">
     <div class="wide">
 
       <!-- Section header -->
@@ -16,7 +16,7 @@ const capabilities = useTmList<{ icon: string, label: string, desc: string }[]>(
       </div>
 
       <!-- Architecture diagram-style layout -->
-      <div v-reveal="{ delay: 100 }" class="relative rounded-[2px] border border-[#BDD1F6]/20 bg-gradient-to-br from-[#0B0A10] via-[#0B0A10] to-[#0B0A10] p-10 overflow-hidden">
+      <div v-reveal="{ delay: 100 }" class="relative rounded-[2px] border border-[#BDD1F6]/20 bg-gradient-to-br from-[#0B0A10] via-[#0B0A10] to-[#0B0A10] p-3 md:p-10 overflow-hidden">
         <!-- Top accent line -->
         <div class="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#BDD1F6]/60 to-transparent"></div>
 
@@ -30,15 +30,15 @@ const capabilities = useTmList<{ icon: string, label: string, desc: string }[]>(
         </div>
 
         <!-- Capability grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
           <div
             v-for="(cap, i) in capabilities" :key="i"
-            class="group flex items-start gap-4 p-5 rounded-[2px] border border-[#BDD1F6]/10 bg-[#BDD1F6]/[0.03] hover:border-[#BDD1F6]/35 hover:bg-[#BDD1F6]/[0.07] transition-all duration-200 cursor-default"
+            class="group flex items-start gap-4 p-3 md:p-5 rounded-[2px] border border-[#BDD1F6]/10 bg-[#BDD1F6]/[0.03] hover:border-[#BDD1F6]/35 hover:bg-[#BDD1F6]/[0.07] transition-all duration-200 cursor-default"
           >
             <div class="text-xl flex-shrink-0 w-9 h-9 flex items-center justify-center rounded-[2px] bg-[#BDD1F6]/10 group-hover:bg-[#BDD1F6]/20 transition-colors">{{ cap.icon }}</div>
             <div>
-              <div class="text-[13px] font-bold text-[#efefe5] mb-0.5">{{ cap.label }}</div>
-              <div class="text-[11px] text-[#BABABA] leading-[1.5]">{{ cap.desc }}</div>
+              <div class="text-[16px] md:text-[13px] font-bold text-[#efefe5] mb-0.5">{{ cap.label }}</div>
+              <div class="text-[12px] md:text-[11px] text-[#BABABA] leading-[1.5]">{{ cap.desc }}</div>
             </div>
           </div>
         </div>

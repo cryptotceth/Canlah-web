@@ -9,6 +9,21 @@ const textReveal = ref(0) // 0 → 1: text + indicator + features fade in
 const ipReveal = ref(0)   // 0 → 1: CanMarket silhouette → color mask reveal (intro only)
 const trackEl = ref<HTMLElement | null>(null)
 
+const mobileScrollerEl = ref<HTMLElement | null>(null)
+const mobileActive = ref(0)
+const onMobileScroll = () => {
+  const el = mobileScrollerEl.value
+  if (!el) return
+  const w = el.clientWidth
+  if (!w) return
+  mobileActive.value = Math.round(el.scrollLeft / w)
+}
+const scrollMobileTo = (i: number) => {
+  const el = mobileScrollerEl.value
+  if (!el) return
+  el.scrollTo({ left: i * el.clientWidth, behavior: 'smooth' })
+}
+
 let raf = 0
 function compute() {
   raf = 0
@@ -357,10 +372,13 @@ const quadrantReveal = computed(() => {
       </div>
     </div>
 
-    <!-- MOBILE / TABLET (<lg): plain stacked -->
-    <div class="lg:hidden wide flex flex-col gap-12 px-2">
+    <!-- MOBILE / TABLET (<lg): horizontal scroll-snap carousel -->
+    <div
+      ref="mobileScrollerEl"
+      class="lg:hidden mobile-carousel flex overflow-x-auto snap-x snap-mandatory scroll-smooth -mx-4 sm:-mx-6"
+      @scroll.passive="onMobileScroll">
       <div v-for="(card, i) in cards" :key="`m-${i}`"
-        class="flex flex-col items-center text-center gap-4">
+        class="snap-center shrink-0 w-screen px-6 sm:px-8 flex flex-col items-center text-center gap-4">
         <div class="font-mono text-[11px] tracking-[2.5px] uppercase text-[#efefe5]/60">
           AGENT&nbsp;{{ pad2(i + 1) }} · {{ card.tag }}
         </div>
@@ -393,5 +411,22 @@ const quadrantReveal = computed(() => {
         </div>
       </div>
     </div>
+
+    <!-- Mobile pagination dots -->
+    <div class="lg:hidden flex justify-center gap-2.5 mt-7">
+      <button
+        v-for="(_, i) in cards" :key="`dot-${i}`"
+        type="button"
+        :aria-label="`Go to agent ${i + 1}`"
+        @click="scrollMobileTo(i)"
+        class="h-2 rounded-full transition-all duration-300"
+        :class="mobileActive === i ? 'w-7 bg-[#BDD1F6]' : 'w-2 bg-[#efefe5]/25 hover:bg-[#efefe5]/45'"
+      />
+    </div>
   </section>
 </template>
+
+<style scoped>
+.mobile-carousel::-webkit-scrollbar { display: none; }
+.mobile-carousel { scrollbar-width: none; -ms-overflow-style: none; overscroll-behavior-x: contain; }
+</style>
