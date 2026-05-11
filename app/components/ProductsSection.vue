@@ -14,14 +14,14 @@ const mobileActive = ref(0)
 const onMobileScroll = () => {
   const el = mobileScrollerEl.value
   if (!el) return
-  const w = el.clientWidth
-  if (!w) return
-  mobileActive.value = Math.round(el.scrollLeft / w)
+  const h = el.clientHeight
+  if (!h) return
+  mobileActive.value = Math.round(el.scrollTop / h)
 }
 const scrollMobileTo = (i: number) => {
   const el = mobileScrollerEl.value
   if (!el) return
-  el.scrollTo({ left: i * el.clientWidth, behavior: 'smooth' })
+  el.scrollTo({ top: i * el.clientHeight, behavior: 'smooth' })
 }
 
 let raf = 0
@@ -372,13 +372,13 @@ const quadrantReveal = computed(() => {
       </div>
     </div>
 
-    <!-- MOBILE / TABLET (<lg): horizontal scroll-snap carousel -->
+    <!-- MOBILE / TABLET (<lg): vertical scroll-snap carousel (swipe up) -->
     <div
       ref="mobileScrollerEl"
-      class="lg:hidden mobile-carousel flex overflow-x-auto snap-x snap-mandatory scroll-smooth -mx-4 sm:-mx-6"
+      class="lg:hidden mobile-carousel flex flex-col overflow-y-auto snap-y snap-mandatory scroll-smooth h-[85vh]"
       @scroll.passive="onMobileScroll">
       <div v-for="(card, i) in cards" :key="`m-${i}`"
-        class="snap-center shrink-0 w-screen px-6 sm:px-8 flex flex-col items-center text-center gap-4">
+        class="snap-center shrink-0 h-[85vh] w-full px-6 sm:px-8 flex flex-col items-center text-center justify-center gap-4">
         <div class="font-mono text-[11px] tracking-[2.5px] uppercase text-[#efefe5]/60">
           AGENT&nbsp;{{ pad2(i + 1) }} · {{ card.tag }}
         </div>
