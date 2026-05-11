@@ -40,7 +40,7 @@ const quotes = useTmList<{ quote: string; role: string; company: string; metric:
           <!-- Attribution -->
           <div class="flex items-center gap-3">
             <img
-              :src="`/testimonials/avatar${i + 1}.webp`"
+              :src="`/testimonials/avatar${i + 1}.webp?v=2`"
               :alt="q.role"
               loading="lazy"
               class="w-9 h-9 rounded-full object-cover flex-shrink-0 ring-1 ring-[#BDD1F6]/25"
