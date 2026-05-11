@@ -52,13 +52,10 @@ function onLogo(e: MouseEvent) {
     <span class="absolute left-1/4 right-1/4 bottom-0 h-px pointer-events-none" style="background-image: var(--rainbow); opacity: 0.55;"></span>
     <div class="relative flex items-end justify-between px-4 sm:px-6 lg:px-10 xl:px-14 pt-5 pb-5 gap-4 lg:gap-6">
 
-      <!-- ── LEFT: rainbow logo + wordmark — scroll to top if on home, else navigate -->
+      <!-- ── LEFT: brand logo (full wordmark SVG) — scroll to top if on home, else navigate -->
       <div class="flex items-center gap-2 sm:gap-3 flex-shrink-0">
-        <a href="/" class="flex items-center gap-2.5 sm:gap-3 group" @click="onLogo">
-          <span class="relative w-8 h-8 sm:w-9 sm:h-9 rounded-[2px] border-rainbow overflow-hidden flex items-center justify-center bg-[#0a090f]">
-            <img src="/logo-mascot.png" alt="" class="w-[22px] h-[22px] sm:w-[24px] sm:h-[24px] object-contain" />
-          </span>
-          <span class="font-display font-bold text-[16px] sm:text-[17px] tracking-[0.04em] text-[#efefe5] uppercase">CANLAH&nbsp;AI</span>
+        <a href="/" class="flex items-center group" @click="onLogo">
+          <img src="/logo.svg" alt="CANLAH AI" class="h-7 sm:h-8 lg:h-9 w-auto" />
         </a>
         <button @click="isMenuOpen = !isMenuOpen"
           class="lg:hidden text-[#efefe5] p-1.5 rounded-[2px] hover:bg-[#efefe5]/5 transition-colors"
