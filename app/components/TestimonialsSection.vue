@@ -3,7 +3,7 @@ const quotes = useTmList<{ quote: string; role: string; company: string; metric:
 </script>
 
 <template>
-  <section class="section px-4 sm:px-6 lg:px-10 xl:px-14">
+  <section class="section px-3 sm:px-6 lg:px-10 xl:px-14">
     <div class="w-full">
 
       <!-- Section header -->
@@ -15,12 +15,12 @@ const quotes = useTmList<{ quote: string; role: string; company: string; metric:
       </div>
 
       <!-- Horizontal 3-up grid — span same range as nav (logo ↔ TRY FREE) -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-6 w-full">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-5 lg:gap-6 w-full">
         <div
           v-for="(q, i) in quotes"
           :key="i"
           v-reveal="{ delay: i * 100 }"
-          class="group relative rounded-[2px] border border-[#efefe5]/12 bg-[#0B0A10]/75 hover:bg-[#0B0A10]/90 hover:border-[#BDD1F6]/30 backdrop-blur-md p-7 sm:p-9 flex flex-col transition-colors duration-300 min-h-[320px]"
+          class="group relative rounded-[2px] border border-[#efefe5]/12 bg-[#0B0A10]/75 hover:bg-[#0B0A10]/90 hover:border-[#BDD1F6]/30 backdrop-blur-md p-3 sm:p-9 flex flex-col transition-colors duration-300 min-h-[320px]"
         >
           <!-- Top accent -->
           <div class="absolute top-0 left-8 right-8 h-[1px] bg-gradient-to-r from-transparent via-[#BDD1F6]/30 to-transparent"></div>
