@@ -3,11 +3,11 @@
     <SiteHeader />
     <HeroSection />
     <TestimonialsSection />
-    <ComparisonSection />
     <ProductsSection />
     <AmazonSuiteSection />
     <PlatformSection />
     <StudioSection />
+    <ComparisonSection />
     <PricingSection />
     <FaqSection />
     <CtaSection />

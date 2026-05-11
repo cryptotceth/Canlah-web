@@ -21,5 +21,5 @@ export default defineNuxtConfig({
     description: 'AI Agents for Every Business Function.',
     defaultLocale: 'en',
   },
-  seo: { redirectToCanonicalSiteUrl: true }
+  seo: { redirectToCanonicalSiteUrl: false }
 })

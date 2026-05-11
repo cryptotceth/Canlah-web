@@ -71,7 +71,7 @@ function isPositive(icon: string) {
                 <span class="text-[13px] sm:text-[14px] text-[#efefe5]/90 font-medium">{{ row.label }}</span>
               </div>
               <!-- Generic AI -->
-              <div class="py-2 px-3 flex flex-col items-center justify-center gap-1 text-center">
+              <div class="py-2 px-3 flex flex-row items-center justify-start gap-2 text-left">
                 <span class="text-[18px] leading-none"
                   :class="isPositive(row.generic.icon) ? 'text-[#91B3F0]' : 'text-[#5C6470]'">
                   {{ row.generic.icon }}
@@ -79,7 +79,7 @@ function isPositive(icon: string) {
                 <span class="text-[11px] text-[#BABABA]/80 leading-[1.4]">{{ row.generic.text }}</span>
               </div>
               <!-- Agency -->
-              <div class="py-2 px-3 flex flex-col items-center justify-center gap-1 text-center">
+              <div class="py-2 px-3 flex flex-row items-center justify-start gap-2 text-left">
                 <span class="text-[18px] leading-none"
                   :class="isPositive(row.agency.icon) ? 'text-[#91B3F0]' : 'text-[#5C6470]'">
                   {{ row.agency.icon }}
@@ -87,7 +87,7 @@ function isPositive(icon: string) {
                 <span class="text-[11px] text-[#BABABA]/80 leading-[1.4]">{{ row.agency.text }}</span>
               </div>
               <!-- CANLAH — highlighted column -->
-              <div class="relative py-2 px-3 flex flex-col items-center justify-center gap-1 text-center bg-gradient-to-b from-[#BDD1F6]/[0.04] to-[#BDD1F6]/[0.02]">
+              <div class="relative py-2 px-3 flex flex-row items-center justify-start gap-2 text-left bg-gradient-to-b from-[#BDD1F6]/[0.04] to-[#BDD1F6]/[0.02]">
                 <span class="text-[18px] leading-none text-[#BDD1F6] drop-shadow-[0_0_6px_rgba(189,209,246,0.5)]">
                   {{ row.canlah.icon }}
                 </span>

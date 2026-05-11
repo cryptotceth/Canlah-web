@@ -201,7 +201,7 @@ onMounted(() => {
                 w-[min(90vw,calc((100vh-220px)*1.0),480px)] sm:w-[min(82vw,calc((100vh-220px)*1.0),640px)] md:w-[min(70vw,calc((100vh-220px)*1.0),760px)] lg:w-[min(58vw,calc((100vh-240px)*1.0),860px)] xl:w-[min(54vw,calc((100vh-240px)*1.0),960px)] 2xl:w-[min(48vw,calc((100vh-240px)*1.0),1080px)]
                 aspect-square">
       <img
-        v-for="(src, i) in ['/hero/1.png', '/hero/2.png', '/hero/3.png', '/hero/4.png']"
+        v-for="(src, i) in ['/hero/1.webp?v=4', '/hero/2.webp?v=4', '/hero/3.webp?v=4', '/hero/4.webp?v=4']"
         :key="src"
         :src="src"
         alt="Canlah AI mascot"
@@ -223,7 +223,7 @@ onMounted(() => {
       <div class="absolute h-px bg-[#BDD1F6]/60"
         :style="{ top: '32vh', left: '4vw', width: indicatorStyles.seg1.width }"></div>
       <!-- Segment 2: diagonal down-right — SVG line draws via dashoffset -->
-      <svg class="absolute" style="top: 32vh; left: 15vw; width: 20vw; height: 28vh; overflow: visible" preserveAspectRatio="none">
+      <svg class="absolute" style="top: 32vh; left: 15vw; width: 20vw; height: 18vh; overflow: visible" preserveAspectRatio="none">
         <line x1="0" y1="0" x2="100%" y2="100%"
           pathLength="1"
           stroke-dasharray="1"
@@ -233,10 +233,10 @@ onMounted(() => {
       </svg>
       <!-- Segment 3: horizontal — runs from diagonal end to mascot side (width grows) -->
       <div class="absolute h-px bg-[#BDD1F6]/60"
-        :style="{ top: '60vh', left: '35vw', width: indicatorStyles.seg3.width }"></div>
+        :style="{ top: '50vh', left: '35vw', width: indicatorStyles.seg3.width }"></div>
       <!-- Endpoint dot at mascot side — opacity + scale grow with seg3 -->
       <div class="absolute w-[7px] h-[7px] rounded-full bg-[#BDD1F6]/85"
-        :style="{ top: '60vh', left: '49vw', ...indicatorStyles.dot }"></div>
+        :style="{ top: '50vh', left: '49vw', ...indicatorStyles.dot }"></div>
     </div>
 
     <!-- HOW-IT-WORKS step bubbles — BRIEF-style frame, anchored at BRIEF position, fade sequentially -->

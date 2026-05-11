@@ -39,9 +39,12 @@ const quotes = useTmList<{ quote: string; role: string; company: string; metric:
 
           <!-- Attribution -->
           <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-[2px] bg-gradient-to-br from-[#91B3F0]/50 to-[#BDD1F6]/30 flex items-center justify-center text-xs font-bold text-[#efefe5] flex-shrink-0">
-              {{ q.company.charAt(0) }}
-            </div>
+            <img
+              :src="`/testimonials/avatar${i + 1}.webp`"
+              :alt="q.role"
+              loading="lazy"
+              class="w-9 h-9 rounded-full object-cover flex-shrink-0 ring-1 ring-[#BDD1F6]/25"
+            />
             <div>
               <div class="text-[12px] font-bold text-[#efefe5]/80">{{ q.role }}</div>
               <div class="text-[11px] font-mono text-[#BABABA] tracking-wide">{{ q.company }}</div>

@@ -30,12 +30,12 @@
           <!-- CTA buttons -->
           <div class="flex gap-4 justify-center flex-wrap mb-7">
             <a href="https://app.canmarket.ai" target="_blank"
-              class="group px-9 py-4 rounded-[2px] font-bold text-[15px] bg-gradient-to-r from-[#91B3F0] to-[#BDD1F6] text-[#efefe5] hover:shadow-[0_0_50px_rgba(189,209,246,0.5)] transition-all hover:scale-[1.04] flex items-center gap-2">
-              {{ $t('cta.primary') }}
-              <span class="group-hover:translate-x-1 transition-transform">→</span>
+              class="border-rainbow rounded-[2px] inline-flex items-center gap-3 px-7 py-4 cockpit-label !text-[12px] !text-[#efefe5] hover:opacity-90 transition-opacity whitespace-nowrap">
+              <span class="inline-grid grid-cols-2 gap-[2px]"><span v-for="d in 4" :key="d" class="w-[3px] h-[3px] bg-current rounded-[2px]"></span></span>
+              {{ $t('cta.primary') }} <span>→</span>
             </a>
             <a href="mailto:hello@canlah.ai"
-              class="px-9 py-4 rounded-[2px] font-bold text-[15px] border border-white/15 text-[#efefe5]/80 hover:border-[#BDD1F6]/50 hover:text-[#efefe5] hover:bg-white/5 transition-all">
+              class="rounded-[2px] inline-flex items-center gap-3 px-7 py-4 cockpit-label !text-[12px] text-[#efefe5]/70 border border-white/15 hover:border-[#BDD1F6]/50 hover:text-[#efefe5] hover:bg-white/5 transition-all whitespace-nowrap">
               {{ $t('cta.secondary') }}
             </a>
           </div>

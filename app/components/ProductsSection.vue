@@ -147,11 +147,11 @@ onUnmounted(() => {
 watch(active, () => nextTick(measureIndicator))
 
 const cardConfig = [
-  { icon: '/agents/CanMarket.png',  darkIcon: '/agents/CanMarket-dark.png', accentFrom: '#91B3F0', accentTo: '#BDD1F6' },
-  { icon: '/agents/CanArt.png',     accentFrom: '#91B3F0', accentTo: '#91B3F0' },
-  { icon: '/agents/CanSell.png',    accentFrom: '#BDD1F6', accentTo: '#BDD1F6' },
-  { icon: '/agents/CanService.png', accentFrom: '#91B3F0', accentTo: '#BDD1F6' },
-  { icon: '/agents/CanCommerce.png',accentFrom: '#BDD1F6', accentTo: '#91B3F0' },
+  { icon: '/agents/CanMarket.webp?v=5',  darkIcon: '/agents/CanMarket-dark.webp?v=4', accentFrom: '#91B3F0', accentTo: '#BDD1F6' },
+  { icon: '/agents/CanArt.webp?v=2',     accentFrom: '#91B3F0', accentTo: '#91B3F0' },
+  { icon: '/agents/CanSell.webp?v=2',    accentFrom: '#BDD1F6', accentTo: '#BDD1F6' },
+  { icon: '/agents/CanService.webp?v=2', accentFrom: '#91B3F0', accentTo: '#BDD1F6' },
+  { icon: '/agents/CanCommerce.webp?v=2',accentFrom: '#BDD1F6', accentTo: '#91B3F0' },
 ]
 
 const total = computed(() => cards.value?.length || 0)
@@ -251,7 +251,7 @@ const quadrantReveal = computed(() => {
 
           <!-- CENTER COL: IP layers — fully fluid; vw-driven width, vh-driven height -->
           <div class="flex-shrink-0 flex items-center justify-center">
-            <div ref="ipBoxEl" class="relative w-[clamp(500px,52vw,900px)] h-[clamp(600px,96vh,1100px)]">
+            <div ref="ipBoxEl" class="relative aspect-square w-[min(58vw,calc(100vh-240px),860px)]">
               <div
                 v-for="(card, i) in cards"
                 :key="`ip-${i}`"
