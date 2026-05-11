@@ -364,7 +364,7 @@ const quadrantReveal = computed(() => {
         <div class="font-mono text-[11px] tracking-[2.5px] uppercase text-[#efefe5]/60">
           AGENT&nbsp;{{ pad2(i + 1) }} · {{ card.tag }}
         </div>
-        <img :src="cardConfig[i].icon" :alt="card.name" class="w-64 h-64 object-contain" />
+        <img :src="cardConfig[i].icon" :alt="card.name" class="w-[min(82vw,440px)] aspect-square object-contain" />
         <h3 class="font-display font-bold text-[32px] text-[#efefe5]">{{ card.name }}</h3>
         <p class="text-[13px] text-[#BABABA] leading-[1.6] max-w-[480px]">{{ card.description }}</p>
         <ul class="space-y-2 self-start mx-auto text-left">
