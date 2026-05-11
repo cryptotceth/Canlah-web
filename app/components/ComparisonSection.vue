@@ -26,7 +26,7 @@ function isPositive(icon: string) {
           <span class="font-mono text-[10px] text-[#BDD1F6] tracking-[4px]">{{ $t('comparison.sectionTag') }}</span>
           <span class="h-px w-8 bg-gradient-to-l from-transparent to-[#BDD1F6]/10"></span>
         </div>
-        <h2 class="font-display font-bold text-4xl md:text-5xl text-[#efefe5] leading-[1.15] mb-4">
+        <h2 class="font-display font-bold text-[16px] md:text-5xl text-[#efefe5] leading-[1.15] mb-4">
           {{ $t('comparison.title') }}
           <span class="bg-gradient-to-r from-[#BDD1F6] to-[#91B3F0] bg-clip-text text-transparent">{{ $t('comparison.highlight') }}</span>
         </h2>

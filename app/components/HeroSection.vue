@@ -259,11 +259,11 @@ onMounted(() => {
     </template>
 
     <!-- BOTTOM LEFT: three-line headline with rainbow-framed typewriter word — swapped with quote -->
-    <div class="absolute bottom-[12vh] sm:bottom-[14vh] lg:bottom-[10vh] left-4 sm:left-6 lg:left-10 xl:left-16 z-[3] max-w-[calc(100vw-32px)] flex flex-col gap-2 sm:gap-3">
+    <div class="absolute bottom-[12vh] sm:bottom-[14vh] lg:bottom-[10vh] inset-x-0 sm:inset-x-auto sm:left-6 lg:left-10 xl:left-16 z-[3] max-w-[calc(100vw-32px)] mx-auto sm:mx-0 flex flex-col items-center sm:items-start gap-2 sm:gap-3 text-center sm:text-left">
       <span class="font-display text-[28px] sm:text-[36px] md:text-[44px] lg:text-[52px] xl:text-[60px] leading-none tracking-[-0.02em] text-[#BDD1F6]/90">
         AI Agents for
       </span>
-      <div class="border-rainbow rounded-[2px] inline-flex items-center self-start px-3.5 py-2 sm:px-4 sm:py-2.5 lg:px-5 lg:py-3 min-w-[6ch]">
+      <div class="border-rainbow rounded-[2px] inline-flex items-center self-center sm:self-start px-3.5 py-2 sm:px-4 sm:py-2.5 lg:px-5 lg:py-3 min-w-[6ch]">
         <span class="font-display font-bold text-[28px] sm:text-[36px] md:text-[44px] lg:text-[52px] xl:text-[60px] leading-none tracking-[-0.02em] text-[#efefe5] whitespace-nowrap">
           {{ displayed || ' ' }}<span class="typer-cursor inline-block ml-0.5 align-baseline w-[2px] bg-[#efefe5]"></span>
         </span>

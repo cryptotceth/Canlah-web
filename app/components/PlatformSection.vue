@@ -9,7 +9,7 @@ const capabilities = useTmList<{ icon: string, label: string, desc: string }[]>(
       <!-- Section header -->
       <div v-reveal class="text-center mb-14">
         <div class="font-mono text-[10px] text-[#BDD1F6] tracking-[4px] mb-3">{{ $t('platform.sectionTag') }}</div>
-        <h2 class="font-display font-bold text-4xl md:text-5xl text-[#efefe5] leading-[1.15]">
+        <h2 class="font-display font-bold text-[16px] md:text-5xl text-[#efefe5] leading-[1.15]">
           <span v-html="$t('platform.title', { highlight: `<span class='bg-gradient-to-r from-[#BDD1F6] to-[#91B3F0] bg-clip-text text-transparent'>${$t('platform.highlight')}</span>` })"></span>
         </h2>
         <p class="mt-4 text-[15px] text-[#BABABA] max-w-lg mx-auto">{{ $t('platform.subtitle') }}</p>

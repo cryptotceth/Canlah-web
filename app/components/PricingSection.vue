@@ -13,7 +13,7 @@ const tiers = useTmList<{
       <!-- Section header -->
       <div v-reveal class="text-center mb-14">
         <div class="font-mono text-[10px] text-[#BDD1F6] tracking-[4px] mb-3">{{ $t('pricing.sectionTag') }}</div>
-        <h2 class="font-display font-bold text-4xl md:text-5xl text-[#efefe5] leading-[1.15] mb-4">
+        <h2 class="font-display font-bold text-[16px] md:text-5xl text-[#efefe5] leading-[1.15] mb-4">
           {{ $t('pricing.title') }}
         </h2>
         <p class="text-[15px] text-[#BABABA] max-w-lg mx-auto">{{ $t('pricing.subtitle') }}</p>

@@ -9,7 +9,7 @@ const features = useTmList<{ icon: string, title: string, desc: string }[]>('stu
       <!-- Section header -->
       <div class="text-center mb-14">
         <div class="font-mono text-[10px] text-[#91B3F0] tracking-[4px] mb-3">{{ $t('studio.sectionTag') }}</div>
-        <h2 class="font-display font-bold text-4xl md:text-5xl text-[#efefe5] leading-[1.15]">
+        <h2 class="font-display font-bold text-[16px] md:text-5xl text-[#efefe5] leading-[1.15]">
           {{ $t('studio.name') }}
         </h2>
         <p class="mt-4 text-[15px] text-[#BABABA] max-w-lg mx-auto">{{ $t('studio.tag') }}</p>

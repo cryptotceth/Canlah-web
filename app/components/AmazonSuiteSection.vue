@@ -3,24 +3,24 @@ const cards = useTmList<{ name: string, icon: string, description: string }[]>('
 </script>
 
 <template>
-  <section id="amazon-suite" class="section px-4 sm:px-6 lg:px-10 xl:px-14">
+  <section id="amazon-suite" class="section px-2 sm:px-6 lg:px-10 xl:px-14">
     <div class="w-full">
       <!-- Section header -->
       <div v-reveal class="text-center mb-16">
         <div class="font-mono text-[10px] text-[#BDD1F6] tracking-[4px] mb-3">{{ $t('amazonSuite.sectionTag') }}</div>
-        <h2 class="font-display font-bold text-4xl md:text-5xl text-[#efefe5] leading-[1.15]">
+        <h2 class="font-display font-bold text-[16px] md:text-5xl text-[#efefe5] leading-[1.15]">
           <span v-html="$t('amazonSuite.title', { highlight: `<span class='bg-gradient-to-r from-[#BDD1F6] to-[#91B3F0] bg-clip-text text-transparent'>${$t('amazonSuite.highlight')}</span>` })"></span>
         </h2>
         <p class="mt-4 text-[15px] text-[#BABABA] max-w-xl mx-auto">{{ $t('amazonSuite.subtitle') }}</p>
       </div>
 
       <!-- Flex wrap + center: last row (2 cards) auto-centers -->
-      <div class="flex flex-wrap justify-center gap-5 lg:gap-6 w-full mb-12">
+      <div class="flex flex-wrap justify-center gap-2 sm:gap-5 lg:gap-6 w-full mb-12">
         <div
           v-for="(card, i) in cards"
           :key="i"
           v-reveal="{ delay: i * 100 }"
-          class="group relative w-full md:w-[calc(50%-10px)] lg:w-[calc(33.333%-16px)] rounded-[2px] border border-[#efefe5]/12 bg-[#0B0A10]/75 hover:bg-[#0B0A10]/90 hover:border-[#efefe5]/25 backdrop-blur-md p-7 lg:p-9 flex flex-col min-h-[260px] transition-colors duration-300"
+          class="group relative w-full md:w-[calc(50%-10px)] lg:w-[calc(33.333%-16px)] rounded-[2px] border border-[#efefe5]/12 bg-[#0B0A10]/75 hover:bg-[#0B0A10]/90 hover:border-[#efefe5]/25 backdrop-blur-md p-2 sm:p-7 lg:p-9 flex flex-col min-h-[260px] transition-colors duration-300"
         >
           <!-- Icon -->
           <div
